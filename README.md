@@ -18,14 +18,7 @@ We'll be deploying the site as pull requests come in!
 
 1. To start, check out the index.html document in the project repo. jQuery has already been linked, and the document has been set up to get you started!
 2. Set up your HTML document such that there is a header, a nav bar, a content area, and a footer.
-3. Inside the content area create `<div id="book1">` and `<div id="book2">` and place information about a book (or any other item) for sale in each div. Each product should have the following properties:
-    ```
-    name
-    category
-    price
-    picture
-    a list of selling points
-    ```
+3. Inside the content area create `<div id="book1">` and `<div id="book2">` and place information about a book (or any other item) for sale in each div. Each product should have the following properties: `name`, `category`, `price`, `picture_url`, `selling_points`.
 4. Give the outermost div an id of the book's name and a class based on its category as well as a general class of product. i.e `<div id='twilight' class='book product'>` Give the inner HTML elements the appropriate class to match the information they hold (i.e `<div class="name">`, `<div class="category">`, `<div class="price">`, etc)
 5. Add some css styles to make each section of the page stand out. Try to use as many different css selectors and css properties as you can.
 6. Now create a second identical page with two music albums (or any other category of item) for sale. Link the two pages together in the nav bar, so that the user can click back and forth between books and music.
@@ -42,21 +35,23 @@ $('#book1 .name').text(book1.name)
 13. Refactor your code so that you can call a function `add_to_page(book1)`, passing in an object, and that object will be placed using jQuery into the html page. Now you should just call `add_to_page` for each product and the `add_to_page` function will place it on the page for you.
 Refactor your code such that the content div is completely empty on page load, and `addToPage` constructs and appends new HTML elements into it. So:
 ```javascript
-$('#content').append($('<div id=book1>').html( $('<div class=name>').text(book1.name)))
+$('#content').append($('<div id="book1">').html( $('<div class="name">').text(book1.name)))
 ```
 14. Make sure each book or album's div has the appropriate class and id attributes generated for it. You should not have to change any css while refactoring.
-15. Now add click events to the nav bar such that when the user clicks books the books for sale are placed on the page in the `<div id=content>`, but the albums are removed and vice versa. Will you use `$('#content').empty()` before adding new content or just have two separate divs and `.show()` one and `.hide()` the other. Try both ways!
+15. Now add click events to the nav bar such that when the user clicks books the books for sale are placed on the page in the `<div id="content">`, but the albums are removed and vice versa. Will you use `$('#content').empty()` before adding new content or just have two separate divs and `.show()` one and `.hide()` the other. Try both ways!
 16. Also have a "show all" button in the nav that shows all products for sale.
 
 -----
-**Congrats, you now have a working example of a web-based bookstore SPA!** For an extra BONUS, try out some of the following on your local forks:
+**Congrats, you now have a working example of a web-based bookstore SPA!**
 
-17. Refactor your code so that your products are no longer stored as separate variables `book1`, `book2`, etc, but rather as an array of book objects and array of album objects that you iterate over with a `for`loop. Make sure your nav bar switching still works.
+For an extra BONUS, try out some of the following on your local forks:
+
+17. Refactor your code so that your products are no longer stored as separate variables `book1`, `book2`, etc., but rather as an array of book objects and array of album objects that you iterate over with a `for` loop. Make sure your nav bar switching still works.
 18. At this point you should be able to add more books and albums to your arrays and not have to change a single line of code to have your page still work. Check to see if this is the case. If not, make it so.
 19. Now refactor your code such that you have only a single object called `products` with keys `books` and `albums` whose values are arrays of `book` and `album` objects, respectively. Make sure your nav bar switching still works.
 20. Refactor the nav bar to use a dropdown menu instead of links. Use the `.change()` event listener and observe the selected value to know what products to display.
 21. Refactor your code such that you construct the dropdown menu from a `for-in` loop through the properties of `product`. See if you can remove all hardcoded references to the words "books" and "albums" from your code. You will know you are successful if you can add a third category like electronics to the `products` object and not have to change a single line of code to have your page still work.
-22. Add a search box. Show only products whose names or features include that word. 
+22. Add a search box. Show only products whose names or features include that word.
 
 Hint:
 ```javascript
