@@ -6,7 +6,7 @@ Get excited, people! Today is the day we finally *MONETIZE*! We will build eithe
 Please use the GitHub workflow to initialize a repository and save your progress after each step:
 ```
 $ git add .
-$ git commit -m "add music pages"
+$ git commit -m "[your commit message will go here]"
 $ git push origin master
 ```
 ...then use pull requests to have your instructor merge changes into the Blessed Repository, then reset your local version from the 'blessed' repository using:
