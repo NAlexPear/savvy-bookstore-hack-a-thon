@@ -1,4 +1,4 @@
-# SavvyCodersHackathon2
+# Savvy Coders Hackathon \#2
 ## Web Store Hackathon
 
 Get excited, people! Today is the day we finally *MONETIZE*! We will build either an e-commerce store for our community site or a new hot startup to compete with Amazon.com
@@ -9,11 +9,15 @@ $ git add .
 $ git commit -m "add music pages"
 $ git push origin master
 ```
-
+...then use pull requests to have your instructor merge changes into the Blessed Repository, then reset your local version from the 'blessed' repository using:
+```
+$ git fetch --all
+$ git reset --hard blessed/master
+```
 We'll be deploying the site as pull requests come in!
 
-1. To start, check out the index.html document in the project repo. Bootstrap and jQuery have already been linked, and the document has been set up to get you started!
-2. Set up your HTML document such that there is a header, a nav bar, a content area, and a footer. Try using Bootstrap (documentation [here](http://getbootstrap.com/css/#overview))
+1. To start, check out the index.html document in the project repo. jQuery has already been linked, and the document has been set up to get you started!
+2. Set up your HTML document such that there is a header, a nav bar, a content area, and a footer.
 3. Inside the content area create `<div id="book1">` and `<div id="book2">` and place information about a book (or any other item) for sale in each div. Each product should have the following properties:
     ```
     name
