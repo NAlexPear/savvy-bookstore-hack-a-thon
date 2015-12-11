@@ -47,7 +47,11 @@ $('#content').append($('<div id=book1>').html( $('<div class=name>').text(book1.
 14. Make sure each book or album's div has the appropriate class and id attributes generated for it. You should not have to change any css while refactoring.
 15. Now add click events to the nav bar such that when the user clicks books the books for sale are placed on the page in the `<div id=content>`, but the albums are removed and vice versa. Will you use `$('#content').empty()` before adding new content or just have two separate divs and `.show()` one and `.hide()` the other. Try both ways!
 16. Also have a "show all" button in the nav that shows all products for sale.
-17. Now refactor your code so that your products are no longer stored as separate variables `book1`, `book2`, etc, but rather as an array of book objects and array of album objects that you iterate over with a `for`loop. Make sure your nav bar switching still works.
+
+-----
+**Congrats, you now have a working example of a web-based bookstore SPA!** For an extra BONUS, try out some of the following on your local forks:
+
+17. Refactor your code so that your products are no longer stored as separate variables `book1`, `book2`, etc, but rather as an array of book objects and array of album objects that you iterate over with a `for`loop. Make sure your nav bar switching still works.
 18. At this point you should be able to add more books and albums to your arrays and not have to change a single line of code to have your page still work. Check to see if this is the case. If not, make it so.
 19. Now refactor your code such that you have only a single object called `products` with keys `books` and `albums` whose values are arrays of `book` and `album` objects, respectively. Make sure your nav bar switching still works.
 20. Refactor the nav bar to use a dropdown menu instead of links. Use the `.change()` event listener and observe the selected value to know what products to display.
