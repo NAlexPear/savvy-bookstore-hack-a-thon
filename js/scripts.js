@@ -47,3 +47,26 @@ var book4 = {
         "Whatever You Can Steal"
     ]
 };
+
+$( "#book1 .name").text(book1.name);
+$( "#book1 .author").text(book1.author);
+$( "#book1 .price").text(book1.price);
+$( "#book1 .picture").attr( "src", book1.picture );
+
+
+$( "#book2 .name").text(book2.name);
+$( "#book2 .author").text(book2.author);
+$( "#book2 .price").text(book2.price);
+$( "#book2 .picture").attr( "src", book2.picture );
+
+
+$( "#book3 .name").text(book3.name);
+$( "#book3 .author").text(book3.author);
+$( "#book3 .price").text(book3.price);
+$( "#book3 .picture").attr( "src", book3.picture );
+
+
+$( "#book4 .name").text(book4.name);
+$( "#book4 .author").text(book4.author);
+$( "#book4 .price").text(book4.price);
+$( "#book4 .picture").attr( "src", book4.picture );
