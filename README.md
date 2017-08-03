@@ -5,4 +5,5 @@
 
 ### Contributors
 + Alex Pearson
++ Kenny Hall
 + Helen Tierney
