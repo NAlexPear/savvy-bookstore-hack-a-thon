@@ -6,7 +6,27 @@ html {
 
 /*put all other styles below this line, please*/
 header{
+    width:100%;
 
+    background-color:#75a3a3;
+}
+
+header h1{
+    color:#e0ebeb;
+    font-size:70px;
+        text-align:center;
+        font-family: 'Merriweather', serif;
+        padding-top:10px;
+          text-shadow: 2px 2px 4px black;
+}
+
+header h3{
+    color:#a3c2c2;
+    font-size:40px;
+    text-align:center;
+    margin-top:10px;
+    padding-bottom:10px;
+    font-family: 'PT Sans', sans-serif;
 }
 
 .nav-bar{
