@@ -14,7 +14,7 @@ var book1 = {
 var book2 = {
     "id": 2,
     "name": "Granite City Soul Suckers",
-    "author": "Bella Lugosi",
+    "author": "Bela Lugosi",
     "picture": "http://medias.photodeck.com/abc3ec2e-e46d-11e0-8813-0175b4d176d6/100514_IND_003_xgaplus.jpg",
     "price": 2.00,
     "selling-points": [
