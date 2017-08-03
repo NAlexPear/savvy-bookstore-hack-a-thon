@@ -5,3 +5,68 @@ html {
 }
 
 /*put all other styles below this line, please*/
+header{
+
+}
+
+.nav-bar{
+
+}
+
+.content{
+      display:flex;
+      flex-direction: row;
+      flex-wrap:wrap;
+      justify-content: space-around;
+      align-items: center;
+
+
+}
+.content div{
+  width:400px;
+  height:400px;
+  background-color: #f2f9fa;
+  margin:20px;
+
+
+
+}
+
+.name{
+  color:#33838f;
+  text-align:center;
+
+
+}
+
+.author{
+  color:#a5bec2;
+  text-align:center;
+}
+
+.price{
+    color:#a5bec2;
+    text-align:center;
+}
+
+.picture{
+  width:100%;
+  height:auto;
+
+
+}
+
+.selling-points{
+  color:#a5bec2;
+  text-align:center;
+
+}
+
+form{
+
+
+}
+
+footer{
+
+}
