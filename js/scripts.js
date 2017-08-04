@@ -47,18 +47,54 @@ var book4 = {
         "Whatever You Can Steal"
     ]
 };
+var book5 = {
+    "id": 5,
+    "name": " Monty Python 2: Electric Boogaloooo",
+    "author": "Noel HamWrapper",
+    "picture": "http://media.topito.com/wp-content/uploads/2014/10/python1.jpg",
+    "price": 50.00,
+    "selling-points": [
+        "Toupee Spam Muppet",
+        "Decal Slide Off My Car",
+        "Whatever You Can Steal",
+        "Look, another selling point!"
+    ]
+};
 
+var $container = $( ".content" );
 
 function bookinfo( item ){
-  $( "#book" + item.id + " .name").text(item.name);
-  $( "#book" + item.id + " .author").text(item.author);
-  $( "#book" + item.id + " .price").text(item.price);
-  $( "#book" + item.id + " .picture").attr( "src", item.picture );
+  var name = "<h1 class='name'>" + item.name + "</h1>";
+  var author = "<h3 class='author'>" + item.author + "</h3>";
+  var price = "<h3 class='price'>" + item.price + "</h3>";
+  var picture = "<img class='picture' src='" + item.picture + "'/>";
+  var sellingPoints = "<ul class='selling-points'>";
+  var points = item[ "selling-points" ];
+  
+  var i = 0;
 
+  while( i < points.length ){
+    sellingPoints += "<li>" + points[i] + "</li>";
+
+    i++;
+  }
+
+  sellingPoints += "</ul>";
+
+  $container.prepend(
+    "<div id='#book" + item.id + "'>"
+      + name
+      + author
+      + price
+      + picture
+      + sellingPoints
+      + "</div>"
+  );
 };
 
 
+bookinfo( book5 );
+bookinfo( book4 );
+bookinfo( book3 );
+bookinfo( book2 );
 bookinfo( book1 );
-bookinfo ( book2 );
-bookinfo ( book3 );
-bookinfo ( book4 );
