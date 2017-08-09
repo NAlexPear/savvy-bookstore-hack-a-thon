@@ -61,36 +61,31 @@ var book5 = {
     ]
 };
 
-var $container = $( ".content" );
-
 function bookinfo( item ){
   var name = "<h1 class='name'>" + item.name + "</h1>";
   var author = "<h3 class='author'>" + item.author + "</h3>";
   var price = "<h3 class='price'>" + item.price + "</h3>";
   var picture = "<img class='picture' src='" + item.picture + "'/>";
-  var sellingPoints = "<ul class='selling-points'>";
   var points = item[ "selling-points" ];
+  var sellingPoints = points.reduce(
+    ( acc, point ) => acc += "<li>" + point + "</li>",
+    "<ul class='selling-points'>"
+  ) + "</ul>";
 
-  points.forEach( ( point ) => {
-    sellingPoints += "<li>" + point + "</li>";
-  });
-
-  sellingPoints += "</ul>";
-
-  $container.prepend(
-    "<div id='#book" + item.id + "'>"
-      + name
-      + author
-      + price
-      + picture
-      + sellingPoints
-      + "</div>"
-  );
+  return "<div id='#book" + item.id + "'>"
+    + name
+    + author
+    + price
+    + picture
+    + sellingPoints
+    + "</div>";
 };
 
 
-bookinfo( book5 );
-bookinfo( book4 );
-bookinfo( book3 );
-bookinfo( book2 );
-bookinfo( book1 );
+$( ".content" ).prepend([
+  bookinfo( book1 ),
+  bookinfo( book2 ),
+  bookinfo( book3 ),
+  bookinfo( book4 ),
+  bookinfo( book5 )
+]);
