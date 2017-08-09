@@ -1,3 +1,4 @@
+/* globals $ */
 // Put all of your jQuery and JavaScript in this document.
 var book1 = {
     "id": 1,
@@ -62,30 +63,30 @@ var book5 = {
 };
 
 function bookinfo( item ){
-  var name = "<h1 class='name'>" + item.name + "</h1>";
-  var author = "<h3 class='author'>" + item.author + "</h3>";
-  var price = "<h3 class='price'>" + item.price + "</h3>";
-  var picture = "<img class='picture' src='" + item.picture + "'/>";
-  var points = item[ "selling-points" ];
-  var sellingPoints = points.reduce(
-    ( acc, point ) => acc += "<li>" + point + "</li>",
-    "<ul class='selling-points'>"
-  ) + "</ul>";
+    var name = "<h1 class='name'>" + item.name + "</h1>";
+    var author = "<h3 class='author'>" + item.author + "</h3>";
+    var price = "<h3 class='price'>" + item.price + "</h3>";
+    var picture = "<img class='picture' src='" + item.picture + "'/>";
+    var points = item[ "selling-points" ];
+    var sellingPoints = points.reduce(
+      ( acc, point ) => acc += "<li>" + point + "</li>",
+      "<ul class='selling-points'>"
+    ) + "</ul>";
 
-  return "<div id='#book" + item.id + "'>"
-    + name
-    + author
-    + price
-    + picture
-    + sellingPoints
-    + "</div>";
-};
+    return "<div id='#book" + item.id + "'>" +
+      name +
+      author +
+      price +
+      picture +
+      sellingPoints +
+      "</div>";
+}
 
 
-$( ".content" ).prepend([
-  bookinfo( book1 ),
-  bookinfo( book2 ),
-  bookinfo( book3 ),
-  bookinfo( book4 ),
-  bookinfo( book5 )
-]);
+$( ".content" ).prepend( [
+    bookinfo( book1 ),
+    bookinfo( book2 ),
+    bookinfo( book3 ),
+    bookinfo( book4 ),
+    bookinfo( book5 )
+] );
