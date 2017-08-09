@@ -90,3 +90,9 @@ form{
 footer{
 
 }
+
+.wreckage {
+    width:100%;
+    display: flex;
+    justify-content: center;
+}

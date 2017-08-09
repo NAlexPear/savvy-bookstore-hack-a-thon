@@ -70,14 +70,15 @@ function bookinfo( item ){
   var picture = "<img class='picture' src='" + item.picture + "'/>";
   var sellingPoints = "<ul class='selling-points'>";
   var points = item[ "selling-points" ];
-  
-  var i = 0;
 
-  while( i < points.length ){
+
+
+ for( var i = 0; i < points.length; i++ ){
     sellingPoints += "<li>" + points[i] + "</li>";
-
-    i++;
   }
+
+
+
 
   sellingPoints += "</ul>";
 
