@@ -25,33 +25,34 @@ function parseProduct( item ){
       "</div>";
 }
 
-$( "button" ).on( "click", ( event ) => {
-    var target = $( event.target ).attr( "class" );
-
-    products[target].then( ( items ) => {
+function displayProduct( type ){
+    products[type].then( ( items ) => {
         var parsedProducts = items.map( parseProduct );
 
         $( ".content" ).html( parsedProducts );
     } );
+}
+
+$( "button" ).on( "click", ( event ) => {
+    var target = $( event.target ).attr( "class" );
+
+    displayProduct( target );
 } );
 
-products.books.then( ( items ) => {
-    var parsedProducts = items.map( parseProduct );
-
-    $( ".content" ).html( parsedProducts );
-} );
+displayProduct( "books" );
 
 
-$.ajax("http://localhost:3000/books", {
-	"type": "POST",
-	"data": {
-		"type": "book",
-		"name": "I came from jQuery",
-		"author": "JQuery Monster",
-		"picture": "http://lorempixel.com/640/480",
-		"price": "42.00",
-		"sellingPoints": [
-			"thing 1",
-			"thing 2",
-			"thing 3" ]
- }});
+$.ajax( "http://localhost:3000/books", {
+    "type": "POST",
+    "data": {
+        "type": "book",
+        "name": "I came from jQuery",
+        "author": "JQuery Monster",
+        "picture": "http://lorempixel.com/640/480",
+        "price": "42.00",
+        "sellingPoints": [
+            "thing 1",
+            "thing 2",
+            "thing 3"
+        ]
+    } } );
