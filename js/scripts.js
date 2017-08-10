@@ -20,8 +20,12 @@ function parseProduct( item ){
       "</div>";
 }
 
-$( "button" ).on( "click", () => $.ajax( "http://localhost:3000/books" ).then( ( books ) => {
-    var parsedBooks = books.map( parseProduct );
+$( "button" ).on( "click", ( event ) => {
+    var target = $( event.target ).attr( "class" );
 
-    $( ".content" ).prepend( parsedBooks );
-} ) );
+    $.ajax( "http://localhost:3000/" + target ).then( ( products ) => {
+        var parsedProducts = products.map( parseProduct );
+
+        $( ".content" ).prepend( parsedProducts );
+    } );
+} );
