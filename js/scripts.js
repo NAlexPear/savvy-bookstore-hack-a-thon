@@ -34,3 +34,18 @@ $( "button" ).on( "click", ( event ) => {
         $( ".content" ).html( parsedProducts );
     } );
 } );
+
+
+$.ajax("http://localhost:3000/books", {
+	"type": "POST",
+	"data": {
+		"type": "book",
+		"name": "I came from jQuery",
+		"author": "JQuery Monster",
+		"picture": "http://lorempixel.com/640/480",
+		"price": "42.00",
+		"sellingPoints": [
+			"thing 1",
+			"thing 2",
+			"thing 3" ]
+ }})
