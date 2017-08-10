@@ -41,10 +41,14 @@ $( "button" ).on( "click", ( event ) => {
 
 displayProduct( "books" );
 
+$( "form" ).on( "submit", ( event ) => {
+    event.preventDefault();
+} );
 
 $.ajax( "http://localhost:3000/books", {
     "type": "POST",
-    "data": {
+    "contentType": "application/json",
+    "data": JSON.stringify( {
         "type": "book",
         "name": "I came from jQuery",
         "author": "JQuery Monster",
@@ -55,4 +59,5 @@ $.ajax( "http://localhost:3000/books", {
             "thing 2",
             "thing 3"
         ]
-    } } );
+    } )
+} );
