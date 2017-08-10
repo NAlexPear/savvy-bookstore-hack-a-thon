@@ -1,5 +1,10 @@
 /* globals $ */
 // Put all of your jQuery and JavaScript in this document
+var products = {
+    "books": $.ajax( "http://localhost:3000/books" ),
+    "music": $.ajax( "http://localhost:3000/music" )
+};
+
 function parseProduct( item ){
     var name = "<h1 class='name'>" + item.name + "</h1>";
     var author = "<h3 class='author'>" + item.author + "</h3>";
@@ -23,8 +28,8 @@ function parseProduct( item ){
 $( "button" ).on( "click", ( event ) => {
     var target = $( event.target ).attr( "class" );
 
-    $.ajax( "http://localhost:3000/" + target ).then( ( products ) => {
-        var parsedProducts = products.map( parseProduct );
+    products[target].then( ( items ) => {
+        var parsedProducts = items.map( parseProduct );
 
         $( ".content" ).prepend( parsedProducts );
     } );
