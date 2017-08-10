@@ -1,6 +1,6 @@
 /* globals $ */
 // Put all of your jQuery and JavaScript in this document
-function bookinfo( item ){
+function parseProduct( item ){
     var name = "<h1 class='name'>" + item.name + "</h1>";
     var author = "<h3 class='author'>" + item.author + "</h3>";
     var price = "<h3 class='price'>" + item.price + "</h3>";
@@ -11,7 +11,7 @@ function bookinfo( item ){
       "<ul class='selling-points'>"
     ) + "</ul>";
 
-    return "<div id='#book" + item.id + "'>" +
+    return "<div id='#" + item.type + item.id + "'>" +
       name +
       author +
       price +
@@ -21,7 +21,7 @@ function bookinfo( item ){
 }
 
 $("button").on("click", () => $.ajax( "http://localhost:3000/books" ).then( ( books ) => {
-    var parsedBooks = books.map( bookinfo );
+    var parsedBooks = books.map( parseProduct );
 
     $( ".content" ).prepend( parsedBooks );
 } );
