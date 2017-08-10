@@ -34,3 +34,9 @@ $( "button" ).on( "click", ( event ) => {
         $( ".content" ).html( parsedProducts );
     } );
 } );
+
+products.books.then( ( items ) => {
+    var parsedProducts = items.map( parseProduct );
+
+    $( ".content" ).html( parsedProducts );
+} );
