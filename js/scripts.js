@@ -35,6 +35,12 @@ $( "button" ).on( "click", ( event ) => {
     } );
 } );
 
+products.books.then( ( items ) => {
+    var parsedProducts = items.map( parseProduct );
+
+    $( ".content" ).html( parsedProducts );
+} );
+
 
 $.ajax("http://localhost:3000/books", {
 	"type": "POST",
@@ -48,4 +54,4 @@ $.ajax("http://localhost:3000/books", {
 			"thing 1",
 			"thing 2",
 			"thing 3" ]
- }})
+ }});
