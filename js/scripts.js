@@ -67,7 +67,7 @@ function bookinfo( item ){
     var author = "<h3 class='author'>" + item.author + "</h3>";
     var price = "<h3 class='price'>" + item.price + "</h3>";
     var picture = "<img class='picture' src='" + item.picture + "'/>";
-    var points = item[ "selling-points" ];
+    var points = item[ "sellingPoints" ];
     var sellingPoints = points.reduce(
       ( acc, point ) => acc += "<li>" + point + "</li>",
       "<ul class='selling-points'>"
@@ -82,11 +82,8 @@ function bookinfo( item ){
       "</div>";
 }
 
+$.ajax( "http://localhost:3000/books" ).then( ( books ) => {
+    var parsedBooks = books.map( bookinfo );
 
-$( ".content" ).prepend( [
-    bookinfo( book1 ),
-    bookinfo( book2 ),
-    bookinfo( book3 ),
-    bookinfo( book4 ),
-    bookinfo( book5 )
-] );
+    $( ".content" ).prepend( parsedBooks );
+} );
