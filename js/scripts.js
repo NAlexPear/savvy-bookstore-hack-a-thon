@@ -31,6 +31,6 @@ $( "button" ).on( "click", ( event ) => {
     products[target].then( ( items ) => {
         var parsedProducts = items.map( parseProduct );
 
-        $( ".content" ).prepend( parsedProducts );
+        $( ".content" ).html( parsedProducts );
     } );
 } );
