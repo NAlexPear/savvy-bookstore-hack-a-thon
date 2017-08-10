@@ -82,7 +82,7 @@ function bookinfo( item ){
       "</div>";
 }
 
-$.ajax( "http://localhost:3000/books" ).then( ( books ) => {
+$("button").on("click", () => $.ajax( "http://localhost:3000/books" ).then( ( books ) => {
     var parsedBooks = books.map( bookinfo );
 
     $( ".content" ).prepend( parsedBooks );
