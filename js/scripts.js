@@ -42,22 +42,30 @@ $( "button" ).on( "click", ( event ) => {
 displayProduct( "books" );
 
 $( "form" ).on( "submit", ( event ) => {
-    event.preventDefault();
-} );
+    var vals = Array
+      .from( document.querySelectorAll( 'input[type="text"]' ) )
+      .map( ( input ) => $( input ).val() );
 
-$.ajax( "http://localhost:3000/books", {
-    "type": "POST",
-    "contentType": "application/json",
-    "data": JSON.stringify( {
-        "type": "book",
-        "name": "I came from jQuery",
-        "author": "JQuery Monster",
-        "picture": "http://lorempixel.com/640/480",
-        "price": "42.00",
-        "sellingPoints": [
-            "thing 1",
-            "thing 2",
-            "thing 3"
-        ]
-    } )
+    event.preventDefault();
+
+    $.ajax( "http://localhost:3000/" + vals[0], {
+        "type": "POST",
+        "contentType": "application/json",
+        "data": JSON.stringify( {
+            "type": vals[0],
+            "name": vals[1],
+            "author": vals[2],
+            "picture": vals[4],
+            "price": vals[3],
+            "sellingPoints": [
+                "thing 1",
+                "thing 2",
+                "thing 3"
+            ]
+        } )
+    } );
+
+    products[vals[0]] = $.ajax( "http://localhost:3000/" + vals[0] );
+
+    displayProduct( vals[0] );
 } );
