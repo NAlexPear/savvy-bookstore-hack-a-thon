@@ -10,7 +10,7 @@ html {
 #navigation {
   position: fixed;
   top: 0;
-  right: 0; 
+  right: 0;
   text-decoration: none;
 
 }
@@ -24,4 +24,15 @@ html {
   color: blue;
   font-size: 20px;
   font-family: sans-serif;
+}
+
+#footer {
+    text-decoration: none;
+    background-color: orange;
+    color: blue;
+    font-size: 20px;
+    font-family: sans-serif;
+    border-style: solid;
+    border-width: 2px;
+    border-color: red;
 }
