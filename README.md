@@ -12,3 +12,4 @@
 + Danielle Snyder
 + Janae C. Johnson
 + Martin Holloway
++ Meagan Barbeau
