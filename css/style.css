@@ -6,28 +6,40 @@ html {
 
 
 /*put all other styles below this line, please*/
-
 #navigation {
+  width: 100vw;
   position: fixed;
   top: 0;
   right: 0;
-  text-decoration: none;
-
-}
-
-.navigation {
   background-color: orange;
+  text-align: center;
 }
 
-.navigation > ul {
+#navigation a {
+    text-decoration: none;
+}
+
+#navigation > ul {
 
   color: blue;
   font-size: 20px;
   font-family: sans-serif;
+  list-style: none;
+
 }
+
+#navigation > ul > li {
+  display: inline;
+  margin: 5px;
+  position: relative;
+  text-decoration: none;
+
+}
+
 
 #footer {
     text-decoration: none;
+    text-align: center;
     background-color: orange;
     color: blue;
     font-size: 20px;
@@ -35,4 +47,31 @@ html {
     border-style: solid;
     border-width: 2px;
     border-color: red;
+}
+
+#header{
+  background-image: url("https://elearningindustry.com/wp-content/uploads/2016/02/top-10-psychology-books-elearning-professional-read.jpg");
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-shadow: 2px 2px black;
+  text-align: center;
+  height: 30%;
+}
+.storeTitle{
+  font-family: fantasy;
+  color: snow;
+  padding-top: 20px;
+  font-size: 10vw;
+}
+.tagline{
+  color: ivory;
+  text-align: right;
+  margin: 20px;
+  font-size: 4vw;
+}
+
+#footer ul {
+    list-style: none;
+    text-decoration: none;
 }
