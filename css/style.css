@@ -36,3 +36,8 @@ html {
     border-width: 2px;
     border-color: red;
 }
+
+label {
+    float: left;
+    /* clear: both; */
+}
