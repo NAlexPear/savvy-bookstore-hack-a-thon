@@ -5,3 +5,4 @@
 
 ### Contributors
 + Alex Pearson
++ Janae C. Johnson
