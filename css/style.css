@@ -75,3 +75,22 @@ html {
     list-style: none;
     text-decoration: none;
 }
+
+
+.formheader {
+    width: 100%;
+    max-width: 800px;
+}
+
+.formheader > div {
+    margin: 5px;  
+}
+
+.formheader > div > input {
+    width: 100%;
+}
+
+
+.formheader > div > textarea {
+    width: 100%;
+}
