@@ -4,4 +4,22 @@ html {
   box-sizing: border-box;
 }
 
+
 /*put all other styles below this line, please*/
+
+#navigation {
+  position: fixed;
+  text-decoration: none;
+
+}
+
+.navigation {
+  background-color: orange; 
+}
+
+.navigation > ul {
+
+  color: blue;
+  font-size: 20px;
+  font-family: sans-serif;
+}
