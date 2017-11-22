@@ -15,3 +15,4 @@
 + Meagan Barbeau
 + Ramona Jones
 + Brandon Dorsey
++ Nick Gartelos
