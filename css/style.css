@@ -36,6 +36,17 @@ html {
 
 }
 
+#content {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#content > div > h1 {
+  font-family: 'Vollkorn SC', serif;
+  text-align: center;
+  color: red;
+}
 
 #footer {
     text-decoration: none;
