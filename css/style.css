@@ -6,8 +6,6 @@ html {
 
 
 /*put all other styles below this line, please*/
-<<<<<<< HEAD
-
 #navigation {
   position: fixed;
   top: 0;
@@ -36,7 +34,8 @@ html {
     border-style: solid;
     border-width: 2px;
     border-color: red;
-=======
+}
+
 #header{
   background-image: url("https://elearningindustry.com/wp-content/uploads/2016/02/top-10-psychology-books-elearning-professional-read.jpg");
   background-repeat:no-repeat;
@@ -57,5 +56,4 @@ html {
   text-align: right;
   margin: 20px;
   font-size: 4vw;
->>>>>>> 5e62b9a77c22d49dbd847abbb537877b4b5baf0f
 }
