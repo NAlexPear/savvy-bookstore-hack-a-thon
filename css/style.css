@@ -9,12 +9,14 @@ html {
 
 #navigation {
   position: fixed;
+  top: 0;
+  right: 0; 
   text-decoration: none;
 
 }
 
 .navigation {
-  background-color: orange; 
+  background-color: orange;
 }
 
 .navigation > ul {
