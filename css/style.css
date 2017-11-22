@@ -5,3 +5,24 @@ html {
 }
 
 /*put all other styles below this line, please*/
+#header{
+  background-image: url("https://elearningindustry.com/wp-content/uploads/2016/02/top-10-psychology-books-elearning-professional-read.jpg");
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-shadow: 2px 2px black;
+  text-align: center;
+  height: 30%;
+}
+.storeTitle{
+  font-family: fantasy;
+  color: snow;
+  padding-top: 20px;
+  font-size: 10vw;
+}
+.tagline{
+  color: ivory;
+  text-align: right;
+  margin: 20px;
+  font-size: 4vw;
+}
