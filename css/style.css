@@ -42,8 +42,10 @@ html {
   flex-direction: row;
   flex-wrap: wrap
 }
+#content > div{
+  max-width: 200px;
+}
 #content > div img{
-  max-width: 197px;
   width: 100%;
 }
 #content > div > h1 {
