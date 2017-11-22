@@ -40,11 +40,14 @@ html {
   display: flex;
   justify-content: space-around;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: wrap
+}
+#content > div img{
+  max-width: 197px;
+  width: 100%;
 }
 #content > div > h1 {
   font-family: 'Vollkorn SC', serif;
-  text-align: center;
   color: red;
 }
 
