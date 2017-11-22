@@ -8,26 +8,39 @@ html {
 /*put all other styles below this line, please*/
 
 #navigation {
+  width: 100vw;
   position: fixed;
   top: 0;
   right: 0;
-  text-decoration: none;
-
-}
-
-.navigation {
   background-color: orange;
+  text-align: center;
 }
 
-.navigation > ul {
+#navigation a {
+    text-decoration: none;
+}
+
+#navigation > ul {
 
   color: blue;
   font-size: 20px;
   font-family: sans-serif;
+  list-style: none;
+
 }
+
+#navigation > ul > li {
+  display: inline;
+  margin: 5px;
+  position: relative;
+  text-decoration: none;
+
+}
+
 
 #footer {
     text-decoration: none;
+    text-align: center;
     background-color: orange;
     color: blue;
     font-size: 20px;
@@ -35,4 +48,9 @@ html {
     border-style: solid;
     border-width: 2px;
     border-color: red;
+}
+
+#footer ul {
+    list-style: none;
+    text-decoration: none;
 }
