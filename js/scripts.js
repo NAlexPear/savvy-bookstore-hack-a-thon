@@ -65,24 +65,3 @@ var book3 = {
 };
 
 hydrateBook( book1 );
-
-//  $( "#book1 h1" ).text( book1.name );
-// $( "#book1 h2" )
-//     .first()
-//     .text( book1.author );
-//
-// $( "#book1 img" ).attr( { "src": book1.pictureUrl } );
-// $( "#book1 h2 > span.price" ).text( book1.price );
-//
-// $( "#book1 p" )
-//     .first()
-//     .text( book1.sellingPoints[0] );
-//
-// $( "#book1 p" )
-//     .first()
-//     .next()
-//     .text( book1.sellingPoints[1] );
-//
-// $( "#book1 p" )
-//     .last()
-//     .text( book1.sellingPoints[2] );
