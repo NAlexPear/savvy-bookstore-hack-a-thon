@@ -42,6 +42,9 @@ var book3 = {
 
 var books = [ book1, book2, book3 ];
 
+for( var i = 0; i < books.length; i++ ){
+    hydrateBook( books[i] );
+}
 
 $( "#book1 h1" ).text( book1.name );
 $( "#book1 h2" )
