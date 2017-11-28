@@ -67,8 +67,6 @@ var book3 = {
 
 var books = [ book1, book2, book3 ];
 
-hydrateBook( book1 );
-
 for( var i = 0; i < books.length; i++ ){
     hydrateBook( books[i] );
 }
