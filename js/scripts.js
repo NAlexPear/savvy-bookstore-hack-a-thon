@@ -1,6 +1,31 @@
 // Put all of your jQuery and JavaScript in this document.
 /* globals $ */
 
+
+var hydrateBook = function hydrateBook( bookObject ){
+    $( "#book" + bookObject.id + " h1" ).text( bookObject.name );
+    $( "#book" + bookObject.id + " h2" )
+        .first()
+        .text( bookObject.author );
+
+    $( "#book" + bookObject.id + " img" ).attr( { "src": bookObject.pictureUrl } );
+    $( "#book" + bookObject.id + " h2 > span.price" ).text( bookObject.price );
+
+    $( "#book" + bookObject.id + "p" )
+        .first()
+        .text( bookObject.sellingPoints[0] );
+
+    $( "#book" + bookObject.id + " p" )
+        .first()
+        .next()
+        .text( bookObject.sellingPoints[1] );
+
+    $( "#book" + bookObject.id + " p" )
+        .last()
+        .text( bookObject.sellingPoints[2] );
+};
+
+
 var book1 = {
     "id": 1,
     "name": "The Desire Map",
@@ -42,31 +67,11 @@ var book3 = {
 
 var books = [ book1, book2, book3 ];
 
+hydrateBook( book1 );
+
 for( var i = 0; i < books.length; i++ ){
     hydrateBook( books[i] );
 }
-
-$( "#book1 h1" ).text( book1.name );
-$( "#book1 h2" )
-    .first()
-    .text( book1.author );
-
-$( "#book1 img" ).attr( { "src": book1.pictureUrl } );
-$( "#book1 h2 > span.price" ).text( book1.price );
-
-$( "#book1 p" )
-    .first()
-    .text( book1.sellingPoints[0] );
-
-$( "#book1 p" )
-    .first()
-    .next()
-    .text( book1.sellingPoints[1] );
-
-$( "#book1 p" )
-    .last()
-    .text( book1.sellingPoints[2] );
-
 
 $( "form" ).on( "submit", ( event ) => {
     var data = $( event.target ).serializeArray();
