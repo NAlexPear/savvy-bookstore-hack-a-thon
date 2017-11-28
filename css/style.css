@@ -99,7 +99,7 @@ html {
 }
 
 .formheader > div {
-    margin: 5px;  
+    margin: 5px;
 }
 
 .formheader > div > input {
@@ -109,4 +109,14 @@ html {
 
 .formheader > div > textarea {
     width: 100%;
+}
+
+#book1:hover {
+  background-color: cornflowerblue;
+}
+#book2:hover {
+  background-color: coral;
+}
+#book3:hover {
+  background-color: orange;
 }
