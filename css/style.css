@@ -118,3 +118,13 @@ html {
 .formheader > div > textarea {
     width: 100%;
 }
+
+#book1:hover {
+  background-color: cornflowerblue;
+}
+#book2:hover {
+  background-color: coral;
+}
+#book3:hover {
+  background-color: orange;
+}
