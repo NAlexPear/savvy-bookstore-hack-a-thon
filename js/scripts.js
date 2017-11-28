@@ -1,4 +1,5 @@
 // Put all of your jQuery and JavaScript in this document.
+/* globals $ */
 
 
 var hydrateBook = function hydrateBook( bookObject ){
@@ -64,4 +65,33 @@ var book3 = {
     ]
 };
 
+var books = [ book1, book2, book3 ];
+
 hydrateBook( book1 );
+
+for( var i = 0; i < books.length; i++ ){
+    hydrateBook( books[i] );
+}
+
+$( "form" ).on( "submit", ( event ) => {
+    var data = $( event.target ).serializeArray();
+    var formObject = {};
+
+    event.preventDefault();
+
+    formObject.id = books.length + 1;
+    formObject.sellingPoints = [];
+
+    data.forEach( ( field ) => {
+        if( field.name === "sellingPoints" ){
+            formObject.sellingPoints.push( ...field.value.split( "\n" ) );
+        }
+        else{
+            formObject[ field.name ] = field.value;
+        }
+    } );
+
+    books.push( formObject );
+
+    appendToPage( formObject );
+} );
