@@ -11,7 +11,7 @@ var hydrateBook = function hydrateBook( bookObject ){
     $( "#book" + bookObject.id + " img" ).attr( { "src": bookObject.pictureUrl } );
     $( "#book" + bookObject.id + " h2 > span.price" ).text( bookObject.price );
 
-    $( "#book" + bookObject.id + "p" )
+    $( "#book" + bookObject.id + " p" )
         .first()
         .text( bookObject.sellingPoints[0] );
 
