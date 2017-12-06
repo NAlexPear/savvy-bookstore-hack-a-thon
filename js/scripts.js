@@ -25,14 +25,15 @@ function appendToPage( productObject ){
         .append( "<h2>" + productObject.author + "</h2>" )
         .append( "<img src='" + imageSrc + "'/>" )
         .append( "<h2>$" + productObject.price + "</h2>" )
-        .append( $sellingPoints );
-
+        .append( $sellingPoints )
+        .append( "<button>" + "Delete" + "</button>" );
     $( "#content" ).append( $newContent );
 }
 
 
 $.ajax( "https://api.savvycoders.com/books" ).then(
     ( products ) => products.forEach(appendToPage)
+
   );
 
 $( "form" ).on( "submit", ( event ) => {
