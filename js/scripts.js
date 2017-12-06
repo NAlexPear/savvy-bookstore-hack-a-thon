@@ -4,7 +4,14 @@ var loadedProducts = [];
 
 $( ".category" ).on( "click", ( event ) => {
     event.preventDefault();
-    console.log( event.target.attributes.href );
+
+    $.ajax( "https://api.savvycoders.com" + event.target.attributes.href.value ).then(
+        ( products ) => {
+            for( var i = 0; i < products.length; i++ ){
+                appendToPage( products[i] );
+            }
+        }
+    );
 } );
 
 function appendToPage( productObject ){
