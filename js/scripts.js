@@ -1,14 +1,13 @@
 // Put all of your jQuery and JavaScript in this document.
 /* globals $ */
+
+var loadedProducts = [];
+
 $( ".category" ).on( "click", ( event ) => {
     event.preventDefault();
     $( "#content" ).empty();
     $.ajax( "https://api.savvycoders.com" + event.target.attributes.href.value ).then(
-        ( products ) => {
-            for( var i = 0; i < products.length; i++ ){
-                appendToPage( products[i] );
-            }
-        }
+        ( products ) => products.forEach(appendToPage)
     );
 } );
 
@@ -17,9 +16,9 @@ function appendToPage( productObject ){
     var $sellingPoints = $( "<div>" );
     var imageSrc = productObject.pictureUrl || productObject.picture;
 
-    for( var i = 0; i < productObject.sellingPoints.length; i++ ){
-        $sellingPoints.append( "<p>" + productObject.sellingPoints[i] + "</p>" );
-    }
+    productObject.sellingPoints.forEach(
+     (sellingPoint) => $sellingPoints.append( "<p>" + sellingPoint + "</p>" )
+    );
 
     $newContent
         .append( "<h1>" + productObject.name + "</h1>" )
@@ -33,20 +32,19 @@ function appendToPage( productObject ){
 
 
 $.ajax( "https://api.savvycoders.com/books" ).then(
-    ( products ) => {
-        for( var i = 0; i < products.length; i++ ){
-            appendToPage( products[i] );
-        }
-    }
-);
+    ( products ) => products.forEach(appendToPage)
+  );
 
 $( "form" ).on( "submit", ( event ) => {
     var data = $( event.target ).serializeArray();
     var formObject = {};
+    var postOptions = {
+        "method": "POST"
+    };
 
     event.preventDefault();
 
-    formObject.id = products.length + 1;
+    formObject.id = loadedProducts.length + 1;
     formObject.sellingPoints = [];
 
     data.forEach( ( field ) => {
@@ -58,7 +56,14 @@ $( "form" ).on( "submit", ( event ) => {
         }
     } );
 
-    products.push( formObject );
+    loadedProducts.push( formObject );
 
     appendToPage( formObject );
+    $.ajax( "https://api.savvycoders.com/books", postOptions )
+        .then(
+            () => console.log( "It works!" )
+        )
+        .catch(
+            () => console.log( "Error!" )
+        );
 } );
