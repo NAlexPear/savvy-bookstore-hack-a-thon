@@ -2,7 +2,16 @@
 /* globals $ */
 $( ".category" ).on( "click", ( event ) => {
     event.preventDefault();
-    console.log( "You clicked a link" );
+
+    console.dir( event.target.attributes.href.value );
+
+    $.ajax( "https://api.savvycoders.com" + event.target.attributes.href.value ).then(
+        ( products ) => {
+            for( var i = 0; i < products.length; i++ ){
+                appendToPage( products[i] );
+            }
+        }
+    );
 } );
 
 function appendToPage( productObject ){
