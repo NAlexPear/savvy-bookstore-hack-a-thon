@@ -6,18 +6,20 @@ function appendToPage( productObject ){
     var $sellingPoints = $( "<div>" );
     var imageSrc = productObject.pictureUrl || productObject.picture;
 
-    productObject.sellingPoints.forEach(
-        ( sellingPoint ) => $sellingPoints.append( "<p>" + sellingPoint + "</p>" )
-    );
+    if( productObject.sellingPoints ){
+        productObject.sellingPoints.forEach(
+            ( sellingPoint ) => $sellingPoints.append( "<p>" + sellingPoint + "</p>" )
+        );
 
-    $newContent
-        .append( "<h1>" + productObject.name + "</h1>" )
-        .append( "<h2>" + productObject.author + "</h2>" )
-        .append( "<img src='" + imageSrc + "'/>" )
-        .append( "<h2>$" + productObject.price + "</h2>" )
-        .append( $sellingPoints )
-        .append( "<button>" + "Delete" + "</button>" );
-    $( "#content" ).append( $newContent );
+        $newContent
+            .append( "<h1>" + productObject.name + "</h1>" )
+            .append( "<h2>" + productObject.author + "</h2>" )
+            .append( "<img src='" + imageSrc + "'/>" )
+            .append( "<h2>$" + productObject.price + "</h2>" )
+            .append( $sellingPoints )
+            .append( "<button>" + "Delete" + "</button>" );
+        $( "#content" ).append( $newContent );
+    }
 }
 
 
