@@ -17,11 +17,12 @@ html {
 
 #navigation a {
     text-decoration: none;
+    color: white;
 }
 
 #navigation > ul {
 
-  color: blue;
+  color: white;
   font-size: 20px;
   font-family: sans-serif;
   list-style: none;
@@ -33,15 +34,38 @@ html {
   margin: 5px;
   position: relative;
   text-decoration: none;
-
 }
 
+#navigation li:hover {
+  background-color: blue;
+}
+
+#navigation a:hover {
+  color: orange;
+}
+
+#content {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap
+}
+#content > div{
+  max-width: 200px;
+}
+#content > div img{
+  width: 100%;
+}
+#content > div > h1 {
+  font-family: 'Vollkorn SC', serif;
+  color: red;
+}
 
 #footer {
     text-decoration: none;
     text-align: center;
     background-color: orange;
-    color: blue;
+    color: white;
     font-size: 20px;
     font-family: sans-serif;
     border-style: solid;
@@ -83,7 +107,7 @@ html {
 }
 
 .formheader > div {
-    margin: 5px;  
+    margin: 5px;
 }
 
 .formheader > div > input {
@@ -93,4 +117,14 @@ html {
 
 .formheader > div > textarea {
     width: 100%;
+}
+
+#book1:hover {
+  background-color: cornflowerblue;
+}
+#book2:hover {
+  background-color: coral;
+}
+#book3:hover {
+  background-color: orange;
 }
