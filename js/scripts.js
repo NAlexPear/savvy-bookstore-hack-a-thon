@@ -39,7 +39,8 @@ $( "form" ).on( "submit", ( event ) => {
     var data = $( event.target ).serializeArray();
     var formObject = {};
     var postOptions = {
-        "method": "POST"
+        "method": "POST",
+        "data": formObject
     };
 
     event.preventDefault();
@@ -59,7 +60,7 @@ $( "form" ).on( "submit", ( event ) => {
 
     $.ajax( "https://api.savvycoders.com/books", postOptions )
         .then(
-            () => console.log( "It works!" )
+            console.log
         )
         .catch(
             () => console.log( "Error!" )
