@@ -5,7 +5,7 @@ var loadedProducts = [];
 
 $( ".category" ).on( "click", ( event ) => {
     event.preventDefault();
-
+    $( "#content" ).empty();
     $.ajax( "https://api.savvycoders.com" + event.target.attributes.href.value ).then(
         ( products ) => products.forEach(appendToPage)
     );
