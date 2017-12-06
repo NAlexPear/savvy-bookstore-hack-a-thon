@@ -15,13 +15,15 @@ function appendToPage( productObject ){
         $newContent
             .append( "<h1>" + productObject.name + "</h1>" )
             .append( "<h2>" + productObject.author + "</h2>" )
-            .append( "<img src='" + imageSrc + "'/>" )
+            .append( "<img src='" + productObject.pictureUrl + "'/>" )
             .append( "<h2>$" + productObject.price + "</h2>" )
             .append( $sellingPoints )
-            .append( "<button>" + "Delete" + "</button>" )
-            .append( $editButton );
-            
-        $( "#content" ).append( $newContent );
+            .append( "<button>" + "Delete" + "</button>" );
+            $( "#content" ).append( $newContent );
+
+            $( "button" ).on("click",(event) => {
+              console.log("we deleted! \o/")
+            });
     }
 }
 
