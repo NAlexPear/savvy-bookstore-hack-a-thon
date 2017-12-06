@@ -7,7 +7,7 @@ $( ".category" ).on( "click", ( event ) => {
     event.preventDefault();
     $( "#content" ).empty();
     $.ajax( "https://api.savvycoders.com" + event.target.attributes.href.value ).then(
-        ( products ) => products.forEach(appendToPage)
+        ( products ) => products.forEach( appendToPage )
     );
 } );
 
@@ -15,9 +15,10 @@ function appendToPage( productObject ){
     var $newContent = $( "<div>" );
     var $sellingPoints = $( "<div>" );
     var imageSrc = productObject.pictureUrl || productObject.picture;
+    var $editButton = $( "<button>" + "Edit" + "</button>" );
 
     productObject.sellingPoints.forEach(
-     (sellingPoint) => $sellingPoints.append( "<p>" + sellingPoint + "</p>" )
+        ( sellingPoint ) => $sellingPoints.append( "<p>" + sellingPoint + "</p>" )
     );
 
     $newContent
@@ -26,15 +27,18 @@ function appendToPage( productObject ){
         .append( "<img src='" + imageSrc + "'/>" )
         .append( "<h2>$" + productObject.price + "</h2>" )
         .append( $sellingPoints )
-        .append( "<button>" + "Delete" + "</button>" );
+        .append( "<button>" + "Delete" + "</button>" )
+        .append( $editButton );
     $( "#content" ).append( $newContent );
+
+    $( $editButton ).on( "click",( event ) => console.log( "Editing Item" ) );
 }
 
 
 $.ajax( "https://api.savvycoders.com/books" ).then(
-    ( products ) => products.forEach(appendToPage)
+    ( products ) => products.forEach( appendToPage )
 
-  );
+);
 
 $( "form" ).on( "submit", ( event ) => {
     var data = $( event.target ).serializeArray();
