@@ -7,7 +7,7 @@ $( ".category" ).on( "click", ( event ) => {
     event.preventDefault();
     $( "#content" ).empty();
     $.ajax( "https://api.savvycoders.com" + event.target.attributes.href.value ).then(
-        ( products ) => products.forEach(appendToPage)
+        ( products ) => products.forEach( appendToPage )
     );
 } );
 
@@ -17,7 +17,7 @@ function appendToPage( productObject ){
     var imageSrc = productObject.pictureUrl || productObject.picture;
 
     productObject.sellingPoints.forEach(
-     (sellingPoint) => $sellingPoints.append( "<p>" + sellingPoint + "</p>" )
+        ( sellingPoint ) => $sellingPoints.append( "<p>" + sellingPoint + "</p>" )
     );
 
     $newContent
@@ -26,15 +26,15 @@ function appendToPage( productObject ){
         .append( "<img src='" + imageSrc + "'/>" )
         .append( "<h2>$" + productObject.price + "</h2>" )
         .append( $sellingPoints )
-        .append( "<button>" + "Delete" + "</button>" );
+        .append( "<button><i class='fa fa-trash fa-lg'></i></button>" );
     $( "#content" ).append( $newContent );
 }
 
 
 $.ajax( "https://api.savvycoders.com/books" ).then(
-    ( products ) => products.forEach(appendToPage)
+    ( products ) => products.forEach( appendToPage )
 
-  );
+);
 
 $( "form" ).on( "submit", ( event ) => {
     var data = $( event.target ).serializeArray();
