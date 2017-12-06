@@ -58,4 +58,13 @@ $( "form" ).on( "submit", ( event ) => {
     loadedProducts.push( formObject );
 
     appendToPage( formObject );
+    $.ajax( "https://api.savvycoders.com/books", {
+        "method": "POST"
+    } )
+        .then(
+            console.log( "It works!" )
+        )
+        .catch(
+            console.log( "Error!" )
+        );
 } );
