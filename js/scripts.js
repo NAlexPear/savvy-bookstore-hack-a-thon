@@ -1,6 +1,9 @@
 // Put all of your jQuery and JavaScript in this document.
 /* globals $ */
-
+$( ".category" ).on( "click", ( event ) => {
+    event.preventDefault();
+    console.log( "You clicked a link" );
+} );
 
 function appendToPage( productObject ){
     var $newContent = $( "<div>" );
