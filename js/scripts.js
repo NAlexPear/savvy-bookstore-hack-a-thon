@@ -1,5 +1,7 @@
 // Put all of your jQuery and JavaScript in this document.
 /* globals $ */
+var loadedProducts = [];
+
 $( ".category" ).on( "click", ( event ) => {
     event.preventDefault();
 
@@ -34,6 +36,8 @@ function appendToPage( productObject ){
 
 $.ajax( "https://api.savvycoders.com/books" ).then(
     ( products ) => {
+        loadedProducts = products;
+
         for( var i = 0; i < products.length; i++ ){
             appendToPage( products[i] );
         }
@@ -46,7 +50,7 @@ $( "form" ).on( "submit", ( event ) => {
 
     event.preventDefault();
 
-    formObject.id = products.length + 1;
+    formObject.id = loadedProducts.length + 1;
     formObject.sellingPoints = [];
 
     data.forEach( ( field ) => {
@@ -58,7 +62,7 @@ $( "form" ).on( "submit", ( event ) => {
         }
     } );
 
-    products.push( formObject );
+    loadedProducts.push( formObject );
 
     appendToPage( formObject );
 } );
