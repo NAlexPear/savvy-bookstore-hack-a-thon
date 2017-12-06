@@ -1,81 +1,56 @@
 // Put all of your jQuery and JavaScript in this document.
 /* globals $ */
 
-var products = [
-    {
-        "id": 1,
-        "name": "The Desire Map",
-        "author": "Danielle LaPorte",
-        "pictureUrl": "https://images-na.ssl-images-amazon.com/images/I/41BhS87QXrL._SX258_BO1,204,203,200_.jpg",
-        "price": 6.32,
-        "sellingPoints": [
-            "Self Help",
-            "Inspiration",
-            "Coding"
-        ]
-    },
-    {
-        "id": 2,
-        "name": "Savvy Coding For Dummies",
-        "author": "Alex Pearson",
-        "pictureUrl": "https://images-na.ssl-images-amazon.com/images/I/51q-YHB62GL._SX258_BO1,204,203,200_.jpg",
-        "price": 1799.00,
-        "sellingPoints": [
-            "Tech Help",
-            "Web Design",
-            "Coding"
-        ]
-    },
-    {
-        "id": 3,
-        "name": "The Monster at the End of This Book",
-        "author": "Jon Stone",
-        "pictureUrl": "http://smollin.com/michael/tmonstr/mon001.jpg",
-        "price": 6.32,
-        "sellingPoints": [
-            "Timeless",
-            "Interactive",
-            "Coding"
-        ]
-    }
-];
-
 function appendToPage( productObject ){
     var $newContent = $( "<div>" );
     var $sellingPoints = $( "<div>" );
+    var imageSrc = productObject.pictureUrl || productObject.picture;
+    var $editButton = $( "<button>" + "Edit" + "</button>" );
 
-    productObject.sellingPoints.forEach(
-     (sellingPoint) => $sellingPoints.append( "<p>" + sellingPoint + "</p>" )
-    );
+    if( productObject.sellingPoints ){
+        productObject.sellingPoints.forEach(
+            ( sellingPoint ) => $sellingPoints.append( "<p>" + sellingPoint + "</p>" )
+        );
 
-    $newContent
-        .append( "<h1>" + productObject.name + "</h1>" )
-        .append( "<h2>" + productObject.author + "</h2>" )
-        .append( "<img src='" + productObject.pictureUrl + "'/>" )
-        .append( "<h2>$" + productObject.price + "</h2>" )
-        .append( $sellingPoints )
-        .append( "<button>" + "Delete" + "</button>" );
-        $( "#content" ).append( $newContent );
+        $newContent
+            .append( "<h1>" + productObject.name + "</h1>" )
+            .append( "<h2>" + productObject.author + "</h2>" )
+            .append( "<img src='" + productObject.pictureUrl + "'/>" )
+            .append( "<h2>$" + productObject.price + "</h2>" )
+            .append( $sellingPoints )
+            .append( "<button>" + "Delete" + "</button>" );
+            $( "#content" ).append( $newContent );
 
-        $( "button" ).on("click",(event) => {
-          console.log("we deleted! \o/")
-          });
-
+            $( "button" ).on("click",(event) => {
+              console.log("we deleted! \o/")
+            });
+    }
 }
 
+
 $.ajax( "https://api.savvycoders.com/books" ).then(
-    ( products ) => products.forEach(appendToPage)
+    ( products ) => products.forEach( appendToPage )
+);
 
-  );
+$( ".category" ).on( "click", ( event ) => {
+    event.preventDefault();
 
+    $( "#content" ).empty();
+
+    $.ajax( "https://api.savvycoders.com" + event.target.attributes.href.value ).then(
+        ( products ) => products.forEach( appendToPage )
+    );
+} );
 
 $( "form" ).on( "submit", ( event ) => {
     var data = $( event.target ).serializeArray();
     var formObject = {};
+    var postOptions = {
+        "method": "POST"
+    };
 
     event.preventDefault();
 
-    formObject.id = products.length + 1;
     formObject.sellingPoints = [];
 
     data.forEach( ( field ) => {
@@ -87,7 +62,15 @@ $( "form" ).on( "submit", ( event ) => {
         }
     } );
 
-    products.push( formObject );
-
     appendToPage( formObject );
+
+    postOptions.data = formObject;
+
+    $.ajax( "https://api.savvycoders.com/books", postOptions )
+        .then(
+            console.log
+        )
+        .catch(
+            () => console.log( "Error!" )
+        );
 } );
