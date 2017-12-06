@@ -55,7 +55,12 @@ function appendToPage( productObject ){
         .append( "<h2>$" + productObject.price + "</h2>" )
         .append( $sellingPoints )
         .append( "<button>" + "Delete" + "</button>" );
-    $( "#content" ).append( $newContent );
+        $( "#content" ).append( $newContent );
+
+        $( "button" ).on("click",(event) => {
+          console.log("we deleted! \o/")
+          });
+
 }
 
 $.ajax( "https://api.savvycoders.com/books" ).then(
