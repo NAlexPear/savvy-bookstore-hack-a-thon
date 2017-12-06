@@ -44,9 +44,9 @@ function appendToPage( productObject ){
     var $newContent = $( "<div>" );
     var $sellingPoints = $( "<div>" );
 
-    for( var i = 0; i < productObject.sellingPoints.length; i++ ){
-        $sellingPoints.append( "<p>" + productObject.sellingPoints[i] + "</p>" );
-    }
+    productObject.sellingPoints.forEach(
+     (sellingPoint) => $sellingPoints.append( "<p>" + sellingPoint + "</p>" )
+    );
 
     $newContent
         .append( "<h1>" + productObject.name + "</h1>" )
@@ -59,11 +59,9 @@ function appendToPage( productObject ){
 }
 
 $.ajax( "https://api.savvycoders.com/books" ).then(
-    ( products ) => {
-        for( var i = 0; i < products.length; i++ ){
-            appendToPage( products[i] );
-        }
-    } );
+    ( products ) => products.forEach(appendToPage)
+  );
+
 
 $( "form" ).on( "submit", ( event ) => {
     var data = $( event.target ).serializeArray();
