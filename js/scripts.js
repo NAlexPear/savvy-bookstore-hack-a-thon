@@ -22,9 +22,13 @@ function appendToPage( productObject ){
 }
 
 
-for( var i = 0; i < products.length; i++ ){
-    appendToPage( products[i] );
-}
+$.ajax( "https://api.savvycoders.com/books" ).then(
+    ( products ) => {
+        for( var i = 0; i < products.length; i++ ){
+            appendToPage( products[i] );
+        }
+    }
+);
 
 $( "form" ).on( "submit", ( event ) => {
     var data = $( event.target ).serializeArray();
