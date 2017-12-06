@@ -2,7 +2,7 @@
 /* globals $ */
 $( ".category" ).on( "click", ( event ) => {
     event.preventDefault();
-
+    $( "#content" ).empty();
     $.ajax( "https://api.savvycoders.com" + event.target.attributes.href.value ).then(
         ( products ) => {
             for( var i = 0; i < products.length; i++ ){
