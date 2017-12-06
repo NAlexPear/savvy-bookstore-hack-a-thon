@@ -5,7 +5,7 @@ function appendToPage( productObject ){
     var $newContent = $( "<div>" );
     var $sellingPoints = $( "<div>" );
     var imageSrc = productObject.pictureUrl || productObject.picture;
-    var $editButton = $( "<button>" + "Edit" + "</button>" );
+    var $editButton = $( "<button>" + "<i class='fa fa-pencil-square-o' aria-hidden='true'></i>" + "</button>" );
 
     productObject.sellingPoints.forEach(
         ( sellingPoint ) => $sellingPoints.append( "<p>" + sellingPoint + "</p>" )
