@@ -43,6 +43,7 @@ var products = [
 function appendToPage( productObject ){
     var $newContent = $( "<div>" );
     var $sellingPoints = $( "<div>" );
+    var imageSrc = productObject.pictureUrl || productObject.picture;
 
     for( var i = 0; i < productObject.sellingPoints.length; i++ ){
         $sellingPoints.append( "<p>" + productObject.sellingPoints[i] + "</p>" );
@@ -51,7 +52,7 @@ function appendToPage( productObject ){
     $newContent
         .append( "<h1>" + productObject.name + "</h1>" )
         .append( "<h2>" + productObject.author + "</h2>" )
-        .append( "<img src='" + productObject.pictureUrl + "'/>" )
+        .append( "<img src='" + imageSrc + "'/>" )
         .append( "<h2>$" + productObject.price + "</h2>" )
         .append( $sellingPoints );
 
