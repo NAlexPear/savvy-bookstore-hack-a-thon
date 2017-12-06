@@ -62,9 +62,9 @@ $( "form" ).on( "submit", ( event ) => {
         "method": "POST"
     } )
         .then(
-            console.log( "It works!" )
+            () => console.log( "It works!" )
         )
         .catch(
-            console.log( "Error!" )
+            () => console.log( "Error!" )
         );
 } );
