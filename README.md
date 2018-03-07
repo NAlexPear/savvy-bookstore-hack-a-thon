@@ -5,6 +5,7 @@
 
 ### Contributors
 + Alex Pearson
++ Jasmine White
 + Bala Peralli
 + Michael Kelly
 + Martha Bearskin
