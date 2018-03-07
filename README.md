@@ -5,6 +5,7 @@
 
 ### Contributors
 + Alex Pearson
++ Dustin Brown
 + Matthew Ricehouse
 + Malcolm Johnson
 + Jeffrey Williams
