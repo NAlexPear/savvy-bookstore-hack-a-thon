@@ -5,3 +5,31 @@ html {
 }
 
 /*put all other styles below this line, please*/
+
+body {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  grid-template-rows: 50px minmax(0, 100%) 1fr 50px;
+  grid-template-areas:
+    "nav"
+    "header"
+    "content"
+    "footer";   
+}
+
+#navigation {
+  grid-area: nav;
+}
+
+#header {
+  grid-area: header;
+}
+
+#content {
+  grid-area: content;
+}
+
+#footer {
+  grid-area: footer;
+}
