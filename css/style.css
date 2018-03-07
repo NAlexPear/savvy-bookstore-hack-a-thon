@@ -5,3 +5,33 @@ html {
 }
 
 /*put all other styles below this line, please*/
+
+ul {
+  list-style: none;
+}
+
+#navigation {
+  overflow: hidden;
+  background-color: #333;
+}
+
+#navigation ul li a {
+  font-family: Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  float: left;
+  color: #fff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  letter-spacing: 1px;
+}
+
+#navigation a:hover {
+  background-color: #444;
+}
+
+#navigation a.active {
+  color: #d83108;
+}
