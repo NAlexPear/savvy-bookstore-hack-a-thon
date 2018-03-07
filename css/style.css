@@ -71,10 +71,11 @@ body {
   display: flex;
   justify-content: space-around;
   padding: 30px;
-  font-size: 16px;
+  font-size: 18px;
   font-family: helvetica, arial, sans-serif;
   color: #fff;
   letter-spacing: 1px;
+  font-weight: bold;
 }
 
 #footer {
@@ -87,6 +88,5 @@ body {
 }
 
 #footer li:hover {
-  background-color: blue;
-  color: black;
+  color: #d83108;
 }
