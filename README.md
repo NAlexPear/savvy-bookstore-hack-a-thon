@@ -5,6 +5,7 @@
 
 ### Contributors
 + Alex Pearson
++ Bala Peralli
 + Michael Kelly
 + Martha Bearskin
 + Kevin Heinz
