@@ -6,13 +6,13 @@ html {
 
 /*put all other styles below this line, please*/
 
-ul {
-  list-style: none;
-}
-
 #navigation {
   overflow: hidden;
   background-color: #333;
+}
+
+#navigation ul {
+  list-style: none;
 }
 
 #navigation ul li a {
