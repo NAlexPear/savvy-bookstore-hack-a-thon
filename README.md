@@ -6,3 +6,4 @@
 ### Contributors
 + Alex Pearson
 + Tony Bush
++ Stefan West
