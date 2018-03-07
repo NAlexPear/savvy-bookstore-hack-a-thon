@@ -5,6 +5,7 @@
 
 ### Contributors
 + Alex Pearson
++ Michael Kelly
 + Martha Bearskin
 + Kevin Heinz
 + Marquis Patton
