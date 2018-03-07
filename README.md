@@ -5,6 +5,7 @@
 
 ### Contributors
 + Alex Pearson
++ Kevin Heinz
 + Marquis Patton
 + Kiara Lewis
 + Dustin Brown
