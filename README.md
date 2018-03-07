@@ -5,6 +5,7 @@
 
 ### Contributors
 + Alex Pearson
++ Kiara Lewis
 + Dustin Brown
 + Matthew Ricehouse
 + Malcolm Johnson
