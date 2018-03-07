@@ -4,6 +4,15 @@ html {
   box-sizing: border-box;
 }
 
+
+#content{
+  display: flex;
+  padding: 0 20px 0 20px;
+
+}
+
+
+
 /*put all other styles below this line, please*/
 
 body {
