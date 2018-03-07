@@ -4,9 +4,6 @@ html {
   box-sizing: border-box;
 }
 
-.container > .book{
-  border: 10px solid;
-}
 
 #content{
   display: flex;
