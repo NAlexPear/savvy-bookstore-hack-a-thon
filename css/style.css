@@ -19,6 +19,8 @@ body {
 }
 
 #navigation {
+  width: 100vw;
+  position: fixed;
   overflow: hidden;
   background-color: #333;
 }
@@ -47,4 +49,3 @@ body {
 #navigation a.active {
   color: #d83108;
 }
-
