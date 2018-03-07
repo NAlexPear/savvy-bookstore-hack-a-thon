@@ -3,5 +3,20 @@
 html {
   box-sizing: border-box;
 }
+#header{
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVn7RR1pkTE4ihoNtZUkPlMLP2Tk2dLNvV2HrtQkiKbpWOXOGF");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+#header h1{
+  display: flex;
+  justify-content: center;
+  font-family: 'Alfa Slab One', cursive;
+  color: #d83108;
+
+
+}
+
 
 /*put all other styles below this line, please*/
