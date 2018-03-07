@@ -4,4 +4,27 @@ html {
   box-sizing: border-box;
 }
 
+
 /*put all other styles below this line, please*/
+
+#footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+  font-size: 16px;
+  font-family: helvetica, arial, sans-serif;
+  color: #fff;
+  letter-spacing: 1px;
+  }
+#footer {
+  background-color: #333;
+}
+#footer li.active {
+  background-color: #4CAF50;
+  color: white;
+}
+#footer li:hover {
+  background-color: blue;
+  color: black;
+}
