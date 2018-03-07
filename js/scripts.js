@@ -1,8 +1,8 @@
 // Put all of your jQuery and JavaScript in this document.
 var book1 = {
     "id": 1,
-    "title": "butt cakes",
-    "author": "Garfield",
+    "title": "50 Shades of Grey",
+    "author": "E. L. James",
     "bookImage": "https://d188rgcu4zozwl.cloudfront.net/content/B007J4T2G8/resources/469708731",
     "price": 17.69,
     "sellingPoints": [
@@ -37,28 +37,18 @@ var book3 = {
     ]
 }
 
-$("#book1 > .book-info > .title", ).text(book1.title);
-$("#book2 > .book-info > .title", ).text(book2.title);
-$("#book3 > .book-info > .title", ).text(book3.title);
+// @TODO: replace lines 41 and 42 with the function created from lines 45 on
+$("#book2 img").attr("src", book2.bookImage)
+$("#book3 img").attr("src", book3.bookImage)
 
-$("#book1 > .book-info > .author", ).text(book1.author);
-$("#book2 > .book-info > .author", ).text(book2.author);
-$("#book3 > .book-info > .author", ).text(book3.author);
+// @TODO: convert all of this logic into a separate function
+var $image = $("<img>").attr("src", book1.bookImage)
+var $title = $("<h1>").text(book1.title)
+var $author = $("<h2>").text(book1.author)
+var $price = $("<h2>").text("$" + book1.price)
+var $sellingPoints = $("<p>").text(book1.sellingPoints)
+var $description = $("<div>").append($sellingPoints)
+var $info = $("<div>").append($title, $author, $price)
+var $book1 = $("<div>").append($image, $info, $sellingPoints)
 
-$("#book1 > .book-info > .price", ).text(book3.price);
-$("#book2 > .book-info > .price", ).text(book3.price);
-$("#book3 > .book-info > .price", ).text(book3.price);
-
-$("#book1 > .book-discription > .sellingPoints", ).text(book1.sellingPoints);
-$("#book2 > .book-discription > .sellingPoints", ).text(book2.sellingPoints);
-$("#book3 > .book-discription > .sellingPoints", ).text(book3.sellingPoints);
-
-$("#book1 > .book-img > img", ).attr({
-  "src": book1.bookImage
-});
-$("#book2 > .book-img > img", ).attr({
-  "src": book2.bookImage
-});
-$("#book3 > .book-img > img", ).attr({
-  "src": book3.bookImage
-});
+$("#content").prepend($book1)
