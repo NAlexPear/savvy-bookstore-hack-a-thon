@@ -40,44 +40,44 @@ var books = [
     }
 ];
 
-var albums [
-  {
-    "id": 1,
-    "title": "Illmatic",
-    "author": "Nas",
-    "albumImage": "https://audioxide.com/wp-content/uploads/2016/06/Illmatic-500x500.jpg",
-    "price": "9.99",
-    "sellingPoints": [
-        "Lasagna is delicious.",
-        "The essential guide to Italian casseroles of all types.",
-        "Real G's move silent, like Lasagna. -Lil Wayne"
-      ]
-  },
-  {
-    "id": 1,
-    "title": "N**ga Please",
-    "author": "Ol' Dirty Bastard",
-    "albumImage": "https://vignette.wikia.nocookie.net/lyricwiki/images/e/e6/Ol%27_Dirty_Bastard_-_Nigga_Please.jpg/revision/latest?cb=20130122095709",
-    "price": "9.99",
-    "sellingPoints": [
-        "Lasagna is delicious.",
-        "The essential guide to Italian casseroles of all types.",
-        "Real G's move silent, like Lasagna. -Lil Wayne"
-      ]
-  },
-  {
-    "id": 1,
-    "title": "Girl You Know It's True",
-    "author": "Milli Vanilli",
-    "albumImage": "https://direct.rhapsody.com/imageserver/images/Alb.117181854/500x500.jpg",
-    "price": "9.99",
-    "sellingPoints": [
-        "Lasagna is delicious.",
-        "The essential guide to Italian casseroles of all types.",
-        "Real G's move silent, like Lasagna. -Lil Wayne"
-      ]
-  }
-]
+var albums = [
+    {
+        "id": 1,
+        "title": "Illmatic",
+        "author": "Nas",
+        "albumImage": "https://audioxide.com/wp-content/uploads/2016/06/Illmatic-500x500.jpg",
+        "price": "9.99",
+        "sellingPoints": [
+            "Lasagna is delicious.",
+            "The essential guide to Italian casseroles of all types.",
+            "Real G's move silent, like Lasagna. -Lil Wayne"
+        ]
+    },
+    {
+        "id": 1,
+        "title": "N**ga Please",
+        "author": "Ol' Dirty Bastard",
+        "albumImage": "https://vignette.wikia.nocookie.net/lyricwiki/images/e/e6/Ol%27_Dirty_Bastard_-_Nigga_Please.jpg/revision/latest?cb=20130122095709",
+        "price": "9.99",
+        "sellingPoints": [
+            "Lasagna is delicious.",
+            "The essential guide to Italian casseroles of all types.",
+            "Real G's move silent, like Lasagna. -Lil Wayne"
+        ]
+    },
+    {
+        "id": 1,
+        "title": "Girl You Know It's True",
+        "author": "Milli Vanilli",
+        "albumImage": "https://direct.rhapsody.com/imageserver/images/Alb.117181854/500x500.jpg",
+        "price": "9.99",
+        "sellingPoints": [
+            "Lasagna is delicious.",
+            "The essential guide to Italian casseroles of all types.",
+            "Real G's move silent, like Lasagna. -Lil Wayne"
+        ]
+    }
+];
 
 
 function appendToPage( book ){
