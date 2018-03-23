@@ -54,11 +54,7 @@ function appendToPage( book ){
     $( "#content" ).prepend( $book );
 }
 
-appendToPage( books[2] );
-appendToPage( books[1] );
-appendToPage( books[0] );
 
-// @TODO: replace lines 41 and 42 with the function created from lines 45 on
 $( "#book2 img" ).attr( "src", books[1].bookImage );
 $( "#book3 img" ).attr( "src", books[2].bookImage );
 
