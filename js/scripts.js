@@ -41,22 +41,22 @@ var books = [
 ];
 
 
-function appendToPage(book){
-  var $image = $("<img>").attr("src", book.bookImage)
-  var $title = $("<h1>").text(book.title)
-  var $author = $("<h2>").text(book.author)
-  var $price = $("<h2>").text("$" + book.price)
-  var $sellingPoints = $("<p>").text(book.sellingPoints)
-  var $description = $("<div>").append($sellingPoints)
-  var $info = $("<div>").append($title, $author, $price)
-  var $book = $("<div>").append($image, $info, $sellingPoints)
+function appendToPage( book ){
+    var $image = $( "<img>" ).attr( "src", book.bookImage );
+    var $title = $( "<h1>" ).text( book.title );
+    var $author = $( "<h2>" ).text( book.author );
+    var $price = $( "<h2>" ).text( "$" + book.price );
+    var $sellingPoints = $( "<p>" ).text( book.sellingPoints );
+    var $description = $( "<div>" ).append( $sellingPoints );
+    var $info = $( "<div>" ).append( $title, $author, $price );
+    var $book = $( "<div>" ).append( $image, $info, $description );
 
-  $("#content").prepend($book)
-};
+    $( "#content" ).prepend( $book );
+}
 
-appendToPage(book3);
-appendToPage(book2);
-appendToPage(book1);
+appendToPage( books[2] );
+appendToPage( books[1] );
+appendToPage( books[0] );
 
 // @TODO: replace lines 41 and 42 with the function created from lines 45 on
 $( "#book2 img" ).attr( "src", books[1].bookImage );
