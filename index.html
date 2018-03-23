@@ -42,13 +42,17 @@
       <div id="form">
         <h2>Add Product</h2>
         <form>
-
+          <div class="radio-container">
+            Product Type
+            <input type="radio" name="type" value="books" checked>Book
+            <input type="radio" name="type" value="albums">Music
+          </div>
           <input id="title" type="text" placeholder="Title" name="title" >
           <input id="author" type="text" placeholder="Author" name="author">
           <input id="image" type="text" placeholder="Image URL" name="image">
-
           <input id="price" type="text" placeholder="Price" name="price" >
           <input id="sellingPoints" type="text" placeholder="Selling Points" name="sellingPoints">
+
           <input type="submit">
         </form>
       </div>
