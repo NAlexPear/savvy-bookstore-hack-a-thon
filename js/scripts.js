@@ -55,4 +55,4 @@ var $description = $("<div>").append($sellingPoints)
 var $info = $("<div>").append($title, $author, $price)
 var $book1 = $("<div>").append($image, $info, $sellingPoints)
 
-$("#content").prepend(books)
+$("#content").prepend($book1)
