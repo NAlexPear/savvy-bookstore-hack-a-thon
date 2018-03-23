@@ -80,9 +80,6 @@ var products = {
     ]
 };
 
-$( "#books" ).click( () => console.log( "logsum" ) );
-
-
 function appendToPage( item ){
     var $image = $( "<img>" ).attr( "src", item.image );
     var $title = $( "<h1>" ).text( item.title );
@@ -98,6 +95,9 @@ function appendToPage( item ){
 
 products.books.forEach( appendToPage );
 products.albums.forEach( appendToPage );
+
+$( "#books" ).click( () => console.log( products.books ) );
+$( "#music" ).click( () => console.log( products.albums ) );
 
 $( "form" ).on( "submit", ( event ) => {
     var data = $( event.target ).serializeArray();
@@ -119,6 +119,6 @@ $( "form" ).on( "submit", ( event ) => {
     formObject.id = products[formObject.type].length + 1;
 
     products[formObject.type].push( formObject );
-    
+
     appendToPage( formObject );
 } );
