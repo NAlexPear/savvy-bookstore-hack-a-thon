@@ -6,6 +6,7 @@
     <!-- CDN reset -->
     <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.min.css">
 
     <!-- linked stylesheet below -->
     <link rel="stylesheet" href="css/style.css">
@@ -31,7 +32,6 @@
         <h1>Welcome to Savvy Bookstore</h1>
       </div>
       <div id="content">
-        <!-- what goes here?!?! -->
         <div id="book2">
           <div class="book-img" >
             <img src="" alt="Fifty Shades Darker book cover">
@@ -58,7 +58,22 @@
             <p class="sellingPoints">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit cumque facere impedit aut nostrum odit amet atque corrupti a consectetur deleniti asperiores voluptatem ea, totam et quo, ex natus aspernatur.</p>
           </div>
         </div>
+
       </div>
+      <div id="form">
+        <h2>Add Product</h2>
+        <form>
+
+          <input id="title" type="text" placeholder="Title" name="title" >
+          <input id="author" type="text" placeholder="Author" name="author">
+          <input id="image" type="text" placeholder="Image URL" name="image">
+
+          <input id="price" type="text" placeholder="Price" name="price" >
+          <input id="sellingPoints" type="text" placeholder="Selling Points" name="sellingPoints">
+          <input type="submit">
+        </form>
+      </div>
+
       <div id="footer">
         <ul>
           <li>Site Map</li>
@@ -67,7 +82,6 @@
           <li>Subscribe</li>
         </ul>
       </div>
-
         <!-- all HTML content goes above this line -->
         <!-- connected libraries -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

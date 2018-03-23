@@ -53,7 +53,6 @@ var $description = $( "<div>" ).append( $sellingPoints );
 var $info = $( "<div>" ).append( $title, $author, $price );
 var $book1 = $( "<div>" ).append( $image, $info, $description );
 
-
 // @TODO: replace lines 41 and 42 with the function created from lines 45 on
 $( "#book2 img" ).attr( "src", books[1].bookImage );
 $( "#book3 img" ).attr( "src", books[2].bookImage );
