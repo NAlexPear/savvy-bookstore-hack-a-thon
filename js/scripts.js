@@ -58,3 +58,12 @@ $( "#book2 img" ).attr( "src", books[1].bookImage );
 $( "#book3 img" ).attr( "src", books[2].bookImage );
 
 $( "#content" ).prepend( $book1 );
+
+
+$( "form" ).on( "submit", ( event ) => {
+    var data = $( event.target ).serializeArray();
+    var formObject = {};
+
+    event.preventDefault();
+    console.log( data );
+} );
