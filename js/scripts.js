@@ -55,9 +55,9 @@ var albums = [
     },
     {
         "id": 1,
-        "title": "N**ga Please",
-        "author": "Ol' Dirty Bastard",
-        "albumImage": "https://vignette.wikia.nocookie.net/lyricwiki/images/e/e6/Ol%27_Dirty_Bastard_-_Nigga_Please.jpg/revision/latest?cb=20130122095709",
+        "title": "All Eyez On Me",
+        "author": "2Pac",
+        "albumImage": "http://3.bp.blogspot.com/_5A6fSMDiXaI/TRGA65YolHI/AAAAAAAAAmo/NknnnYHa0II/s1600/2Pac_-_All_Eyez_on_Me_single_version.jpg",
         "price": "9.99",
         "sellingPoints": [
             "Lasagna is delicious.",
