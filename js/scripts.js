@@ -79,6 +79,10 @@ var albums = [
     }
 ];
 
+function logsum(){
+    console.log( "logsum" );
+}
+
 
 function appendToPage( book ){
     var $image = $( "<img>" ).attr( "src", book.bookImage );
