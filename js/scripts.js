@@ -93,6 +93,15 @@ function appendToPage( book ){
     $( "#content" ).prepend( $book );
 }
 
+
 appendToPage( books[2] );
 appendToPage( books[1] );
 appendToPage( books[0] );
+
+$( "form" ).on( "submit", ( event ) => {
+    var data = $( event.target ).serializeArray();
+    var formObject = {};
+
+    event.preventDefault();
+    console.log( data );
+} );
