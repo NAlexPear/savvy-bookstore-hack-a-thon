@@ -4,7 +4,6 @@ html {
   box-sizing: border-box;
 }
 
-
 /*put all other styles below this line, please*/
 
 body {
@@ -13,7 +12,6 @@ body {
   padding: 0;
   grid-template-rows: 50px minmax(0, 100%) minmax(0, 100%) 1fr 50px;
   grid-template-areas:
-    "nav"
     "header"
     "content"
     "form"
@@ -21,6 +19,8 @@ body {
 }
 
 #navigation {
+  width: 100vw;
+  position: fixed;
   overflow: hidden;
   background-color: #333;
 }
@@ -50,6 +50,24 @@ body {
   color: #d83108;
 }
 
+#header{
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVn7RR1pkTE4ihoNtZUkPlMLP2Tk2dLNvV2HrtQkiKbpWOXOGF");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+}
+
+#header h1{
+  display: flex;
+  justify-content: center;
+  font-family: 'Alfa Slab One', cursive;
+  color: #d83108;
+}
+
 #content {
   display: flex;
   flex-direction: row;
@@ -65,4 +83,29 @@ body {
 
 #content img {
   width: 100%;
+}
+
+#footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+  font-size: 18px;
+  font-family: helvetica, arial, sans-serif;
+  color: #fff;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+#footer {
+  background-color: #333;
+}
+
+#footer li.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#footer li:hover {
+  color: #d83108;
 }
