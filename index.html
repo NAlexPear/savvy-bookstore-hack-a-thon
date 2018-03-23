@@ -5,6 +5,7 @@
     <title>Web Store Hackathon! October 2017</title>
     <!-- CDN reset -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.min.css">
 
     <!-- linked stylesheet below -->
     <link rel="stylesheet" href="css/style.css">
@@ -34,7 +35,7 @@
           <div class="book-img" >
             <img src="" alt="Fifty Shades of Grey book cover">
           </div>
-        t  <div class="book-info">
+          <div class="book-info">
             <h1 class="title">Fifty Shades of Grey</h1>
             <h2 class="author">E. L. James</h2>
             <h2 class="price">$17.69</h2>
@@ -69,7 +70,22 @@
             <p class="sellingPoints">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit cumque facere impedit aut nostrum odit amet atque corrupti a consectetur deleniti asperiores voluptatem ea, totam et quo, ex natus aspernatur.</p>
           </div>
         </div>
+
       </div>
+      <div id="form">
+        <h2>Add Product</h2>
+        <form class="" action="index.html" method="post">
+
+          <input id="title" type="text" placeholder="Title" >
+          <input id="author" type="text" placeholder="Author" >
+          <input id="image" type="text" placeholder="Image URL" >
+
+          <input id="price" type="text" placeholder="Price" >
+          <input id="sellingPoints" type="text" placeholder="Selling Points" >
+          <input type="submit">
+        </form>
+      </div>
+
       <div id="footer">
         <ul>
           <li>Site Map</li>
@@ -78,7 +94,6 @@
           <li>Subscribe!</li>
         </ul>
       </div>
-
         <!-- all HTML content goes above this line -->
         <!-- connected libraries -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

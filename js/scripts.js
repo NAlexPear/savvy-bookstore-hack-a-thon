@@ -45,8 +45,8 @@ $("#book1 > .book-info > .author", ).text(book1.author);
 $("#book2 > .book-info > .author", ).text(book2.author);
 $("#book3 > .book-info > .author", ).text(book3.author);
 
-$("#book1 > .book-info > .price", ).text(book3.price);
-$("#book2 > .book-info > .price", ).text(book3.price);
+$("#book1 > .book-info > .price", ).text(book1.price);
+$("#book2 > .book-info > .price", ).text(book2.price);
 $("#book3 > .book-info > .price", ).text(book3.price);
 
 $("#book1 > .book-discription > .sellingPoints", ).text(book1.sellingPoints);

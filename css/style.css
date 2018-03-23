@@ -11,14 +11,17 @@ body {
   display: grid;
   margin: 0;
   padding: 0;
-  grid-template-rows: 50px minmax(0, 100%) 1fr 50px;
+  grid-template-rows: 50px minmax(0, 100%) minmax(0, 100%) 1fr 50px;
   grid-template-areas:
     "nav"
     "header"
     "content"
+    "form"
     "footer";
 }
+#form {
 
+}
 #navigation {
   overflow: hidden;
   background-color: #333;
