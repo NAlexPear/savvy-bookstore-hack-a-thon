@@ -14,7 +14,6 @@ var books = [
             "Real G's move silent, like Lasagna. -Lil Wayne"
         ]
     },
-
     {
         "id": 2,
         "title": "50 Shade of Gray",
@@ -27,7 +26,6 @@ var books = [
             "Real G's move silent, like Lasagna. -Lil Wayne"
         ]
     },
-
     {
         "id": 3,
         "title": "50 Shade of Gray",
@@ -43,18 +41,23 @@ var books = [
 ];
 
 
-// @TODO: convert all of this logic into a separate function
-var $image = $( "<img>" ).attr( "src", books[0].bookImage );
-var $title = $( "<h1>" ).text( books[0].title );
-var $author = $( "<h2>" ).text( books[0].author );
-var $price = $( "<h2>" ).text( books[0].price );
-var $sellingPoints = $( "<p>" ).text( books[0].sellingPoints );
-var $description = $( "<div>" ).append( $sellingPoints );
-var $info = $( "<div>" ).append( $title, $author, $price );
-var $book1 = $( "<div>" ).append( $image, $info, $description );
+function appendToPage(book){
+  var $image = $("<img>").attr("src", book.bookImage)
+  var $title = $("<h1>").text(book.title)
+  var $author = $("<h2>").text(book.author)
+  var $price = $("<h2>").text("$" + book.price)
+  var $sellingPoints = $("<p>").text(book.sellingPoints)
+  var $description = $("<div>").append($sellingPoints)
+  var $info = $("<div>").append($title, $author, $price)
+  var $book = $("<div>").append($image, $info, $sellingPoints)
+
+  $("#content").prepend($book)
+};
+
+appendToPage(book3);
+appendToPage(book2);
+appendToPage(book1);
 
 // @TODO: replace lines 41 and 42 with the function created from lines 45 on
 $( "#book2 img" ).attr( "src", books[1].bookImage );
 $( "#book3 img" ).attr( "src", books[2].bookImage );
-
-$( "#content" ).prepend( $book1 );
