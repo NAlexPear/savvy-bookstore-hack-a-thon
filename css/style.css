@@ -18,6 +18,10 @@ body {
     "footer";
 }
 
+.radio-container > input {
+  margin: 1rem;
+}
+
 #navigation {
   width: 100vw;
   position: fixed;
@@ -108,4 +112,8 @@ body {
 
 #footer li:hover {
   color: #d83108;
+}
+
+#form {
+  padding: 2rem;
 }
