@@ -102,5 +102,19 @@ $( "form" ).on( "submit", ( event ) => {
     var formObject = {};
 
     event.preventDefault();
-    console.log( data );
+
+    formObject.id = books.length + 1;
+    formObject.sellingPoints = [];
+
+    data.forEach( ( field ) => {
+        if( field.name === "sellingPoints" ){
+            formObject.sellingPoints.push( field.value );
+        }
+        else{
+            formObject[ field.name ] = field.value;
+        }
+    } );
+
+    books.push( formObject );
+    appendToPage( formObject );
 } );
