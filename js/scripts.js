@@ -93,7 +93,9 @@ function appendToPage( book ){
     $( "#content" ).prepend( $book );
 }
 
+
 books.forEach( appendToPage );
+albums.forEach( appendToPage );
 
 $( "form" ).on( "submit", ( event ) => {
     var data = $( event.target ).serializeArray();
