@@ -35,20 +35,26 @@ var book3 = {
         "The essential guide to Italian casseroles of all types.",
         "Real G's move silent, like Lasagna. -Lil Wayne"
     ]
-}
+};
 
-// @TODO: replace lines 41 and 42 with the function created from lines 45 on
-$("#book2 img").attr("src", book2.bookImage)
+
 $("#book3 img").attr("src", book3.bookImage)
+$("#book2 img").attr("src", book2.bookImage)
+$("#book1 img").attr("src", book1.bookImage)
 
-// @TODO: convert all of this logic into a separate function
-var $image = $("<img>").attr("src", book1.bookImage)
-var $title = $("<h1>").text(book1.title)
-var $author = $("<h2>").text(book1.author)
-var $price = $("<h2>").text("$" + book1.price)
-var $sellingPoints = $("<p>").text(book1.sellingPoints)
-var $description = $("<div>").append($sellingPoints)
-var $info = $("<div>").append($title, $author, $price)
-var $book1 = $("<div>").append($image, $info, $sellingPoints)
+function  appendToPage(book){
+  var $image = $("<img>").attr("src", book.bookImage)
+  var $title = $("<h1>").text(book.title)
+  var $author = $("<h2>").text(book.author)
+  var $price = $("<h2>").text("$" + book.price)
+  var $sellingPoints = $("<p>").text(book.sellingPoints)
+  var $description = $("<div>").append($sellingPoints)
+  var $info = $("<div>").append($title, $author, $price)
+  var $book = $("<div>").append($image, $info, $sellingPoints)
 
-$("#content").prepend($book1)
+  $("#content").prepend($book)
+};
+
+appendToPage(book3);
+appendToPage(book2);
+appendToPage(book1);
