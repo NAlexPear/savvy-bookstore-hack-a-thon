@@ -79,9 +79,9 @@ var albums = [
     }
 ];
 
-function logsum(){
+$( "#books" ).click( function(){
     console.log( "logsum" );
-}
+} );
 
 
 function appendToPage( book ){
