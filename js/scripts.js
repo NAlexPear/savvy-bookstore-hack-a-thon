@@ -120,3 +120,6 @@ $( "form" ).on( "submit", ( event ) => {
 
     appendToPage( formObject );
 } );
+
+// what's going on here?
+$.ajax( "//api.savvycoders.com/books" ).then( ( books ) => console.log( "this is coming from an an external database/API ->", books ) );
