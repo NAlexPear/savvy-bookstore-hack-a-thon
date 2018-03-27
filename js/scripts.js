@@ -97,17 +97,18 @@ function appendToPage( item ){
 $( "#books" ).click( ( event ) => {
     event.preventDefault();
     $( "#content" ).html( "" );
-
-    products.books.forEach( appendToPage );
+  
+    products.books.forEach(appendToPage);
 } );
 
-$( "#music" ).click( ( event ) => {
+$( "#home" ).click( ( event ) => {
     event.preventDefault();
     $( "#content" ).html( "" );
 
+    products.books.forEach( appendToPage );
     products.albums.forEach( appendToPage );
-}
-);
+} );
+
 
 $( "form" ).on( "submit", ( event ) => {
     var data = $( event.target ).serializeArray();
