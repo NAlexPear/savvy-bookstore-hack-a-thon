@@ -99,10 +99,10 @@ $( "#books" ).click( ( event ) => {
     products.books.forEach( appendToPage );
 } );
 
-$( "#music" ).click( () => console.log( products.albums ) );
+$( "#music" ).click( () => {
     event.preventDefault();
     $( "#content" ).html( "" );
-  
+
     products.books.forEach( appendToPage );
 } );
 
