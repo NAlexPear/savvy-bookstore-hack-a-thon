@@ -96,8 +96,14 @@ function appendToPage( item ){
 products.books.forEach( appendToPage );
 products.albums.forEach( appendToPage );
 
-$( "#books" ).click( () => console.log( products.books ) );
-$( "#music" ).click( () => console.log( products.albums ) );
+$( "#home" ).click( ( event ) => {
+    event.preventDefault();
+    $( "#content" ).html( "" );
+
+    products.books.forEach( appendToPage );
+    products.albums.forEach( appendToPage );
+} );
+
 
 $( "form" ).on( "submit", ( event ) => {
     var data = $( event.target ).serializeArray();
