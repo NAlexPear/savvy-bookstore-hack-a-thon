@@ -2,80 +2,8 @@
 
 // Put all of your jQuery and JavaScript in this document.
 var products = {
-    "books": [ {
-        "creator": "E. L. James",
-        "image": "https://d188rgcu4zozwl.cloudfront.net/content/B007J4T2G8/resources/469708731",
-        "price": 17.69,
-        "sellingPoints": [
-            "Lasagna is delicious.",
-            "The essential guide to Italian casseroles of all types.",
-            "Real G's move silent, like Lasagna. -Lil Wayne"
-        ],
-        "title": "50 Shades of Grey",
-        "type": "book"
-    },
-    {
-        "creator": "Garfield",
-        "image": "https://images-na.ssl-images-amazon.com/images/I/51YUYsBp2CL._SX322_BO1,204,203,200_.jpg",
-        "price": 17.69,
-        "sellingPoints": [
-            "Lasagna is delicious.",
-            "The essential guide to Italian casseroles of all types.",
-            "Real G's move silent, like Lasagna. -Lil Wayne"
-        ],
-        "title": "50 Shade of Gray",
-        "type": "book"
-    },
-    {
-        "creator": "Garfield",
-        "image": "https://images-na.ssl-images-amazon.com/images/I/51HhuPD7WhL._SX322_BO1,204,203,200_.jpg",
-        "price": 17.69,
-        "sellingPoints": [
-            "Lasagna is delicious.",
-            "The essential guide to Italian casseroles of all types.",
-            "Real G's move silent, like Lasagna. -Lil Wayne"
-        ],
-        "title": "50 Shade of Gray",
-        "type": "book"
-    }
-    ],
-    "albums": [ {
-        "creator": "Nas",
-        "image": "https://audioxide.com/wp-content/uploads/2016/06/Illmatic-500x500.jpg",
-        "price": 9.99,
-        "sellingPoints": [
-            "Lasagna is delicious.",
-            "The essential guide to Italian casseroles of all types.",
-            "Real G's move silent, like Lasagna. -Lil Wayne"
-        ],
-        "title": "Illmatic",
-        "type": "album"
-    },
-    {
-        "creator": "2Pac",
-        "image": "http://3.bp.blogspot.com/_5A6fSMDiXaI/TRGA65YolHI/AAAAAAAAAmo/NknnnYHa0II/s1600/2Pac_-_All_Eyez_on_Me_single_version.jpg",
-        "price": 9.99,
-        "sellingPoints": [
-            "Lasagna is delicious.",
-            "The essential guide to Italian casseroles of all types.",
-            "Real G's move silent, like Lasagna. -Lil Wayne"
-        ],
-        "title": "All Eyez On Me",
-        "type": "album"
-    },
-    {
-        "creator": "Milli Vanilli",
-        "image": "https://direct.rhapsody.com/imageserver/images/Alb.117181854/500x500.jpg",
-        "price": 9.99,
-        "sellingPoints": [
-            "Lasagna is delicious.",
-            "The essential guide to Italian casseroles of all types.",
-            "Real G's move silent, like Lasagna. -Lil Wayne"
-        ],
-        "title": "Girl You Know It's True",
-        "type": "album"
-    }
-    ]
+    "books": [],
+    "albums": []
 };
 
 function appendToPage( item ){
@@ -91,6 +19,11 @@ function appendToPage( item ){
     $( "#content" ).prepend( $item );
 }
 
+function handleItems( items ){
+    products[items[0].type + "s"] = items;
+
+    items.forEach( appendToPage );
+}
 
 $( "#books" ).click( ( event ) => {
     event.preventDefault();
@@ -103,7 +36,7 @@ $( "#music" ).click( () => {
     event.preventDefault();
     $( "#content" ).html( "" );
 
-    products.books.forEach( appendToPage );
+    products.albums.forEach( appendToPage );
 } );
 
 $( "#home" ).click( ( event ) => {
@@ -126,15 +59,24 @@ $( "form" ).on( "submit", ( event ) => {
         if( field.name === "sellingPoints" ){
             formObject.sellingPoints.push( field.value );
         }
+        else if( field.name === "price" ){
+            formObject.price = parseFloat( field.value, 0 );
+        }
         else{
             formObject[field.name] = field.value;
         }
     } );
 
-    products[formObject.type].push( formObject );
+    products[formObject.type + "s"].push( formObject );
 
     appendToPage( formObject );
+
+    $.ajax( "//api.savvycoders.com/" + formObject.type + "s", {
+        "method": "POST",
+        "contentType": "application/json",
+        "data": JSON.stringify( formObject )
+    } );
 } );
 
-// what's going on here?
-$.ajax( "//api.savvycoders.com/books" ).then( ( books ) => console.log( "this is coming from an an external database/API ->", books ) );
+$.ajax( "//api.savvycoders.com/books" ).then( handleItems );
+$.ajax( "//api.savvycoders.com/albums" ).then( handleItems );
