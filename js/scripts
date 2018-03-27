@@ -1,0 +1,140 @@
+/* globals $ */
+
+// Put all of your jQuery and JavaScript in this document.
+// create list of products in JSAON format
+var products = {
+// variables for books
+    "books": [
+        {
+            "id": 1,
+            "title": "50 Shades of Grey",
+            "author": "E. L. James",
+            "image": "https://d188rgcu4zozwl.cloudfront.net/content/B007J4T2G8/resources/469708731",
+            "price": 17.69,
+            "sellingPoints": [
+                "Lasagna is delicious.",
+                "The essential guide to Italian casseroles of all types.",
+                "Real G's move silent, like Lasagna. -Lil Wayne"
+            ]
+        },
+        {
+            "id": 2,
+            "title": "50 Shade of Gray",
+            "author": "Garfield",
+            "image": "https://images-na.ssl-images-amazon.com/images/I/51YUYsBp2CL._SX322_BO1,204,203,200_.jpg",
+            "price": 17.69,
+            "sellingPoints": [
+                "Lasagna is delicious.",
+                "The essential guide to Italian casseroles of all types.",
+                "Real G's move silent, like Lasagna. -Lil Wayne"
+            ]
+        },
+        {
+            "id": 3,
+            "title": "50 Shade of Gray",
+            "author": "Garfield",
+            "image": "https://images-na.ssl-images-amazon.com/images/I/51HhuPD7WhL._SX322_BO1,204,203,200_.jpg",
+            "price": 17.69,
+            "sellingPoints": [
+                "Lasagna is delicious.",
+                "The essential guide to Italian casseroles of all types.",
+                "Real G's move silent, like Lasagna. -Lil Wayne"
+            ]
+        }
+    ],
+    // variables for albums
+    "albums": [
+        {
+            "id": 1,
+            "title": "Illmatic",
+            "author": "Nas",
+            "image": "https://audioxide.com/wp-content/uploads/2016/06/Illmatic-500x500.jpg",
+            "price": "9.99",
+            "sellingPoints": [
+                "Lasagna is delicious.",
+                "The essential guide to Italian casseroles of all types.",
+                "Real G's move silent, like Lasagna. -Lil Wayne"
+            ]
+        },
+        {
+            "id": 1,
+            "title": "All Eyez On Me",
+            "author": "2Pac",
+            "image": "http://3.bp.blogspot.com/_5A6fSMDiXaI/TRGA65YolHI/AAAAAAAAAmo/NknnnYHa0II/s1600/2Pac_-_All_Eyez_on_Me_single_version.jpg",
+            "price": "9.99",
+            "sellingPoints": [
+                "Lasagna is delicious.",
+                "The essential guide to Italian casseroles of all types.",
+                "Real G's move silent, like Lasagna. -Lil Wayne"
+            ]
+        },
+        {
+            "id": 1,
+            "title": "Girl You Know It's True",
+            "author": "Milli Vanilli",
+            "image": "https://direct.rhapsody.com/imageserver/images/Alb.117181854/500x500.jpg",
+            "price": "9.99",
+            "sellingPoints": [
+                "Lasagna is delicious.",
+                "The essential guide to Italian casseroles of all types.",
+                "Real G's move silent, like Lasagna. -Lil Wayne"
+            ]
+        }
+    ]
+};
+// select page locations to append to
+
+function appendToPage( item ){
+    var $image = $( "<img>" ).attr( "src", item.image );
+    var $title = $( "<h1>" ).text( item.title );
+    var $author = $( "<h2>" ).text( item.author );
+    var $price = $( "<h2>" ).text( "$" + item.price );
+    var $sellingPoints = $( "<p>" ).text( item.sellingPoints );
+    var $description = $( "<div>" ).append( $sellingPoints );
+    var $info = $( "<div>" ).append( $title, $author, $price );
+    var $item = $( "<div>" ).append( $image, $info, $description );
+    // data prepened to #content div
+
+    $( "#content" ).prepend( $item );
+}
+// get book append to page
+products.books.forEach( appendToPage );
+products.albums.forEach( appendToPage );
+
+$( "#books" ).click( () => console.log( products.books ) );
+$( "#music" ).click( () => console.log( products.albums ) );
+// get new blog post
+// on form submit event execute and return
+// event is the 'callback' a placeholder for the returned value
+$( "form" ).on( "submit", ( event ) => {
+// takes submit data and transforms it into an array for json data
+    var data = $( event.target ).serializeArray();
+
+    var formObject = {};
+    // prevents defaut (page reload)
+
+    event.preventDefault();
+    // forms object for the selling points.
+    formObject.sellingPoints = [];
+
+    /*
+    for each field of the data returned and JSONafyied by .serializeArray();
+    formObject of the field name.
+    */
+    data.forEach( ( field ) => {
+        if( field.name === "sellingPoints" ){
+            // forEach appends new selling point into the selling points array
+            formObject.sellingPoints.push( field.value );
+        }
+        // else forEach form object of the fourms form's value.
+        else{
+            formObject[ field.name ] = field.value;
+        }
+    } );
+    // adds one to the intger of the id value.
+    formObject.id = products[formObject.type].length + 1;
+    // appends packaged data to the products object in the objects array
+    products[formObject.type].push( formObject );
+    // appends newly created item to page.
+    appendToPage( formObject );
+} );

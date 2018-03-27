@@ -91,8 +91,6 @@ function appendToPage( item ){
     $( "#content" ).prepend( $item );
 }
 
-products.books.forEach( appendToPage );
-products.albums.forEach( appendToPage );
 
 $( "#books" ).click( ( event ) => {
     event.preventDefault();
@@ -100,7 +98,21 @@ $( "#books" ).click( ( event ) => {
 
     products.books.forEach( appendToPage );
 } );
+
 $( "#music" ).click( () => console.log( products.albums ) );
+    event.preventDefault();
+    $( "#content" ).html( "" );
+  
+    products.books.forEach( appendToPage );
+} );
+
+$( "#home" ).click( ( event ) => {
+    event.preventDefault();
+    $( "#content" ).html( "" );
+
+    products.books.forEach( appendToPage );
+    products.albums.forEach( appendToPage );
+} );
 
 $( "form" ).on( "submit", ( event ) => {
     var data = $( event.target ).serializeArray();
