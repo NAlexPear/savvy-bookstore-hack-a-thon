@@ -6,3 +6,4 @@
 ### Contributors
 + Alex Pearson
 + Allan Caprola
++ Tyler Krszjzaniek
