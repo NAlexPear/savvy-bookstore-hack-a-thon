@@ -5,4 +5,10 @@
 
 ### Contributors
 + Alex Pearson
-Jennifer Fisher
++ Jennifer Fisher
++ Drew Roby
++ Ashlea Swindell
++ Jake Pelech
++ Sidney Buckner
++ Allan Caprola
++ Tyler Krszjzaniek
