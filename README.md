@@ -5,6 +5,7 @@
 
 ### Contributors
 + Alex Pearson
++ Ashlea Swindell
 + Jake Pelech
 + Sidney Buckner
 + Allan Caprola
