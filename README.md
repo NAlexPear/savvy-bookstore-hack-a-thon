@@ -6,3 +6,6 @@
 ### Contributors
 + Alex Pearson
 + Jake Pelech
++ Sidney Buckner
++ Allan Caprola
++ Tyler Krszjzaniek
