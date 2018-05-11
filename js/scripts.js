@@ -8,9 +8,9 @@ var book1 = {
     "sellingPoints": [
         "Hiding In The closet.",
         "Never Ask a 2yr old for tissue.",
-        "Be A Friend Before A Parent"
+        "Be A Friend Before A Parent."
     ]
-}
+};
 
 var book2 = {
     "id": 2,
@@ -21,9 +21,9 @@ var book2 = {
     "sellingPoints": [
         "Home Grown Food.",
         "Processed Food.",
-        "Chitterlings vs. Veggies"
+        "Chitterlings vs. Veggies."
     ]
-}
+};
 
 var book3 = {
     "id": 3,
@@ -34,6 +34,6 @@ var book3 = {
     "sellingPoints": [
         "Killing a Tiger With a Twig.",
         "How to Rule a Nation.",
-        "Wearing the Crown",
+        "Wearing the Crown."
     ]
-}
+};

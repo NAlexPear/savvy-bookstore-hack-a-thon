@@ -5,3 +5,37 @@ html {
 }
 
 /*put all other styles below this line, please*/
+body {
+
+}
+
+#navigation {
+  position: sticky;
+  width: 100%;
+}
+
+#header {
+  width: 100%;
+  display: flex;
+  position: absolute;
+   /**/
+}
+
+#content {
+  display: flex;
+  justify-content: space-around;
+  align-content: space-around;
+  flex-wrap: wrap;
+}
+
+#footer {
+  width: 100%;
+  display: flex;
+  align-content: space-between;
+
+}
+
+.book {
+  background-color: wheat;
+
+}
