@@ -4,4 +4,24 @@ html {
   box-sizing: border-box;
 }
 
+
 /*put all other styles below this line, please*/
+body{
+  background-color: #AFDDC1;
+  font-family: 'Lato', sans-serif;
+}
+#header{
+  color: #0A5E2D;
+}
+#header > h1{
+  font-family: 'Henny Penny', cursive;
+}
+#header > h2{
+  font-family: 'Permanent Marker', cursive;
+}
+#content{
+  color: #0A5E2D;
+}
+.title{
+  font-family: 'Comfortaa', cursive;
+}
