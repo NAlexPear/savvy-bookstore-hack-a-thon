@@ -5,6 +5,7 @@
 
 ### Contributors
 + Alex Pearson
++ Nick Worsham
 + Jennifer Fisher
 + Drew Roby
 + Ashlea Swindell
