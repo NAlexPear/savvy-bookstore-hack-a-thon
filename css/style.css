@@ -4,9 +4,21 @@ html {
   box-sizing: border-box;
 }
 
+
 /*put all other styles below this line, please*/
-body {
-  /* display: flex; */
+
+body{
+  background-color: #AFDDC1;
+  font-family: 'Lato', sans-serif;
+}
+
+#content{
+  color: #0A5E2D;
+}
+
+.title{
+  color: blue;
+  font-family: 'Comfortaa', cursive;
 }
 
 #navigation {
@@ -28,6 +40,18 @@ body {
     clear: both;
 }
 
+#header{
+  color: #0A5E2D;
+}
+
+#header > h1{
+  font-family: 'Henny Penny', cursive;
+}
+
+#header > h2{
+  font-family: 'Rock Salt', cursive;
+}
+
 #content {
   display: flex;
   justify-content: space-around;
@@ -36,22 +60,31 @@ body {
 
 }
 
-/* #content < # {
-
-} */
-
 #footer {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
+}
 
+#content > div {
+  background-color: hotpink;
+  margin: 20px;
+  width: 300px;
+}
+
+#content ul{
+  color: blue;
+}
+#content > div > div {
+  margin: 20px;
+}
+
+#footer ul  {
   list-style-type: none;
   list-style: none;
 }
 
-#footer < ul  {
-  list-style-type: none;
-  list-style: none;
-
+#content img {
+  width: 100%;
 }
