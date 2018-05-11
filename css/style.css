@@ -5,10 +5,6 @@ html {
 }
 
 /*put all other styles below this line, please*/
-body {
-
-}
-
 #navigation {
   position: sticky;
   width: 100%;
@@ -32,10 +28,5 @@ body {
   width: 100%;
   display: flex;
   align-content: space-between;
-
-}
-
-.book {
-  background-color: wheat;
 
 }
