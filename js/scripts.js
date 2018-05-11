@@ -2,7 +2,7 @@
 var book1 = {
     "id": 1,
     "name": "How Not to Scare Kids",
-    "author": "Iceberg Slim"
+    "author": "Iceberg Slim",
     "pictureUrl": "http://cdn3.momsxyz.com/2015/04/image001.jpg",
     "price": 10,
     "sellingPoints": [
