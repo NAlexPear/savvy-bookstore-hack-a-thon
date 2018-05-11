@@ -55,3 +55,30 @@ body{
   display: flex;
   align-content: space-between;
 }
+
+#content > div {
+  background-color: hotpink;
+  margin: 20px;
+  width: 300px;
+}
+
+#content ul{
+  color: blue;
+}
+#content > div > div {
+  margin: 20px;
+}
+
+#content img {
+  width: 100%;
+}
+
+.title {
+  color: blue;
+}
+
+
+
+.container{
+width: 90%;
+}
