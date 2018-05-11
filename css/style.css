@@ -6,19 +6,26 @@ html {
 
 /*put all other styles below this line, please*/
 body {
-
+  /* display: flex; */
 }
 
 #navigation {
   position: sticky;
   width: 100%;
+  padding: 1%;
+
 }
 
 #header {
-  width: 100%;
-  display: flex;
-  position: absolute;
-   /**/
+    width: 100%;
+    display: block;
+    position: relative;
+    padding-bottom: 30%;
+    background-image: url(http://globelink.ca/wp-content/uploads/2014/08/SF_books.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.5;
+    clear: both;
 }
 
 #content {
@@ -26,16 +33,25 @@ body {
   justify-content: space-around;
   align-content: space-around;
   flex-wrap: wrap;
+
 }
+
+/* #content < # {
+
+} */
 
 #footer {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   align-content: space-between;
 
+  list-style-type: none;
+  list-style: none;
 }
 
-.book {
-  background-color: wheat;
+#footer < ul  {
+  list-style-type: none;
+  list-style: none;
 
 }
