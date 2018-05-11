@@ -4,7 +4,22 @@ html {
   box-sizing: border-box;
 }
 
+
 /*put all other styles below this line, please*/
+
+body{
+  background-color: #AFDDC1;
+  font-family: 'Lato', sans-serif;
+}
+
+#content{
+  color: #0A5E2D;
+}
+
+.title{
+  font-family: 'Comfortaa', cursive;
+}
+
 #navigation {
   position: sticky;
   width: 100%;
@@ -14,7 +29,18 @@ html {
   width: 100%;
   display: flex;
   position: absolute;
-   /**/
+}
+
+#header{
+  color: #0A5E2D;
+}
+
+#header > h1{
+  font-family: 'Henny Penny', cursive;
+}
+
+#header > h2{
+  font-family: 'Permanent Marker', cursive;
 }
 
 #content {
@@ -28,5 +54,4 @@ html {
   width: 100%;
   display: flex;
   align-content: space-between;
-
 }
