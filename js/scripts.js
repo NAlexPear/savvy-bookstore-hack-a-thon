@@ -37,3 +37,19 @@ var book3 = {
         "Wearing the Crown."
     ]
 };
+
+var bookTitleVariable = "<div class='title'><header><h1>" + book1.name + "</h1></header></div>";
+var bookAuthorVariable = "<div class='author'><h2>" + book1.author + "</h2></div>";
+var bookImageVariable = "<div class='image'><img src='" + book1.pictureUrl + "' alt=''>"
+var bookPriceVariable = "<ul class='price'"
+document.querySelector("#book1").innerHTML = bookTitleVariable + bookAuthorVariable + bookImageVariable
+
+
+
+
+
+book += "name:" + bookName + ",";
+book += "author:" + authorName + ",";
+book += "pictureUrl:" + pictureUrl + ",";
+book += "price:" + price + ",";
+book += "sellingPoint:" sellingPoint + "}";
