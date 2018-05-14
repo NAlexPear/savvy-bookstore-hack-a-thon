@@ -37,6 +37,7 @@ var book3 = {
         "Wearing the Crown."
     ]
 };
+
 var addToList = function addToList( bookObj ){
     var bookTitleVariable = "<div class='title'><header><h1>" + bookObj.name + "</h1></header></div>";
     var bookAuthorVariable = "<div class='author'><h2>" + bookObj.author + "</h2></div>";
