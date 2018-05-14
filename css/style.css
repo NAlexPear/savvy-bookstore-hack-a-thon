@@ -32,17 +32,17 @@ html {
 }
 
 #content > div {
-  width: 30%;
+  width: 20%;
   background-color: gray;
-  padding: 20px;
-  margin: 20px;
+  padding: 30px;
+  margin: 25px;
   text-align: center;
   border: solid black 50px;
 
 }
 #content > div > .title{
   color: White;
-  font-size: 40px;
+  font-size: 10px;
 
 }
 #content ul {
