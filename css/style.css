@@ -30,3 +30,32 @@ html {
   align-content: space-between;
 
 }
+
+#content > div {
+  width: 30%;
+  background-color: gray;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  border: solid black 50px;
+
+}
+#content > div > .title{
+  color: White;
+  font-size: 40px;
+
+}
+#content ul {
+  color: white;
+  text-align: center;
+  list-style: none;
+}
+#content > div > div {
+  margin: 20px;
+}
+#content img{
+  width: 100%;
+}
+img {
+  width: 5px;
+}
