@@ -17,18 +17,27 @@ body{
 }
 
 .title{
+  color: blue;
   font-family: 'Comfortaa', cursive;
 }
 
 #navigation {
   position: sticky;
   width: 100%;
+  padding: 1%;
+
 }
 
 #header {
-  width: 100%;
-  display: flex;
-  position: absolute;
+    width: 100%;
+    display: block;
+    position: relative;
+    padding-bottom: 30%;
+    background-image: url(http://globelink.ca/wp-content/uploads/2014/08/SF_books.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.5;
+    clear: both;
 }
 
 #header{
@@ -48,10 +57,34 @@ body{
   justify-content: space-around;
   align-content: space-around;
   flex-wrap: wrap;
+
 }
 
 #footer {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   align-content: space-between;
+}
+
+#content > div {
+  background-color: hotpink;
+  margin: 20px;
+  width: 300px;
+}
+
+#content ul{
+  color: blue;
+}
+#content > div > div {
+  margin: 20px;
+}
+
+#footer ul  {
+  list-style-type: none;
+  list-style: none;
+}
+
+#content img {
+  width: 100%;
 }
