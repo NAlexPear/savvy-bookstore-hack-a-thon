@@ -38,11 +38,16 @@ var book3 = {
     ]
 };
 
-var bookTitleVariable = "<div class='title'><header><h1>" + book1.name + "</h1></header></div>";
-var bookAuthorVariable = "<div class='author'><h2>" + book1.author + "</h2></div>";
-var bookImageVariable = "<div class='image'><img src='" + book1.pictureUrl + "' alt=''>"
-var bookPriceVariable = "<ul class='price'"
-document.querySelector("#book1").innerHTML = bookTitleVariable + bookAuthorVariable + bookImageVariable
+var addToList = function(bookObj){
+  var bookTitleVariable = "<div class='title'><header><h1>" + bookObj.name + "</h1></header></div>";;
+  var bookAuthorVariable = "<div class='author'><h2>" + bookObj.author + "</h2></div>";;
+  var bookImageVariable = "<div class='image'><img src='" + bookObj.pictureUrl + "' alt=''>";
+  var bookPriceAndPointsVariable = "<ul class='price'><li>Price: $" + bookObj.price + ".00</li><li>" + book1.sellingPoints[0] + "</li>" + "<li>" + book1.sellingPoints[1] + "</li>" + "<li>" + book1.sellingPoints[2] + "</li>";
+
+
+  document.querySelector("#book1").innerHTML = bookTitleVariable + bookAuthorVariable + bookImageVariable + bookPriceAndPointsVariable;
+
+}
 
 
 
