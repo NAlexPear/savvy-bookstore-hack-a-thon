@@ -31,6 +31,7 @@ body{
 #header {
     width: 100%;
     display: block;
+    text-align: right;
     position: relative;
     padding-bottom: 30%;
     background-image: url(http://globelink.ca/wp-content/uploads/2014/08/SF_books.jpg);
@@ -46,10 +47,14 @@ body{
 
 #header > h1{
   font-family: 'Henny Penny', cursive;
+  font-size: 10vw;
+  margin-top: 0;
+  transform: translate(0,12%);
 }
 
 #header > h2{
   font-family: 'Rock Salt', cursive;
+  font-size: 4vw;
 }
 
 #content {
