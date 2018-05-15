@@ -1,4 +1,8 @@
 // Put all of your jQuery and JavaScript in this document.
+
+// var something = 1
+// var bookName = book + something
+
 var book1 = {
     "id": 1,
     "name": "How Not to Scare Kids",
@@ -41,10 +45,16 @@ var addToList = function addToList( bookObj ){
     var bookTitleVariable = "<div class='title'><header><h1>" + bookObj.name + "</h1></header></div>";
     var bookAuthorVariable = "<div class='author'><h2>" + bookObj.author + "</h2></div>";
     var bookImageVariable = "<div class='image'><img src='" + bookObj.pictureUrl + "' alt=''>";
-    var bookPriceAndPointsVariable = "<ul class='price'><li>Price: $" + bookObj.price + ".00</li><li>" + book1.sellingPoints[0] + "</li>" + "<li>" + book1.sellingPoints[1] + "</li>" + "<li>" + book1.sellingPoints[2] + "</li>";
+    var bookPrice = "<ul class='price'><li>Price: $" + bookObj.price + ".00</li>";
+    var bookSellingPoints = "<div class='sellingPoints'><ul>";
 
-
-    document.querySelector( "#book1" ).innerHTML = bookTitleVariable + bookAuthorVariable + bookImageVariable + bookPriceAndPointsVariable;
+    for( let i = 0; i <= bookObj.sellingPoints.length - 1; i++ ){
+        // console.log( bookObj.sellingPoints[i] );
+        bookSellingPoints += "<li>" + bookObj.sellingPoints[i] + "</li>" ;
+    }
+    bookSellingPoints += "</ul>" + "</div>";
+    document.querySelector( "#book1" ).innerHTML = bookTitleVariable + bookAuthorVariable + bookImageVariable + bookPrice + bookSellingPoints;
 };
+
 
 addToList( book1 );
