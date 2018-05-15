@@ -37,6 +37,43 @@ var book3 = {
         "Wearing the Crown."
     ]
 };
+var albums1 = {
+    "id": 1,
+    "name": "Houses of the Holy",
+    "author": "Led Zeppelin",
+    "pictureUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Led_Zeppelin_-_Houses_of_the_Holy.jpg/220px-Led_Zeppelin_-_Houses_of_the_Holy.jpg",
+    "price": 20,
+    "sellingPoints": [
+        "Over the Hills and Far Away/Dancing Days",
+        "D'yer Mak'er/The Crunge",
+        "Released	in 28 March 1973"
+    ]
+};
+var albums2 = {
+    "id": 2,
+    "name": "Broke and Famous",
+    "author": "Dormtainment",
+    "pictureUrl": "https://direct.rhapsody.com/imageserver/images/Alb.69185622/500x500.jpg",
+    "price": 3.99,
+    "sellingPoints": [
+        "@$$ On the Internet [Explicit]",
+        "Ballin Ona Budget [Explicit]",
+        "Elephant D-Ck (Bonus Track) [Explicit]"
+    ]
+};
+var album3 = {
+    "id": 3,
+    "name": "Hippie High",
+    "author": "Josie Hill",
+    "pictureUrl": "https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/field-of-flowers-jessica-t-hamilton.jpg",
+    "price": 11.99,
+    "sellingPoints": [
+        "Rolling in the daisies",
+        "High on life",
+        "Pass it, my friend"
+    ]
+};
+
 
 var addToList = function addToList( bookObj ){
     var bookTitleVariable = "<div class='title'><header><h1>" + bookObj.name + "</h1></header></div>";
