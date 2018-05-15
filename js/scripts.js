@@ -69,6 +69,7 @@ var albums = [
 ];
 
 var addToList = function addToList( bookObj ){
+    var openingTag = "<div>";
     var bookTitleVariable = "<div class='title'><header><h1>" + bookObj.name + "</h1></header></div>";
     var bookAuthorVariable = "<div class='author'><h2>" + bookObj.author + "</h2></div>";
     var bookImageVariable = "<div class='image'><img src='" + bookObj.pictureUrl + "' alt=''>";
@@ -79,12 +80,10 @@ var addToList = function addToList( bookObj ){
         bookSellingPoints += "<li>" + bookObj.sellingPoints[i] + "</li>" ;
     }
 
-
     bookSellingPoints += "</ul>" + "</div>";
 
-    document.querySelector( "#book1" ).innerHTML = bookTitleVariable + bookAuthorVariable + bookImageVariable + bookPrice + bookSellingPoints;
+    document.querySelector( "#content" ).innerHTML += openingTag + bookTitleVariable + bookAuthorVariable + bookImageVariable + bookPrice + bookSellingPoints + "</div>";
 };
-
 
 for ( var i = 0; i < books.length; i++) {
   addToList(books[i]);
