@@ -39,21 +39,18 @@ var book3 = {
 };
 
 
-// var makeContentItem = function makeContentItem(contentArray) {
-//   for (i=0; i<=contentArray.length; i++ ){
-//   }
-// }
 var addToList = function( bookObj ){
-    document.querySelector( "#content" ).innerHTML = "<div id=book" + bookObj.id + "></div>";
+    var openingTag = "<div id=book" + bookObj.id + ">";
     var contentItemNumber = "#book" + bookObj.id;
     var bookTitleVariable = "<div class='title'><header><h1>" + bookObj.name + "</h1></header></div>";
     var bookAuthorVariable = "<div class='author'><h2>" + bookObj.author + "</h2></div>";
     var bookImageVariable = "<div class='image'><img src='" + bookObj.pictureUrl + "' alt=''>";
     var bookPriceAndPointsVariable = "<ul class='price'><li>Price: $" + bookObj.price + ".00</li><li>" + bookObj.sellingPoints[0] + "</li>" + "<li>" + bookObj.sellingPoints[1] + "</li>" + "<li>" + bookObj.sellingPoints[2] + "</li>";
+    var closingTag = "</div>";
 
-    document.querySelector( contentItemNumber ).innerHTML = bookTitleVariable + bookAuthorVariable + bookImageVariable + bookPriceAndPointsVariable;
+    document.querySelector( contentItemNumber ).innerHTML = openingTag + bookTitleVariable + bookAuthorVariable + bookImageVariable + bookPriceAndPointsVariable + closingTag;
 };
 
 addToList( book1 );
-// addToList( book3 );
-// addToList( book2 );
+addToList( book3 );
+addToList( book2 );
