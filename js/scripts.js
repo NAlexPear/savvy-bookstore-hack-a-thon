@@ -88,3 +88,7 @@ var addToList = function addToList( bookObj ){
 addToList( books[0] );
 addToList( books[1] );
 addToList( books[2] );
+
+for( let i = 0; i < albums.length; i ++ ){
+    addToList( albums[i] );
+}
