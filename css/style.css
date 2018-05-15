@@ -33,7 +33,7 @@ body{
     background-image: url(http://globelink.ca/wp-content/uploads/2014/08/SF_books.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.5;
+    /*opacity: 0.5; */
     clear: both;
 }
 
