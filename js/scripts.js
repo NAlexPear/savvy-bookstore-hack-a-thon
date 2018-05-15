@@ -90,8 +90,7 @@ var addToList = function addToList( bookObj ){
     document.querySelector( "#content" ).innerHTML += openingTag + bookTitleVariable + bookAuthorVariable + bookImageVariable + bookPrice + bookSellingPoints + "</div>";
 };
 
-
-for( let i = 0; i < albums.length; i ++ ){
+for( let i = 0; i < albums.length; i++ ){
     addToList( albums[i] );
 }
 
