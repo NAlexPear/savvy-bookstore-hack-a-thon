@@ -1,5 +1,6 @@
 var books = [
-    {  "id": 1,
+    {
+        "id": 1,
         "name": "How Not to Scare Kids",
         "author": "Iceberg Slim",
         "pictureUrl": "http://cdn3.momsxyz.com/2015/04/image001.jpg",
@@ -9,7 +10,8 @@ var books = [
             "Never Ask a 2yr old for tissue.",
             "Be A Friend Before A Parent." ]
     },
-    { "id": 2,
+    {
+        "id": 2,
         "name": "Apples to Oranges",
         "author": "Farmer Fred",
         "pictureUrl": "http://strongautomotive.com/wp-content/uploads/2014/11/Apple-Orange-2.jpg",
@@ -19,7 +21,8 @@ var books = [
             "Processed Food.",
             "Chitterlings vs. Veggies." ]
     },
-    { "id": 3,
+    {
+        "id": 3,
         "name": "Queens and Kings",
         "author": "Shaka Zulu",
         "pictureUrl": "https://i.pinimg.com/originals/a6/f6/f8/a6f6f872fc9ba5cd80d37971b15e7a1c.jpg",
@@ -44,7 +47,8 @@ var albums = [
             "Released	in 28 March 1973"
         ]
     },
-    { "id": 2,
+    {
+        "id": 2,
         "name": "Broke and Famous",
         "author": "Dormtainment",
         "pictureUrl": "https://direct.rhapsody.com/imageserver/images/Alb.69185622/500x500.jpg",
@@ -55,7 +59,8 @@ var albums = [
             "Elephant D-Ck (Bonus Track) [Explicit]"
         ]
     },
-    {  "id": 3,
+    {
+        "id": 3,
         "name": "Hippie High",
         "author": "Josie Hill",
         "pictureUrl": "https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/field-of-flowers-jessica-t-hamilton.jpg",
@@ -85,6 +90,6 @@ var addToList = function addToList( bookObj ){
     document.querySelector( "#content" ).innerHTML += openingTag + bookTitleVariable + bookAuthorVariable + bookImageVariable + bookPrice + bookSellingPoints + "</div>";
 };
 
-for ( var i = 0; i < books.length; i++) {
-  addToList(books[i]);
-};
+for( let i = 0; i < books.length; i++ ){
+    addToList( books[i] );
+}
