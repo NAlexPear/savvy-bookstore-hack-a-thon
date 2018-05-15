@@ -1,4 +1,3 @@
-
 var books = [
     {  "id": 1,
         "name": "How Not to Scare Kids",
@@ -73,10 +72,16 @@ var addToList = function addToList( bookObj ){
     var bookTitleVariable = "<div class='title'><header><h1>" + bookObj.name + "</h1></header></div>";
     var bookAuthorVariable = "<div class='author'><h2>" + bookObj.author + "</h2></div>";
     var bookImageVariable = "<div class='image'><img src='" + bookObj.pictureUrl + "' alt=''>";
-    var bookPriceAndPointsVariable = "<ul class='price'><li>Price: $" + bookObj.price + ".00</li><li>" + bookObj.sellingPoints[0] + "</li>" + "<li>" + bookObj.sellingPoints[1] + "</li>" + "<li>" + bookObj.sellingPoints[2] + "</li>";
+    var bookPrice = "<ul class='price'><li>Price: $" + bookObj.price + ".00</li></ul>";
+    var bookSellingPoints = "<div class='sellingPoints'><ul>";
 
-
-    document.querySelector( "#book1" ).innerHTML = bookTitleVariable + bookAuthorVariable + bookImageVariable + bookPriceAndPointsVariable;
+    for( let i = 0; i < bookObj.sellingPoints.length ; i++ ){
+        bookSellingPoints += "<li>" + bookObj.sellingPoints[i] + "</li>" ;
+    }
+  
+    bookSellingPoints += "</ul>" + "</div>";
+  
+    document.querySelector( "#book1" ).innerHTML = bookTitleVariable + bookAuthorVariable + bookImageVariable + bookPrice + bookSellingPoints;
 };
 
 addToList( books[0] );
