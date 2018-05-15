@@ -1,7 +1,5 @@
 // Put all of your jQuery and JavaScript in this document.
 
-// var something = 1
-// var bookName = book + something
 
 var book1 = {
     "id": 1,
@@ -48,8 +46,9 @@ var addToList = function addToList( bookObj ){
     var bookPrice = "<ul class='price'><li>Price: $" + bookObj.price + ".00</li>";
     var bookSellingPoints = "<div class='sellingPoints'><ul>";
 
-    for( let i = 0; i <= bookObj.sellingPoints.length - 1; i++ ){
-        // console.log( bookObj.sellingPoints[i] );
+    bookPrice += "</ul>";
+
+    for( let i = 0; i < bookObj.sellingPoints.length ; i++ ){
         bookSellingPoints += "<li>" + bookObj.sellingPoints[i] + "</li>" ;
     }
     bookSellingPoints += "</ul>" + "</div>";
