@@ -79,13 +79,13 @@ var addToList = function addToList( bookObj ){
         bookSellingPoints += "<li>" + bookObj.sellingPoints[i] + "</li>" ;
     }
 
-    for (var i = 0; i < books.length; i++) {
-      books[i]
-    }
-    
+
     bookSellingPoints += "</ul>" + "</div>";
 
     document.querySelector( "#book1" ).innerHTML = bookTitleVariable + bookAuthorVariable + bookImageVariable + bookPrice + bookSellingPoints;
 };
 
-addToList( books[0] );
+
+for ( var i = 0; i < books.length; i++) {
+  addToList(books[i]);
+};
