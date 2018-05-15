@@ -39,16 +39,15 @@ var book3 = {
 };
 
 
-var addToList = function( bookObj ){
-    var openingTag = "<div id=book" + bookObj.id + ">";
-    var contentItemNumber = "#book" + bookObj.id;
+var addToList = function addToList( bookObj ){
+    var openingTag = "<div>";
     var bookTitleVariable = "<div class='title'><header><h1>" + bookObj.name + "</h1></header></div>";
     var bookAuthorVariable = "<div class='author'><h2>" + bookObj.author + "</h2></div>";
     var bookImageVariable = "<div class='image'><img src='" + bookObj.pictureUrl + "' alt=''>";
     var bookPriceAndPointsVariable = "<ul class='price'><li>Price: $" + bookObj.price + ".00</li><li>" + bookObj.sellingPoints[0] + "</li>" + "<li>" + bookObj.sellingPoints[1] + "</li>" + "<li>" + bookObj.sellingPoints[2] + "</li>";
     var closingTag = "</div>";
 
-    document.querySelector( contentItemNumber ).innerHTML = openingTag + bookTitleVariable + bookAuthorVariable + bookImageVariable + bookPriceAndPointsVariable + closingTag;
+    document.querySelector( "#content" ).innerHTML += openingTag + bookTitleVariable + bookAuthorVariable + bookImageVariable + bookPriceAndPointsVariable + closingTag;
 };
 
 addToList( book1 );
