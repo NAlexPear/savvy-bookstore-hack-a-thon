@@ -12,10 +12,6 @@ body{
   font-family: 'Lato', sans-serif;
 }
 
-#content{
-  color: #0A5E2D;
-}
-
 .title{
   color: blue;
   font-family: 'Comfortaa', cursive;
@@ -62,32 +58,6 @@ body{
   justify-content: space-around;
   align-content: space-around;
   flex-wrap: wrap;
-
-}
-
-#footer {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: space-between;
-}
-
-#content > div {
-  background-color: hotpink;
-  margin: 20px;
-  width: 300px;
-}
-
-#content ul{
-  color: blue;
-}
-#content > div > div {
-  margin: 20px;
-}
-
-#footer ul  {
-  list-style-type: none;
-  list-style: none;
 }
 
 #content img {
@@ -96,26 +66,35 @@ body{
 
 #content > div {
   width: 20%;
-  background-color: gray;
+  background-color: white;
   padding: 30px;
   margin: 25px;
   text-align: center;
-  border: solid black 50px;
+  border: solid #0A5E2D 15px;
+  color: #0A5E2D;
 
 }
 #content > div > .title{
-  color: White;
+  color: #0A5E2D;
   font-size: 10px;
 
 }
 #content ul {
-  color: white;
+  color: #0A5E2D;
   text-align: center;
   list-style: none;
 }
 #content > div > div {
   margin: 20px;
 }
-#content img{
+
+#footer {
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+#footer ul  {
+  list-style-type: none;
+  list-style: none;
 }
