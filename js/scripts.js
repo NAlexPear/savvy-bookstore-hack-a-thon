@@ -38,7 +38,7 @@ var book3 = {
     ]
 };
 
-var albums1 = {
+var album1 = {
     "id": 1,
     "name": "Houses of the Holy",
     "author": "Led Zeppelin",
@@ -50,7 +50,7 @@ var albums1 = {
         "Released	in 28 March 1973"
     ]
 };
-var albums2 = {
+var album2 = {
     "id": 2,
     "name": "Broke and Famous",
     "author": "Dormtainment",
@@ -74,6 +74,8 @@ var album3 = {
         "Pass it, my friend"
     ]
 };
+var books = [ "book1", "book2", "book3"]
+var albums = [ "album1", "album2", "album3"]
 
 
 var addToList = function addToList( bookObj ){
