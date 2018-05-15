@@ -93,3 +93,29 @@ body{
 #content img {
   width: 100%;
 }
+
+#content > div {
+  width: 20%;
+  background-color: gray;
+  padding: 30px;
+  margin: 25px;
+  text-align: center;
+  border: solid black 50px;
+
+}
+#content > div > .title{
+  color: White;
+  font-size: 10px;
+
+}
+#content ul {
+  color: white;
+  text-align: center;
+  list-style: none;
+}
+#content > div > div {
+  margin: 20px;
+}
+#content img{
+  width: 100%;
+}
