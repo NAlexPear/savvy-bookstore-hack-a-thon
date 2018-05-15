@@ -31,8 +31,6 @@ body{
 #header {
     width: 100%;
     display: block;
-    /* align-content: flex-end; */
-    /* flex-flow: row-reverse wrap; */
     text-align: right;
     position: relative;
     padding-bottom: 30%;
@@ -41,7 +39,6 @@ body{
     background-size: cover;
     opacity: 0.5;
     clear: both;
-    /* margin-top: 20px; */
 }
 
 #header{
@@ -53,8 +50,6 @@ body{
   font-size: 10vw;
   margin-top: 0;
   transform: translate(0,12%);
-  /* font: ;lex-directsion: column; */
-  /* text-align: center; */
 }
 
 #header > h2{
