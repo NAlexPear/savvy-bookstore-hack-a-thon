@@ -73,27 +73,23 @@ var albums = [
     }
 ];
 
-var addToList = function addToList( bookObj ){
+function createProductCard( product ){
     var openingTag = "<div>";
-    var bookTitleVariable = "<div class='title'><header><h1>" + bookObj.name + "</h1></header></div>";
-    var bookAuthorVariable = "<div class='author'><h2>" + bookObj.author + "</h2></div>";
-    var bookImageVariable = "<div class='image'><img src='" + bookObj.pictureUrl + "' alt=''>";
-    var bookPrice = "<ul class='price'><li>Price: $" + bookObj.price + ".00</li></ul>";
+    var bookTitleVariable = "<div class='title'><header><h1>" + product.name + "</h1></header></div>";
+    var bookAuthorVariable = "<div class='author'><h2>" + product.author + "</h2></div>";
+    var bookImageVariable = "<div class='image'><img src='" + product.pictureUrl + "' alt=''>";
+    var bookPrice = "<ul class='price'><li>Price: $" + product.price + ".00</li></ul>";
     var bookSellingPoints = "<div class='sellingPoints'><ul>";
 
-    for( let i = 0; i < bookObj.sellingPoints.length ; i++ ){
-        bookSellingPoints += "<li>" + bookObj.sellingPoints[i] + "</li>" ;
+    for( let i = 0; i < product.sellingPoints.length ; i++ ){
+        bookSellingPoints += "<li>" + product.sellingPoints[i] + "</li>" ;
     }
 
     bookSellingPoints += "</ul>" + "</div>";
 
-    document.querySelector( "#content" ).innerHTML += openingTag + bookTitleVariable + bookAuthorVariable + bookImageVariable + bookPrice + bookSellingPoints + "</div>";
-};
-
-for( let i = 0; i < albums.length; i++ ){
-    addToList( albums[i] );
+    return openingTag + bookTitleVariable + bookAuthorVariable + bookImageVariable + bookPrice + bookSellingPoints + "</div>";
 }
 
-for( let i = 0; i < books.length; i++ ){
-    addToList( books[i] );
-}
+document.querySelector( "#content" ).innerHTML += albums.map(createProductCard).join() + books.map(createProductCard).join()
+
+
