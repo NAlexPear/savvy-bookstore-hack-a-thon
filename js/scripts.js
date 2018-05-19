@@ -74,20 +74,35 @@ var albums = [
 ];
 
 function createProductCard( product ){
-    var openingTag = "<div>";
-    var bookTitleVariable = "<div class='title'><header><h1>" + product.name + "</h1></header></div>";
-    var bookAuthorVariable = "<div class='author'><h2>" + product.author + "</h2></div>";
-    var bookImageVariable = "<div class='image'><img src='" + product.pictureUrl + "' alt=''></div>";
-    var bookPrice = "<ul class='price'><li>Price: $" + product.price + ".00</li></ul>";
-    var bookSellingPoints = "<div class='sellingPoints'><ul>";
+    var bookSellingPoints = "<ul>";
 
     for( let i = 0; i < product.sellingPoints.length ; i++ ){
         bookSellingPoints += "<li>" + product.sellingPoints[i] + "</li>" ;
     }
 
-    bookSellingPoints += "</ul>" + "</div>";
+    bookSellingPoints += "</ul>";
 
-    return openingTag + bookTitleVariable + bookAuthorVariable + bookImageVariable + bookPrice + bookSellingPoints + "</div>";
+    return `
+        <div>
+          <div class='title'>
+            <header>
+              <h1>${product.name}</h1>
+            </header>
+          </div>
+        <div class='author'>
+          <h2> ${product.author}</h2>
+        </div>
+        <div class='image'>
+          <img src='${product.pictureUrl}' alt=''>
+        </div>
+        <ul class='price'>
+          <li>Price: $ ${product.price} .00</li>
+        </ul>
+        <div class='sellingPoints'>
+          ${bookSellingPoints}
+        </div>
+      </div>
+  `;
 }
 
 document.querySelector( "#content" ).innerHTML += albums.map( createProductCard ).join( "" ) + books.map( createProductCard ).join( "" );
