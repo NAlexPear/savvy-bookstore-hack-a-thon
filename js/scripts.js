@@ -1,3 +1,5 @@
+
+
 var books = [
     {
         "id": 1,
@@ -73,6 +75,7 @@ var albums = [
     }
 ];
 
+
 function createProductCard( product ){
     var openingTag = "<div>";
     var bookTitleVariable = "<div class='title'><header><h1>" + product.name + "</h1></header></div>";
@@ -91,3 +94,21 @@ function createProductCard( product ){
 }
 
 document.querySelector( "#content" ).innerHTML += albums.map( createProductCard ).join( "" ) + books.map( createProductCard ).join( "" );
+
+
+document.getElementById( "booksLink" ).addEventListener(
+    "click",
+    ( event )  => {
+        event.preventDefault();
+
+        console.log( books );
+    }
+);
+
+
+document.querySelector( "#albumsLink" )
+    .addEventListener(
+        "click",
+        function manipulateSelection(){
+            console.log( albums );
+        } );
