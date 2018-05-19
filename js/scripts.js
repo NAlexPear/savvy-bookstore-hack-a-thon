@@ -83,26 +83,32 @@ function createProductCard( product ){
     bookSellingPoints += "</ul>";
 
     return `
-        <div>
-          <div class='title'>
-            <header>
-              <h1>${product.name}</h1>
-            </header>
-          </div>
+      <div>
+        <div class='title'>
+          <header>
+            <h1>
+              ${product.name}
+            </h1>
+          </header>
+        </div>
         <div class='author'>
-          <h2> ${product.author}</h2>
+          <h2>
+            ${product.author}
+          </h2>
         </div>
         <div class='image'>
           <img src='${product.pictureUrl}' alt=''>
         </div>
         <ul class='price'>
-          <li>Price: $ ${product.price} .00</li>
+          <li>
+            Price: $${product.price}.00
+          </li>
         </ul>
         <div class='sellingPoints'>
           ${bookSellingPoints}
         </div>
       </div>
-  `;
+    `;
 }
 
 document.querySelector( "#content" ).innerHTML += albums.map( createProductCard ).join( "" ) + books.map( createProductCard ).join( "" );
