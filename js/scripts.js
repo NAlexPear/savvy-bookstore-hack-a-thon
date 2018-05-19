@@ -77,7 +77,7 @@ function createProductCard( product ){
     var openingTag = "<div>";
     var bookTitleVariable = "<div class='title'><header><h1>" + product.name + "</h1></header></div>";
     var bookAuthorVariable = "<div class='author'><h2>" + product.author + "</h2></div>";
-    var bookImageVariable = "<div class='image'><img src='" + product.pictureUrl + "' alt=''>";
+    var bookImageVariable = "<div class='image'><img src='" + product.pictureUrl + "' alt=''></div>";
     var bookPrice = "<ul class='price'><li>Price: $" + product.price + ".00</li></ul>";
     var bookSellingPoints = "<div class='sellingPoints'><ul>";
 
@@ -90,6 +90,4 @@ function createProductCard( product ){
     return openingTag + bookTitleVariable + bookAuthorVariable + bookImageVariable + bookPrice + bookSellingPoints + "</div>";
 }
 
-document.querySelector( "#content" ).innerHTML += albums.map(createProductCard).join() + books.map(createProductCard).join()
-
-
+document.querySelector( "#content" ).innerHTML += albums.map( createProductCard ).join( "" ) + books.map( createProductCard ).join( "" );
