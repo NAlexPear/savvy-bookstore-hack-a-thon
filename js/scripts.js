@@ -1,3 +1,5 @@
+/* globals $ */
+/* eslint-disable vars-on-top, no-console */
 $.ajax( "https://api.savvycoders.com/albums" ).then( console.log );
 $.ajax( "https://api.savvycoders.com/books" ).then( console.log );
 
