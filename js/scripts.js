@@ -3,11 +3,12 @@
 $.ajax( "https://api.savvycoders.com/albums" ).then( console.log );
 $.ajax( "https://api.savvycoders.com/books" ).then( console.log );
 
+var content = document.querySelector( "#content" );
 var books = [
     {
         "id": 1,
         "title": "How Not to Scare Kids",
-        "author": "Iceberg Slim",
+        "creator": "Iceberg Slim",
         "image": "http://cdn3.momsxyz.com/2015/04/image001.jpg",
         "price": 10,
         "selling_points": [
@@ -18,7 +19,7 @@ var books = [
     {
         "id": 2,
         "title": "Apples to Oranges",
-        "author": "Farmer Fred",
+        "creator": "Farmer Fred",
         "image": "http://strongautomotive.com/wp-content/uploads/2014/11/Apple-Orange-2.jpg",
         "price": 8,
         "selling_points": [
@@ -29,7 +30,7 @@ var books = [
     {
         "id": 3,
         "title": "Queens and Kings",
-        "author": "Shaka Zulu",
+        "creator": "Shaka Zulu",
         "image": "https://i.pinimg.com/originals/a6/f6/f8/a6f6f872fc9ba5cd80d37971b15e7a1c.jpg",
         "price": 115,
         "selling_points": [
@@ -43,7 +44,7 @@ var albums = [
     {
         "id": 1,
         "title": "Houses of the Holy",
-        "author": "Led Zeppelin",
+        "creator": "Led Zeppelin",
         "image": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Led_Zeppelin_-_Houses_of_the_Holy.jpg/220px-Led_Zeppelin_-_Houses_of_the_Holy.jpg",
         "price": 20,
         "selling_points": [
@@ -55,7 +56,7 @@ var albums = [
     {
         "id": 2,
         "title": "Broke and Famous",
-        "author": "Dormtainment",
+        "creator": "Dormtainment",
         "image": "https://direct.rhapsody.com/imageserver/images/Alb.69185622/500x500.jpg",
         "price": 3.99,
         "selling_points": [
@@ -67,7 +68,7 @@ var albums = [
     {
         "id": 3,
         "title": "Hippie High",
-        "author": "Josie Hill",
+        "creator": "Josie Hill",
         "image": "https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/field-of-flowers-jessica-t-hamilton.jpg",
         "price": 11.99,
         "selling_points": [
@@ -80,13 +81,10 @@ var albums = [
 
 
 function createProductCard( product ){
-    var sellingPoints = "<ul>";
-
-    for( let i = 0; i < product.selling_points.length ; i++ ){
-        sellingPoints += "<li>" + product.selling_points[i] + "</li>" ;
-    }
-
-    sellingPoints += "</ul>";
+    var sellingPointsList = product
+        .selling_points
+        .map( ( point ) => `<li>${point}</point>` )
+        .join( "" );
 
     return `
       <div>
@@ -111,14 +109,15 @@ function createProductCard( product ){
           </li>
         </ul>
         <div class='selling_points'>
-          ${sellingPoints}
+          <ul>
+            ${sellingPointsList}
+          </ul>
         </div>
       </div>
     `;
 }
 
-document.querySelector( "#content" ).innerHTML += albums.map( createProductCard ).join( "" ) + books.map( createProductCard ).join( "" );
-
+content.innerHTML += albums.map( createProductCard ).join( "" ) + books.map( createProductCard ).join( "" );
 
 document
     .getElementById( "booksLink" )
@@ -147,7 +146,7 @@ document
     .querySelector( "#booksLink" )
     .addEventListener( "click",
         function bookFilter(){
-            document.querySelector( "#content" ).innerHTML = books.map( createProductCard ).join( "" );
+            content.innerHTML = books.map( createProductCard ).join( "" );
         }
     );
 
@@ -155,7 +154,7 @@ document
     .querySelector( "#albumsLink" )
     .addEventListener( "click",
         function albumsFilter(){
-            document.querySelector( "#content" ).innerHTML = albums.map( createProductCard ).join( "" );
+            content.innerHTML = albums.map( createProductCard ).join( "" );
         }
     );
 
@@ -183,11 +182,13 @@ document
         else{
             albums.push( newProduct );
         }
-        console.log( newProduct );
+
         document.querySelector( "#content" ).innerHTML += createProductCard( newProduct );
         $.ajax( `https://api.savvycoders.com/${newProduct.type}s`,{
             "method": "post",
             "contentType": "application/json",
             "data": JSON.stringify( newProduct )
         } );
+
+        content.innerHTML += createProductCard( newProduct );
     } );
