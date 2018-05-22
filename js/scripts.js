@@ -3,6 +3,7 @@
 $.ajax( "https://api.savvycoders.com/albums" ).then( console.log );
 $.ajax( "https://api.savvycoders.com/books" ).then( console.log );
 
+var content = document.querySelector( "#content" );
 var books = [
     {
         "id": 1,
@@ -117,8 +118,7 @@ function createProductCard( product ){
     `;
 }
 
-document.querySelector( "#content" ).innerHTML += albums.map( createProductCard ).join( "" ) + books.map( createProductCard ).join( "" );
-
+content.innerHTML += albums.map( createProductCard ).join( "" ) + books.map( createProductCard ).join( "" );
 
 document
     .getElementById( "booksLink" )
@@ -147,7 +147,7 @@ document
     .querySelector( "#booksLink" )
     .addEventListener( "click",
         function bookFilter(){
-            document.querySelector( "#content" ).innerHTML = books.map( createProductCard ).join( "" );
+            content.innerHTML = books.map( createProductCard ).join( "" );
         }
     );
 
@@ -155,7 +155,7 @@ document
     .querySelector( "#albumsLink" )
     .addEventListener( "click",
         function albumsFilter(){
-            document.querySelector( "#content" ).innerHTML = albums.map( createProductCard ).join( "" );
+            content.innerHTML = albums.map( createProductCard ).join( "" );
         }
     );
 
@@ -184,5 +184,5 @@ document
             albums.push( newProduct );
         }
 
-        document.querySelector( "#content" ).innerHTML += createProductCard( newProduct );
+        content.innerHTML += createProductCard( newProduct );
     } );
