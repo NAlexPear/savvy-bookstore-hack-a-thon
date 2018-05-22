@@ -99,7 +99,7 @@ function createProductCard( product ){
         </div>
         <div class='author'>
           <h2>
-            ${product.author}
+            ${product.creator}
           </h2>
         </div>
         <div class='image'>
