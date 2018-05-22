@@ -7,7 +7,7 @@ var books = [
     {
         "id": 1,
         "title": "How Not to Scare Kids",
-        "author": "Iceberg Slim",
+        "creator": "Iceberg Slim",
         "image": "http://cdn3.momsxyz.com/2015/04/image001.jpg",
         "price": 10,
         "selling_points": [
@@ -18,7 +18,7 @@ var books = [
     {
         "id": 2,
         "title": "Apples to Oranges",
-        "author": "Farmer Fred",
+        "creator": "Farmer Fred",
         "image": "http://strongautomotive.com/wp-content/uploads/2014/11/Apple-Orange-2.jpg",
         "price": 8,
         "selling_points": [
@@ -29,7 +29,7 @@ var books = [
     {
         "id": 3,
         "title": "Queens and Kings",
-        "author": "Shaka Zulu",
+        "creator": "Shaka Zulu",
         "image": "https://i.pinimg.com/originals/a6/f6/f8/a6f6f872fc9ba5cd80d37971b15e7a1c.jpg",
         "price": 115,
         "selling_points": [
@@ -43,7 +43,7 @@ var albums = [
     {
         "id": 1,
         "title": "Houses of the Holy",
-        "author": "Led Zeppelin",
+        "creator": "Led Zeppelin",
         "image": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Led_Zeppelin_-_Houses_of_the_Holy.jpg/220px-Led_Zeppelin_-_Houses_of_the_Holy.jpg",
         "price": 20,
         "selling_points": [
@@ -55,7 +55,7 @@ var albums = [
     {
         "id": 2,
         "title": "Broke and Famous",
-        "author": "Dormtainment",
+        "creator": "Dormtainment",
         "image": "https://direct.rhapsody.com/imageserver/images/Alb.69185622/500x500.jpg",
         "price": 3.99,
         "selling_points": [
@@ -67,7 +67,7 @@ var albums = [
     {
         "id": 3,
         "title": "Hippie High",
-        "author": "Josie Hill",
+        "creator": "Josie Hill",
         "image": "https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/field-of-flowers-jessica-t-hamilton.jpg",
         "price": 11.99,
         "selling_points": [
