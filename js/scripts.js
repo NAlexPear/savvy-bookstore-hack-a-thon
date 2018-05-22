@@ -6,33 +6,33 @@ $.ajax( "https://api.savvycoders.com/books" ).then( console.log );
 var books = [
     {
         "id": 1,
-        "name": "How Not to Scare Kids",
+        "title": "How Not to Scare Kids",
         "author": "Iceberg Slim",
-        "pictureUrl": "http://cdn3.momsxyz.com/2015/04/image001.jpg",
+        "image": "http://cdn3.momsxyz.com/2015/04/image001.jpg",
         "price": 10,
-        "sellingPoints": [
+        "selling_points": [
             "Hiding In The closet.",
             "Never Ask a 2yr old for tissue.",
             "Be A Friend Before A Parent." ]
     },
     {
         "id": 2,
-        "name": "Apples to Oranges",
+        "title": "Apples to Oranges",
         "author": "Farmer Fred",
-        "pictureUrl": "http://strongautomotive.com/wp-content/uploads/2014/11/Apple-Orange-2.jpg",
+        "image": "http://strongautomotive.com/wp-content/uploads/2014/11/Apple-Orange-2.jpg",
         "price": 8,
-        "sellingPoints": [
+        "selling_points": [
             "Home Grown Food.",
             "Processed Food.",
             "Chitterlings vs. Veggies." ]
     },
     {
         "id": 3,
-        "name": "Queens and Kings",
+        "title": "Queens and Kings",
         "author": "Shaka Zulu",
-        "pictureUrl": "https://i.pinimg.com/originals/a6/f6/f8/a6f6f872fc9ba5cd80d37971b15e7a1c.jpg",
+        "image": "https://i.pinimg.com/originals/a6/f6/f8/a6f6f872fc9ba5cd80d37971b15e7a1c.jpg",
         "price": 115,
-        "sellingPoints": [
+        "selling_points": [
             "Killing a Tiger With a Twig.",
             "How to Rule a Nation.",
             "Wearing the Crown." ]
@@ -42,11 +42,11 @@ var books = [
 var albums = [
     {
         "id": 1,
-        "name": "Houses of the Holy",
+        "title": "Houses of the Holy",
         "author": "Led Zeppelin",
-        "pictureUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Led_Zeppelin_-_Houses_of_the_Holy.jpg/220px-Led_Zeppelin_-_Houses_of_the_Holy.jpg",
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Led_Zeppelin_-_Houses_of_the_Holy.jpg/220px-Led_Zeppelin_-_Houses_of_the_Holy.jpg",
         "price": 20,
-        "sellingPoints": [
+        "selling_points": [
             "Over the Hills and Far Away/Dancing Days",
             "D'yer Mak'er/The Crunge",
             "Released	in 28 March 1973"
@@ -54,11 +54,11 @@ var albums = [
     },
     {
         "id": 2,
-        "name": "Broke and Famous",
+        "title": "Broke and Famous",
         "author": "Dormtainment",
-        "pictureUrl": "https://direct.rhapsody.com/imageserver/images/Alb.69185622/500x500.jpg",
+        "image": "https://direct.rhapsody.com/imageserver/images/Alb.69185622/500x500.jpg",
         "price": 3.99,
-        "sellingPoints": [
+        "selling_points": [
             "@$$ On the Internet [Explicit]",
             "Ballin Ona Budget [Explicit]",
             "Elephant D-Ck (Bonus Track) [Explicit]"
@@ -66,11 +66,11 @@ var albums = [
     },
     {
         "id": 3,
-        "name": "Hippie High",
+        "title": "Hippie High",
         "author": "Josie Hill",
-        "pictureUrl": "https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/field-of-flowers-jessica-t-hamilton.jpg",
+        "image": "https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/field-of-flowers-jessica-t-hamilton.jpg",
         "price": 11.99,
-        "sellingPoints": [
+        "selling_points": [
             "Rolling in the daisies",
             "High on life",
             "Pass it, my friend"
@@ -80,20 +80,20 @@ var albums = [
 
 
 function createProductCard( product ){
-    var bookSellingPoints = "<ul>";
+    var sellingPoints = "<ul>";
 
-    for( let i = 0; i < product.sellingPoints.length ; i++ ){
-        bookSellingPoints += "<li>" + product.sellingPoints[i] + "</li>" ;
+    for( let i = 0; i < product.selling_points.length ; i++ ){
+        sellingPoints += "<li>" + product.selling_points[i] + "</li>" ;
     }
 
-    bookSellingPoints += "</ul>";
+    sellingPoints += "</ul>";
 
     return `
       <div>
         <div class='title'>
           <header>
             <h1>
-              ${product.name}
+              ${product.title}
             </h1>
           </header>
         </div>
@@ -103,15 +103,15 @@ function createProductCard( product ){
           </h2>
         </div>
         <div class='image'>
-          <img src='${product.pictureUrl}' alt=''>
+          <img src='${product.image}' alt=''>
         </div>
         <ul class='price'>
           <li>
             Price: $${product.price}.00
           </li>
         </ul>
-        <div class='sellingPoints'>
-          ${bookSellingPoints}
+        <div class='selling_points'>
+          ${sellingPoints}
         </div>
       </div>
     `;
@@ -149,13 +149,13 @@ document
     .addEventListener( "submit", ( event ) => {
         var inputs = Array.from( event.target.elements );
         var newProduct = {
-            "sellingPoints": []
+            "selling_points": []
         };
 
         event.preventDefault();
         inputs.forEach( ( input ) => {
-            if( input.name === "sellingPoints" ){
-                newProduct.sellingPoints.push( input.value );
+            if( input.name === "selling_points" ){
+                newProduct.selling_points.push( input.value );
             }
             else{
                 newProduct[input.name] = input.value;
