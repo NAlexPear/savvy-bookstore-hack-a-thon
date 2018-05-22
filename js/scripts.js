@@ -117,19 +117,25 @@ function createProductCard( product ){
 document.querySelector( "#content" ).innerHTML += albums.map( createProductCard ).join( "" ) + books.map( createProductCard ).join( "" );
 
 
-document.getElementById( "booksLink" ).addEventListener(
-    "click",
-    ( event )  => {
-        event.preventDefault();
-
-        console.log( books );
-    }
-);
-
-
-document.querySelector( "#albumsLink" )
+document
+    .getElementById( "booksLink" )
     .addEventListener(
         "click",
-        function manipulateSelection(){
+        ( event )  => {
+            event.preventDefault();
+
+            console.log( books );
+        }
+    );
+
+
+document
+    .getElementById( "albumsLink" )
+    .addEventListener(
+        "click",
+        ( event ) => {
+            event.preventDefault();
+
             console.log( albums );
-        } );
+        }
+    );
