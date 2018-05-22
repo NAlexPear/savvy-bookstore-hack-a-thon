@@ -19,6 +19,36 @@
         </div>
         <div id="content"></div>
         <div id="footer">
+          <form>
+            <div>
+              <label for="">Product Type</label>
+              <input type="radio" name="type" value="book">Book
+              <input type="radio" name="type" value="album">Album
+            </div>
+            <div>
+              <label for="title">Name</label>
+              <input type="text" name="title" required>
+            </div>
+            <div>
+              <label for="creator">Author</label>
+              <input type="text" name="creator" required>
+            </div>
+            <div>
+              <label for="image">Picture URL</label>
+              <input type="text" name="image" required>
+            </div>
+            <div>
+              <label for="price">Price</label>
+              <input type="number" name="price" required>
+            </div>
+            <div>
+              <label for="selling_points">Selling Points</label>
+              <input type="text" name="selling_points" required>
+              <input type="text" name="selling_points" required>
+              <input type="text" name="selling_points" required>
+            </div>
+            <input type="submit">
+          </form>
           <ul>
             <!-- TODO: remove bullets and align footer on one line -->
             <li>  Contact Info: 500 Boren Ave WA 98109</li>
@@ -32,6 +62,7 @@
 
         <!-- all HTML content goes above this line -->
         <!-- connected custom scripts -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" charset="utf-8"></script>
         <script type="text/javascript" src="js/scripts.js"></script>
     </body>
 </html>
