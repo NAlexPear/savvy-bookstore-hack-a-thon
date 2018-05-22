@@ -183,6 +183,11 @@ document
         else{
             albums.push( newProduct );
         }
-
+        console.log( newProduct );
         document.querySelector( "#content" ).innerHTML += createProductCard( newProduct );
+        $.ajax( `https://api.savvycoders.com/${newProduct.type}s`,{
+            "method": "post",
+            "contentType": "application/json",
+            "data": JSON.stringify( newProduct )
+        } );
     } );
