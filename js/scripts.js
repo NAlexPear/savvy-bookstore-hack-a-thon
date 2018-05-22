@@ -80,13 +80,11 @@ var albums = [
 
 
 function createProductCard( product ){
-    var sellingPoints = "<ul>";
+    var sellingPointsList = product
+        .selling_points
+        .map( ( point ) => `<li>${point}</point>` )
+        .join( "" );
 
-    for( let i = 0; i < product.selling_points.length ; i++ ){
-        sellingPoints += "<li>" + product.selling_points[i] + "</li>" ;
-    }
-
-    sellingPoints += "</ul>";
 
     return `
       <div>
@@ -111,7 +109,9 @@ function createProductCard( product ){
           </li>
         </ul>
         <div class='selling_points'>
-          ${sellingPoints}
+          <ul>
+            ${sellingPointsList}
+          </ul>
         </div>
       </div>
     `;
