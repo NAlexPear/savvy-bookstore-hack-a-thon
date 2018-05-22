@@ -86,7 +86,6 @@ function createProductCard( product ){
         .map( ( point ) => `<li>${point}</point>` )
         .join( "" );
 
-
     return `
       <div>
         <div class='title'>
@@ -183,6 +182,13 @@ document
         else{
             albums.push( newProduct );
         }
+
+        document.querySelector( "#content" ).innerHTML += createProductCard( newProduct );
+        $.ajax( `https://api.savvycoders.com/${newProduct.type}s`,{
+            "method": "post",
+            "contentType": "application/json",
+            "data": JSON.stringify( newProduct )
+        } );
 
         content.innerHTML += createProductCard( newProduct );
     } );
