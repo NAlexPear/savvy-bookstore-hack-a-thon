@@ -172,7 +172,7 @@ document
             if( input.name === "selling_points" ){
                 newProduct.selling_points.push( input.value );
             }
-            else{
+            else if( input.name ){
                 newProduct[input.name] = input.value;
             }
         } );
