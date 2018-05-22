@@ -1,4 +1,5 @@
-
+var albumRequest = $.ajax( "https://api.savvycoders.com/albums" ).then( console.log );
+var booksRequest = $.ajax( "https://api.savvycoders.com/books" ).then( console.log );
 
 var books = [
     {
@@ -139,3 +140,6 @@ document
             console.log( albums );
         }
     );
+
+console.log( booksRequest );
+console.log( albumRequest );
