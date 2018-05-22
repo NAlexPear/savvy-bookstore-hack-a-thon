@@ -143,6 +143,21 @@ document
         }
     );
 
+document
+    .querySelector( "#booksLink" )
+    .addEventListener( "click",
+        function bookFilter(){
+            document.querySelector( "#content" ).innerHTML = books.map( createProductCard ).join( "" );
+        }
+    );
+
+document
+    .querySelector( "#albumsLink" )
+    .addEventListener( "click",
+        function albumsFilter(){
+            document.querySelector( "#content" ).innerHTML = albums.map( createProductCard ).join( "" );
+        }
+    );
 
 document
     .querySelector( "form" )
