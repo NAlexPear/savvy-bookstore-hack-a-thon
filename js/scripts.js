@@ -139,3 +139,31 @@ document
             console.log( albums );
         }
     );
+
+document
+    .querySelector( "form" )
+    .addEventListener( "submit", ( event ) => {
+        var inputs = Array.from( event.target.elements );
+        var newProduct = {
+            "sellingPoints": []
+        };
+
+        event.preventDefault();
+        inputs.forEach( ( input ) => {
+            if( input.name === "sellingPoints" ){
+                newProduct.sellingPoints.push( input.value );
+            }
+            else{
+                newProduct[input.name] = input.value;
+            }
+        } );
+
+        if( newProduct.type === "book" ){
+            books.push( newProduct );
+        }
+        else{
+            albums.push( newProduct );
+        }
+
+        document.querySelector( "#content" ).innerHTML += createProductCard( newProduct );
+    } );
