@@ -1,4 +1,5 @@
-
+$.ajax( "https://api.savvycoders.com/albums" ).then( console.log );
+$.ajax( "https://api.savvycoders.com/books" ).then( console.log );
 
 var books = [
     {
@@ -139,6 +140,7 @@ document
             console.log( albums );
         }
     );
+
 
 document
     .querySelector( "form" )
