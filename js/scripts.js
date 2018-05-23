@@ -1,9 +1,13 @@
 /* globals $ */
+var albumsRequest = $.ajax( "https://api.savvycoders.com/albums" );
+var booksRequest = $.ajax( "https://api.savvycoders.com/books" );
 var content = document.querySelector( "#content" );
+
 var products = {
     "books": [
         {
             "id": 1,
+            "type": "book",
             "title": "How Not to Scare Kids",
             "creator": "Iceberg Slim",
             "image": "http://cdn3.momsxyz.com/2015/04/image001.jpg",
@@ -15,6 +19,7 @@ var products = {
         },
         {
             "id": 2,
+            "type": "book",
             "title": "Apples to Oranges",
             "creator": "Farmer Fred",
             "image": "http://strongautomotive.com/wp-content/uploads/2014/11/Apple-Orange-2.jpg",
@@ -26,6 +31,7 @@ var products = {
         },
         {
             "id": 3,
+            "type": "book",
             "title": "Queens and Kings",
             "creator": "Shaka Zulu",
             "image": "https://i.pinimg.com/originals/a6/f6/f8/a6f6f872fc9ba5cd80d37971b15e7a1c.jpg",
@@ -40,6 +46,7 @@ var products = {
     "albums": [
         {
             "id": 1,
+            "type": "album",
             "title": "Houses of the Holy",
             "creator": "Led Zeppelin",
             "image": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Led_Zeppelin_-_Houses_of_the_Holy.jpg/220px-Led_Zeppelin_-_Houses_of_the_Holy.jpg",
@@ -52,6 +59,7 @@ var products = {
         },
         {
             "id": 2,
+            "type": "album",
             "title": "Broke and Famous",
             "creator": "Dormtainment",
             "image": "https://direct.rhapsody.com/imageserver/images/Alb.69185622/500x500.jpg",
@@ -64,6 +72,7 @@ var products = {
         },
         {
             "id": 3,
+            "type": "album",
             "title": "Hippie High",
             "creator": "Josie Hill",
             "image": "https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/field-of-flowers-jessica-t-hamilton.jpg",
@@ -77,14 +86,24 @@ var products = {
     ]
 };
 
+
 function createProductCard( product ){
     var sellingPointsList = product
         .selling_points
         .map( ( point ) => `<li>${point}</point>` )
         .join( "" );
 
-    return `
-      <div>
+    var element = document.createElement( "div" );
+    var deleteButton = document.createElement( "button" );
+
+    deleteButton.textContent = "DELETE";
+
+    deleteButton.addEventListener(
+        "click",
+        () => console.log( `we should delete ${product.type} ${product.id}` )
+    );
+
+    element.innerHTML = `
         <div class='title'>
           <header>
             <h1>
@@ -110,16 +129,18 @@ function createProductCard( product ){
             ${sellingPointsList}
           </ul>
         </div>
-        <button class="delete">Delete Product</button>
       </div>
-
     `;
+
+    element.appendChild( deleteButton );
+
+    return element;
 }
 
 function createProductCards( item ){
     return products[item]
         .map( createProductCard )
-        .join( "" );
+        .forEach( ( product ) => content.appendChild( product ) );
 }
 
 function isValidInput( input ){
@@ -129,6 +150,19 @@ function isValidInput( input ){
     return isChecked || isText;
 }
 
+albumsRequest.then( ( flansgarble ) => {
+    flansgarble.forEach( ( album ) => products.albums.push( album ) );
+
+    createProductCards( "albums" );
+} );
+
+
+booksRequest.then( ( grebsmackles ) => {
+    grebsmackles.forEach( ( book ) => products.books.push( book )  );
+
+    createProductCards( "books" );
+} );
+
 document
     .getElementById( "booksLink" )
     .addEventListener(
@@ -136,7 +170,8 @@ document
         ( event )  => {
             event.preventDefault();
 
-            content.innerHTML = createProductCards( "books" );
+            content.innerHTML = "";
+            createProductCards( "books" );
         }
     );
 
@@ -148,7 +183,8 @@ document
         ( event ) => {
             event.preventDefault();
 
-            content.innerHTML = createProductCards( "albums" );
+            content.innerHTML = "";
+            createProductCards( "albums" );
         }
     );
 
@@ -179,12 +215,10 @@ document
             "data": JSON.stringify( newProduct )
         } );
 
-        content.innerHTML += createProductCard( newProduct );
+        content.appendChild( createProductCard( newProduct ) );
     } );
 
-content.innerHTML += createProductCards( "books" ) + createProductCards( "albums" );
-
-document.querySelectorAll( ".delete" ).forEach(
+document.querySelectorAll( "button" ).forEach(
     ( deleteButton ) => deleteButton.addEventListener( "click", () =>
         console.log( "I am deleted!" )
     ) );
