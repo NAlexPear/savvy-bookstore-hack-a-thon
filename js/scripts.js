@@ -1,5 +1,8 @@
 /* globals $ */
-var content = document.querySelector( "#content" );
+var albumsRequest = $.ajax( "https://api.savvycoders.com/albums" );
+var booksRequest = $.ajax( "https://api.savvycoders.com/books" );
+
+
 var products = {
     "books": [
         {
@@ -77,6 +80,7 @@ var products = {
     ]
 };
 
+
 function createProductCard( product ){
     var sellingPointsList = product
         .selling_points
@@ -113,6 +117,15 @@ function createProductCard( product ){
       </div>
     `;
 }
+function createProduct( product ){
+    return product
+        .map( createProductCard )
+        .join( "" );
+}
+
+function placeProduct( productToPlace ){
+    document.querySelector( "#content" ).innerHTML += createProduct( productToPlace );
+}
 
 function createProductCards( item ){
     return products[item]
@@ -126,6 +139,19 @@ function isValidInput( input ){
 
     return isChecked || isText;
 }
+
+albumsRequest.then( ( flansgarble ) => {
+    flansgarble.forEach( ( album ) => products.albums.push( album ) );
+
+    placeProduct( products.albums );
+} );
+
+
+booksRequest.then( ( grebsmackles ) => {
+    grebsmackles.forEach( ( book ) => products.books.push( book )  );
+
+    placeProduct( products.books );
+} );
 
 document
     .getElementById( "booksLink" )
@@ -177,7 +203,10 @@ document
             "data": JSON.stringify( newProduct )
         } );
 
-        content.innerHTML += createProductCard( newProduct );
+        document.querySelector( "#content" ).innerHTML += createProductCard( newProduct );
     } );
 
-content.innerHTML += createProductCards( "books" ) + createProductCards( "albums" );
+
+console.log( products.books );
+console.log( products.albums );
+console.log( "Alex y dis hapn" );
