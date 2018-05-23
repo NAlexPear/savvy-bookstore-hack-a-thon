@@ -110,7 +110,9 @@ function createProductCard( product ){
             ${sellingPointsList}
           </ul>
         </div>
+        <button id = "delete">Delete Product</button>
       </div>
+
     `;
 }
 
