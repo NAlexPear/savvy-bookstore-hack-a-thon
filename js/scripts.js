@@ -205,8 +205,3 @@ document
 
         document.querySelector( "#content" ).innerHTML += createProductCard( newProduct );
     } );
-
-
-console.log( products.books );
-console.log( products.albums );
-console.log( "Alex y dis hapn" );
