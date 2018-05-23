@@ -1,7 +1,7 @@
 /* globals $ */
 var albumsRequest = $.ajax( "https://api.savvycoders.com/albums" );
 var booksRequest = $.ajax( "https://api.savvycoders.com/books" );
-
+var content = document.querySelector( "#content" );
 
 var products = {
     "books": [
@@ -132,7 +132,7 @@ function createProduct( product ){
 }
 
 function placeProduct( productToPlace ){
-    document.querySelector( "#content" ).innerHTML += createProduct( productToPlace );
+    content.innerHTML += createProduct( productToPlace );
 }
 
 function createProductCards( item ){
@@ -211,5 +211,5 @@ document
             "data": JSON.stringify( newProduct )
         } );
 
-        document.querySelector( "#content" ).innerHTML += createProductCard( newProduct );
+        content.innerHTML += createProductCard( newProduct );
     } );
