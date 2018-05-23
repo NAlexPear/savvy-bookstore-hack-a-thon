@@ -110,7 +110,7 @@ function createProductCard( product ){
             ${sellingPointsList}
           </ul>
         </div>
-        <button id = "delete">Delete Product</button>
+        <button class="delete">Delete Product</button>
       </div>
 
     `;
@@ -183,3 +183,8 @@ document
     } );
 
 content.innerHTML += createProductCards( "books" ) + createProductCards( "albums" );
+
+document.querySelectorAll( ".delete" ).forEach(
+    ( deleteButton ) => deleteButton.addEventListener( "click", () =>
+        console.log( "I am deleted!" )
+    ) );
