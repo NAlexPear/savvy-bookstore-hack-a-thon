@@ -4,6 +4,7 @@ var products = {
     "books": [
         {
             "id": 1,
+            "type": "book",
             "title": "How Not to Scare Kids",
             "creator": "Iceberg Slim",
             "image": "http://cdn3.momsxyz.com/2015/04/image001.jpg",
@@ -15,6 +16,7 @@ var products = {
         },
         {
             "id": 2,
+            "type": "book",
             "title": "Apples to Oranges",
             "creator": "Farmer Fred",
             "image": "http://strongautomotive.com/wp-content/uploads/2014/11/Apple-Orange-2.jpg",
@@ -26,6 +28,7 @@ var products = {
         },
         {
             "id": 3,
+            "type": "book",
             "title": "Queens and Kings",
             "creator": "Shaka Zulu",
             "image": "https://i.pinimg.com/originals/a6/f6/f8/a6f6f872fc9ba5cd80d37971b15e7a1c.jpg",
@@ -40,6 +43,7 @@ var products = {
     "albums": [
         {
             "id": 1,
+            "type": "album",
             "title": "Houses of the Holy",
             "creator": "Led Zeppelin",
             "image": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Led_Zeppelin_-_Houses_of_the_Holy.jpg/220px-Led_Zeppelin_-_Houses_of_the_Holy.jpg",
@@ -52,6 +56,7 @@ var products = {
         },
         {
             "id": 2,
+            "type": "album",
             "title": "Broke and Famous",
             "creator": "Dormtainment",
             "image": "https://direct.rhapsody.com/imageserver/images/Alb.69185622/500x500.jpg",
@@ -64,6 +69,7 @@ var products = {
         },
         {
             "id": 3,
+            "type": "album",
             "title": "Hippie High",
             "creator": "Josie Hill",
             "image": "https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/field-of-flowers-jessica-t-hamilton.jpg",
@@ -84,7 +90,7 @@ function createProductCard( product ){
         .join( "" );
 
     return `
-      <div>
+      <div id="${product.type}-${product.id}">
         <div class='title'>
           <header>
             <h1>
