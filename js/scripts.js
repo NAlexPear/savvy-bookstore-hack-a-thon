@@ -93,8 +93,17 @@ function createProductCard( product ){
         .map( ( point ) => `<li>${point}</point>` )
         .join( "" );
 
-    return `
-      <div id="${product.type}-${product.id}">
+    var element = document.createElement( "div" );
+    var deleteButton = document.createElement( "button" );
+
+    deleteButton.textContent = "DELETE";
+
+    deleteButton.addEventListener(
+        "click",
+        () => console.log( `we should delete ${product.type} ${product.id}` )
+    );
+
+    element.innerHTML = `
         <div class='title'>
           <header>
             <h1>
@@ -120,25 +129,17 @@ function createProductCard( product ){
             ${sellingPointsList}
           </ul>
         </div>
-        <button id = "delete">Delete Product</button>
-      </div>
-
     `;
-}
-function createProduct( product ){
-    return product
-        .map( createProductCard )
-        .join( "" );
-}
 
-function placeProduct( productToPlace ){
-    content.innerHTML += createProduct( productToPlace );
+    element.appendChild( deleteButton );
+
+    return element;
 }
 
 function createProductCards( item ){
     return products[item]
         .map( createProductCard )
-        .join( "" );
+        .forEach( ( product ) => content.appendChild( product ) );
 }
 
 function isValidInput( input ){
@@ -151,14 +152,14 @@ function isValidInput( input ){
 albumsRequest.then( ( flansgarble ) => {
     flansgarble.forEach( ( album ) => products.albums.push( album ) );
 
-    placeProduct( products.albums );
+    createProductCards( "albums" );
 } );
 
 
 booksRequest.then( ( grebsmackles ) => {
     grebsmackles.forEach( ( book ) => products.books.push( book )  );
 
-    placeProduct( products.books );
+    createProductCards( "books" );
 } );
 
 document
@@ -168,7 +169,8 @@ document
         ( event )  => {
             event.preventDefault();
 
-            content.innerHTML = createProductCards( "books" );
+            content.innerHTML = "";
+            createProductCards( "books" );
         }
     );
 
@@ -180,7 +182,8 @@ document
         ( event ) => {
             event.preventDefault();
 
-            content.innerHTML = createProductCards( "albums" );
+            content.innerHTML = "";
+            createProductCards( "albums" );
         }
     );
 
@@ -211,5 +214,5 @@ document
             "data": JSON.stringify( newProduct )
         } );
 
-        content.innerHTML += createProductCard( newProduct );
+        content.appendChild( createProductCard( newProduct ) );
     } );
