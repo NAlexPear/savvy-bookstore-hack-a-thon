@@ -5,5 +5,6 @@
 
 ### Contributors
 + Alex Pearson
++ Areanna Whittington
 + Luke Siecinski
 + Kai Idris
