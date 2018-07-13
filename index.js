@@ -3,6 +3,8 @@ import Header from './src/Header';
 import Content from './src/Content';
 import Footer from './src/Footer';
 
+var bookArray = [book2, book3, book4];
+
 var book2 = {
     "id": 2,
     "name": "Little Monsters",
@@ -37,7 +39,6 @@ var book2 = {
         "Sadly, there are no Lil Wayne quotes about this book"
     ]
 }
-
 
 
 
