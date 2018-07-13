@@ -18,20 +18,20 @@ html {
 }
 
 #navigation{
-background-color: aqua;
+  background-color: aqua;
 }
 
 #header {
-background-color: tomato;
+  background-color: tomato;
 }
 
 #content{
-background-color: peru;
-display: flex;
+  background-color: peru;
+  display: flex;
 }
 
 #footer{
-background-color: firebrick;
+  background-color: firebrick;
 }
 
 
