@@ -1,10 +1,10 @@
-export default function Book(){
+export default function Book(book){
     return `
         <div>
-            <h1>Book</h1>
-            <h2>Author</h2>
-            <h3>Price</h3>
-            <h3>Selling Points</h3>
+            <h1>${book.name}</h1>
+            <h2>${book.author}</h2>
+            <h3>${book.price}</h3>
+            <h3>${book.sellingPoints}</h3>
             <ol>
                 <li>First Point</li>
                 <li>Second Point</li>
