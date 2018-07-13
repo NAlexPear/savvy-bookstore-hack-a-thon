@@ -2,9 +2,9 @@ export default function Navigation(){
     return `
         <div id="navigation">
             <ul>
-                 <li>
+                <li>
                     <a href="#">Books</a>
-                 </li>
+                </li>
                 <li>
                     <a href="#">Music</a>
                 </li>

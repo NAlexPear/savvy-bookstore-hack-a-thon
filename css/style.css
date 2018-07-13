@@ -8,11 +8,12 @@ html {
 
 #root{
   display: grid;
-  grid-template-rows: min-content min-content auto min-content;
-  grid-template-areas: 
+  grid-template-rows: min-content min-content auto min-content min-content;
+  grid-template-areas:
   "navigation"
   "header"
   "content"
+  "form"
   "footer";
   min-height: 100vh;
 }
@@ -28,8 +29,18 @@ html {
 #content{
   background-color: peru;
   display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#form {
+  background-color: papaywhip;
 }
 
 #footer{
   background-color: firebrick;
+}
+
+img {
+  width: 100%;
 }

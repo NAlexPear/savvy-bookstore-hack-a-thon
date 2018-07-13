@@ -2,6 +2,7 @@ import Navigation from './src/Navigation';
 import Header from './src/Header';
 import Content from './src/Content';
 import Footer from './src/Footer';
+import Form from './src/Form';
 
 var book2 = {
     "id": 2,
@@ -38,11 +39,6 @@ var book2 = {
     ]
 }
 
-
-
-
-
-
 var root = document.querySelector('#root');
 
 function render(){
@@ -50,6 +46,7 @@ function render(){
         ${Navigation()}
         ${Header()}
         ${Content()}
+        ${Form()}
         ${Footer()}
     `;
 
