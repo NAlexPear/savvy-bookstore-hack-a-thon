@@ -1,4 +1,4 @@
-export default function footer(state){
+export default function Footer(){
     return `
     <div id="footer">
         <ul>
