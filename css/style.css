@@ -5,3 +5,31 @@ html {
 }
 
 /*put all other styles below this line, please*/
+
+#root{
+  display: grid;
+  grid-template-rows: min-content min-content auto min-content;
+  grid-template-areas: 
+  "navigation"
+  "header"
+  "content"
+  "footer";
+  min-height: 100vh;
+}
+
+#navigation{
+  background-color: aqua;
+}
+
+#header {
+  background-color: tomato;
+}
+
+#content{
+  background-color: peru;
+  display: flex;
+}
+
+#footer{
+  background-color: firebrick;
+}
