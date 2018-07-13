@@ -5,6 +5,7 @@
 
 ### Contributors
 + Alex Pearson
++ Marcus Boyd
 + Siddhi Goswami
 + Omar Helal
 + Eric Humphrey
