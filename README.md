@@ -5,6 +5,7 @@
 
 ### Contributors
 + Alex Pearson
++ Siddhi Goswami
 + Omar Helal
 + Eric Humphrey
 + Areanna Whittington
