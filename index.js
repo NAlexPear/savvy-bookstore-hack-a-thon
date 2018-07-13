@@ -11,7 +11,6 @@ var book2 = {
     "price": 30,
     "sellingPoints": [
         "Unexpected Plot twists",
-      
     ]
  }
 
