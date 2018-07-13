@@ -5,6 +5,7 @@
 
 ### Contributors
 + Alex Pearson
++ Omar Helal
 + Eric Humphrey
 + Areanna Whittington
 + Luke Siecinski
