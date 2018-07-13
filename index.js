@@ -1,19 +1,19 @@
 
-import Navigation from './src/Navigation';
-import Header from './src/Header';
-import Content from './src/Content';
-import Footer from './src/Footer';
+import Navigation from './src/navigation';
+import Header from './src/header';
+import Content from './src/content';
+import Footer from './src/footer';
 
 var root = document.querySelector('#root');
 
 function render(){
     root.innerHTML = `
-        ${Navigation}
-        ${Header}
-        ${Content}
-        ${Footer}
+        ${Navigation()}
+        ${Header()}
+        ${Content()}
+        ${Footer()}
         `;
 
-} 
+}
 
 render();
