@@ -3,9 +3,9 @@ import Header from './src/Header';
 import Content from './src/Content';
 import Footer from './src/Footer';
 
-var bookArray = [book2, book3, book4];
+var bookArray = [
 
-var book2 = {
+{var book2 = {
     "id": 2,
     "name": "Little Monsters",
     "author": "Kara Thomas",
@@ -15,8 +15,9 @@ var book2 = {
         "Unexpected Plot twists",
     ]
  }
-
- var book3 = {
+}
+ 
+{var book3 = {
     "id": 3,
     "name": "The Go-Giver",
     "author": "Bob Burg and John David Mann",
@@ -26,8 +27,8 @@ var book2 = {
         "A Little Story About a Powerful Business Idea"
     ]
  }
-
- var book4 = {
+}
+ {var book4 = {
     "id": 4,
     "name": "Hitchhikers Guide to the Galaxy",
     "author": "Douglas Adams",
@@ -39,8 +40,9 @@ var book2 = {
         "Sadly, there are no Lil Wayne quotes about this book"
     ]
 }
-
-
+ }
+ 
+]
 
 
 
