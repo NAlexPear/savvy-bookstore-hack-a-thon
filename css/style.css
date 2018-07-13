@@ -4,6 +4,10 @@ html {
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Fjalla One', sans-serif;
+}
+
 /*put all other styles below this line, please*/
 
 #root{
@@ -20,10 +24,21 @@ html {
 
 #navigation{
   background-color: aqua;
+  top: 0;
+  position: sticky;
+}
+
+#navigation ul {
+  align-items: center;
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
 }
 
 #header {
-  background-color: tomato;
+  background-image: url("https://images.pexels.com/photos/33283/stack-of-books-vintage-books-book-books.jpg?auto=compress&cs=tinysrgb&h=750&w=1260");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #content{
