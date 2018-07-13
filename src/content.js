@@ -4,10 +4,11 @@ export default function Content(){
             <form>
                 <input type="text" name="title" placeholder="Title">
                 <input type="text" name="author" placeholder="Author">
-                <input type="text" name="pictureUrl" placeholder="Cover Picture">
-                <input type="text" name="price" placeholder="Price">
-                <input type="text" name="sellingPoints" placeholder="Selling Points">
+                <input type="URL" name="pictureUrl" placeholder="Cover Picture">
+                <input type="number" name="price" placeholder="Price">
             </form>
+            <textarea name="sellingPoints" placeholder="Tell us some good selling points for this book here!"></textarea>
+            <input type="submit">
         </div>
     `;
 }
