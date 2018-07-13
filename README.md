@@ -5,5 +5,11 @@
 
 ### Contributors
 + Alex Pearson
-+ Kai Idris
 + Adam Ladd
++ Marcus Boyd
++ Siddhi Goswami
++ Omar Helal
++ Eric Humphrey
++ Areanna Whittington
++ Luke Siecinski
++ Kai Idris
