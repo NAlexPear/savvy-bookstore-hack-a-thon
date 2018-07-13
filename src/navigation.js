@@ -1,8 +1,6 @@
-export default`
-    <div id="navigation">
+export default function navigation(state){
+    return `
+    <div id="header">
     </div>
-
-
-
-
 `;
+}   
