@@ -1,8 +1,7 @@
-
-import Navigation from './src/navigation';
-import Header from './src/header';
-import Content from './src/content';
-import Footer from './src/footer';
+import Navigation from './src/Navigation';
+import Header from './src/Header';
+import Content from './src/Content';
+import Footer from './src/Footer';
 
 var root = document.querySelector('#root');
 
@@ -12,7 +11,7 @@ function render(){
         ${Header()}
         ${Content()}
         ${Footer()}
-        `;
+    `;
 
 }
 

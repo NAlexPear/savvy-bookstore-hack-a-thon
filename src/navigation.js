@@ -1,6 +1,6 @@
-export default function navigation(state){
+export default function Navigation(){
     return `
-    <div id="header">
-    </div>
-`;
-}   
+        <div id="navigation">
+        </div>
+    `;
+}
