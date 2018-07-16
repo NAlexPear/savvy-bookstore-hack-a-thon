@@ -1,5 +1,5 @@
 export default function Form(){
-  return `
+    return `
     <form>
         <input type="text" name="title" placeholder="Title">
         <input type="text" name="author" placeholder="Author">
@@ -8,5 +8,5 @@ export default function Form(){
         <textarea name="sellingPoints" placeholder="Tell us some good selling points for this book here!"></textarea>
         <input type="submit">
     </form>
-  `
+  `;
 }
