@@ -43,6 +43,7 @@ var books = [
 var root = document.querySelector('#root');
 
 function render(){
+    console.log(books)
     root.innerHTML = `
         ${Navigation()}
         ${Header()}
