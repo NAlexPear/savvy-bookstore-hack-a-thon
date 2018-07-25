@@ -1,4 +1,4 @@
-export default function Book(book = {}){
+export default function Book(book){
     return `
         <div>
             <h1>${book.name}</h1>
@@ -10,7 +10,7 @@ export default function Book(book = {}){
                 <li>${book.sellingPoints[1]}</li>
                 <li>${book.sellingPoints[2]}</li>
             </ol>
-            <img src="${book.pictureUrl}" alt="">
+            <img src = "${book.pictureUrl}" alt = "">
         </div>
     `;
 }
