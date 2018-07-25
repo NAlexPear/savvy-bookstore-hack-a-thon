@@ -62,7 +62,7 @@ function render(){
                     'author': data[1].value,
                     'pictureURL': data[2].value,
                     'price': data[3].value,
-                    'sellingPoints': []
+                    'sellingPoints': data[4].value.split(',')
                 };
 
                 books[books.length] = newProduct;
