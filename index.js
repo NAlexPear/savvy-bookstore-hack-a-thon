@@ -3,6 +3,8 @@ import Header from './src/Header';
 import Content from './src/Content';
 import Footer from './src/Footer';
 import Form from './src/Form';
+import axios from 'axios';
+
 
 var books = [
     {
@@ -42,7 +44,7 @@ var books = [
 
 var root = document.querySelector('#root');
 
-function render(){
+function render(books){
     root.innerHTML = `
         ${Navigation()}
         ${Header()}
@@ -72,4 +74,6 @@ function render(){
         );
 }
 
-render();
+axios 
+  .get('https://api.savvycoders.com/books')
+  .then(response => render(response.data))
