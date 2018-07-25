@@ -60,3 +60,19 @@ body {
 img {
   width: 100%;
 }
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+
+}
+
+.centered {
+  font-size: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
