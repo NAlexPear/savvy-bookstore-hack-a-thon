@@ -39,6 +39,26 @@ var books = [
     }
 ];
 
+document
+    .querySelector('form')
+    .addEventListener(
+        'submit',
+        (event) => {
+            var data = event.target.elements;
+            var newProduct = {
+                'name': data[0].value,
+                'author': data[1].value,
+                'pictureURL': data[2].value,
+                'price': data[3].value
+                'sellingPoints': []
+            };
+
+            books[books.length] = newProduct;
+
+            render(books);
+        }
+    );
+
 
 var root = document.querySelector('#root');
 
