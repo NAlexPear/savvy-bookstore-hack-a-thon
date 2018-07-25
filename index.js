@@ -73,3 +73,33 @@ function render(){
 }
 
 render();
+
+var links = document.querySelectorAll('#navigation a');
+
+links[0].addEventListener(
+  'click',
+  (event) => {
+    var filteredProducts = { // why do we need to do this?
+      books: products.books,
+      albums: []
+    };
+
+    event.preventDefault();
+
+    render(filteredProducts);
+  }
+);
+
+links[1].addEventListener(
+  'click',
+  (event) => {
+    var filteredProducts = { 
+      books: [],
+      albums: products.albums
+    };
+
+    event.preventDefault();
+
+    render(filteredProducts);
+  }
+);
