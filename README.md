@@ -5,6 +5,7 @@
 
 ### Contributors
 + Alex Pearson
++ Tori Stake
 + Chad Smith
 + Dan Catanzaro
 + Alex Lapp
