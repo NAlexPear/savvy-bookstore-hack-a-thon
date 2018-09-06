@@ -5,6 +5,7 @@
 
 ### Contributors
 + Alex Pearson
++ Chad Smith
 + Dan Catanzaro
 + Alex Lapp
 + Travis Dellard
