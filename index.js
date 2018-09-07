@@ -3,7 +3,6 @@ import Header from './components/Header';
 import Content from './components/Content';
 import Footer from './components/Footer';
 
-
 var book1 = {
     'id': 1,
     'name': 'Fried Chicken - A Guide',
@@ -42,3 +41,19 @@ var book2 = {
         'Each Chapter Contains a Different Strain Thoughts - Seth Rogen'
     ]
 };
+
+function render() {
+    
+    document
+    .querySelector(`#root`)
+    .innerHTML =
+    `
+           ${Header()}
+           ${Navigation()}
+           ${Content()}
+           ${Footer()}
+           `;
+
+}
+
+render();
