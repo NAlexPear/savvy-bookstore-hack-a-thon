@@ -31,3 +31,31 @@ html {
     grid-column: 2 / 6;
     grid-row: 5 / 6;
 }
+
+.book {
+    padding: 5px;
+    font-family: 'Futura', sans-serif;
+    font-size: 18pt;
+}
+
+.book .title {
+    font-weight: bold;
+}
+
+.book .author {
+    font-style: italic;
+}
+
+.book .price {
+  font-variant: small-caps;
+  font-size: 15pt;
+}
+
+.book .blurb {
+  font-size: 12pt;
+}
+
+.book .cover {
+    width: 80%;
+    margin-bottom: 5px;
+}
