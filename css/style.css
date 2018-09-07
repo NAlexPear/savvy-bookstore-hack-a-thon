@@ -7,9 +7,9 @@ html {
 /*put all other styles below this line, please*/
 
 #root {
-    display: grid;
-    grid-template-rows: repeat(1fr, 5);
-    grid-template-columns: repeat(1fr, 5);
+  display: grid;
+  grid-template-rows: repeat(1fr, 5);
+  grid-template-columns: repeat(1fr, 5);
 }
 
 #navigation {
@@ -43,32 +43,35 @@ html {
 }
 
 #header {
-    grid-column: 2 / 6;
-    grid-row: 1 / 2;
+  grid-column: 2 / 6;
+  grid-row: 1 / 2;
 }
 
 #content {
-    grid-column: 2 / 6;
-    grid-row: 2 / 6;
+  grid-column: 2 / 6;
+  grid-row: 2 / 6;
 }
 
 #footer {
-    grid-column: 2 / 6;
-    grid-row: 5 / 6;
+  grid-column: 2 / 6;
+  grid-row: 5 / 6;
 }
 
 .book {
-    padding: 5px;
-    font-family: 'Futura', sans-serif;
-    font-size: 18pt;
+  padding: 5px;
+  font-family: 'Futura', sans-serif;
+  font-size: 18pt;
+  border: 1px solid black;
+  max-width: 100px;
+  width: 40vw;
 }
 
 .book .title {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .book .author {
-    font-style: italic;
+  font-style: italic;
 }
 
 .book .price {
