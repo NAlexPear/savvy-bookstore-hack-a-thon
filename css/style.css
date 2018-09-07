@@ -6,11 +6,18 @@ html {
 
 /*put all other styles below this line, please*/
 
+h1 {
+  font-family: 'Kreon', serif;
+}
+
 #root {
   display: grid;
-  grid-template-columns: repeat(1fr, 5);
   grid-template-rows: repeat(1fr, 5);
+  grid-template-columns: repeat(1fr, 5);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  grid-gap: 2px;
 }
+
 
 #navigation {
   grid-column: 1 / 2;
@@ -45,16 +52,29 @@ html {
 #header {
   grid-column: 2 / 6;
   grid-row: 1 / 2;
+  text-align: center;
+}
+
+#savvycoders {
+  color: #07c4dd;
+}
+
+
+#header {
+  grid-column: 2 / 6;
+  grid-row: 1 / 2;
 }
 
 #content {
   grid-column: 2 / 6;
-  grid-row: 2 / 6;
+  grid-row: 2 / 5;
+  text-align: center;
 }
 
 #footer {
   grid-column: 2 / 6;
   grid-row: 5 / 6;
+  text-align: center;
 }
 
 .book {
