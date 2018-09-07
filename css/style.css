@@ -46,17 +46,16 @@ html {
     font-style: italic;
 }
 
-.book .year {
-  font-variant: small-caps;
-  font-size: 15pt;
-}
-
 .book .price {
   font-variant: small-caps;
   font-size: 15pt;
 }
 
-.book > img {
+.book .blurb {
+  font-size: 12pt;
+}
+
+.book .cover {
     width: 80%;
     margin-bottom: 5px;
 }
