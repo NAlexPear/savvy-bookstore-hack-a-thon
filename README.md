@@ -5,6 +5,7 @@
 
 ### Contributors
 + Alex Pearson
++ Pierre Clark
 + Jamal Pryor
 + Tori Stake
 + Chad Smith
