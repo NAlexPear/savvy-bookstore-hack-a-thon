@@ -42,18 +42,15 @@ var book2 = {
     ]
 };
 
-function render() {
-    
+function render(){
     document
-    .querySelector(`#root`)
-    .innerHTML =
-    `
+        .querySelector('#root')
+        .innerHTML = `
            ${Header()}
            ${Navigation()}
            ${Content()}
            ${Footer()}
-           `;
-
+        `;
 }
 
 render();
