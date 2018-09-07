@@ -59,3 +59,7 @@ function render(books){
 }
 
 render(Books);
+
+document.getElementById('bookInput').addEventListener('submit', (event) => {
+    event.preventDefault();
+})
