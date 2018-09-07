@@ -1,4 +1,5 @@
 import Book from './Book';
+import Input from './Input';
 
 export default function Content(bookArray){
     var bookList = '';
@@ -10,6 +11,7 @@ export default function Content(bookArray){
     return `
     <div id="content">
         ${bookList}
+        ${Input()}
     </div>
     `;
 }
