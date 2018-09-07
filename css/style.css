@@ -84,3 +84,7 @@ html {
     width: 80%;
     margin-bottom: 5px;
 }
+
+input {
+    display: block;
+}
