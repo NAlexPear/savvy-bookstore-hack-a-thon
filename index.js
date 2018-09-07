@@ -56,10 +56,10 @@ function render(books){
            ${Content(books)}
            ${Footer()}
         `;
+
+    document.getElementById('bookInput').addEventListener('submit', (event) => {
+        event.preventDefault();
+    })
 }
 
 render(Books);
-
-document.getElementById('bookInput').addEventListener('submit', (event) => {
-    event.preventDefault();
-})
