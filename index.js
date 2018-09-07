@@ -41,8 +41,4 @@ var book2 = {
         'High Times Best Seller',
         'Each Chapter Contains a Different Strain Thoughts - Seth Rogen'
     ]
-<<<<<<< HEAD
-}
-=======
 };
->>>>>>> ee53bb110fc5f4f27ae0d90f5d048d9fa7aa7222
