@@ -5,4 +5,10 @@
 
 ### Contributors
 + Alex Pearson
-Pierre Clark
++ Pierre Clark
++ Jamal Pryor
++ Tori Stake
++ Chad Smith
++ Dan Catanzaro
++ Alex Lapp
++ Travis Dellard
