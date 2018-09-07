@@ -19,12 +19,12 @@ var Books = [
 },
 
 	{
-		id: 1,
-		name: 'Becoming Snoop Lion',
-		author: 'Snoop Dizzle',
-		pictureUrl: 'https://i.kym-cdn.com/photos/images/facebook/000/367/035/e34.jpg',
-		price: 42.0,
-		sellingPoints: [
+		'id': 3,
+		'name': 'Becoming Snoop Lion',
+		'author': 'Snoop Dizzle',
+		'pictureUrl': 'https://i.kym-cdn.com/photos/images/facebook/000/367/035/e34.jpg',
+		'price': 42.0,
+		'sellingPoints': [
 			"You'll fall deep into the weeds throught this highly addictive story - Willie Nelson",
 			'High Times Best Seller',
 			'Each Chapter Contains a Different Strain Thoughts - Seth Rogen',
