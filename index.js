@@ -20,7 +20,7 @@ var Books = [
 
     {
         'id': 2,
-        'name': 'THe Savvy Life',
+        'name': 'The Savvy Life',
         'author': 'Elaine Alex',
         'pictureUrl':
     'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Typing_computer_screen_reflection.jpg/800px-Typing_computer_screen_reflection.jpg',
