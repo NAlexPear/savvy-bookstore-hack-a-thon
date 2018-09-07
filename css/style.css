@@ -69,7 +69,11 @@ h1 {
   grid-column: 2 / 6;
   grid-row: 2 / 5;
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
 }
+
+
 
 #footer {
   grid-column: 2 / 6;
@@ -82,8 +86,10 @@ h1 {
   font-family: 'Futura', sans-serif;
   font-size: 18pt;
   border: 1px solid black;
-  max-width: 100px;
-  width: 40vw;
+  width: 12vw;
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
 }
 
 .book .title {

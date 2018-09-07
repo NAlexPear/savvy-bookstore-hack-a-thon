@@ -48,6 +48,7 @@ var Books = [
 
 
 function render(books){
+    var newBook = books;
     document
         .querySelector('#root')
         .innerHTML = `
@@ -60,6 +61,10 @@ function render(books){
     document.getElementById('bookInput').addEventListener('submit', (event) => {
         event.preventDefault();
     })
+
+    for(let i = 0; i < newBook.length; i++){
+        console.log(newBook[i].author);
+    }
 }
 
 render(Books);
