@@ -12,3 +12,4 @@
 + Dan Catanzaro
 + Alex Lapp
 + Travis Dellard
++ Jim Guccione
