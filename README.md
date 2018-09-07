@@ -5,6 +5,7 @@
 
 ### Contributors
 + Alex Pearson
++ Jamal Pryor
 + Tori Stake
 + Chad Smith
 + Dan Catanzaro
