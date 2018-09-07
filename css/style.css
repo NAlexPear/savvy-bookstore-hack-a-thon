@@ -85,6 +85,8 @@ html {
     margin-bottom: 5px;
 }
 
-input {
+input, textarea {
     display: block;
+    margin-bottom: 3px;
+    width: 400px;
 }
