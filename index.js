@@ -16,7 +16,7 @@ var books = [
         "Finger Lickin' Good - Some Guy",
         "#1 on KFC's Best Seller List",
         "Don't Buy this Book - Jillian Michaels"
-]
+  ]
 },
 
 {
@@ -30,7 +30,7 @@ var books = [
         'Enlightenment into the world of Front-End Web Development',
         'New York Times Best Seller',
         'This book is totally awsome - Dr. Suess'
-]
+  ]
 },
 
 {
@@ -43,8 +43,8 @@ var books = [
         "You'll fall deep into the weeds throught this highly addictive story - Willie Nelson",
         'High Times Best Seller',
         'Each Chapter Contains a Different Strain Thoughts - Seth Rogen'
-]
-}
+    ]
+  }
 ];
 
 function render(books) {
