@@ -7,76 +7,91 @@ html {
 /*put all other styles below this line, please*/
 
 h1 {
-    font-family: 'Kreon', serif;
+  font-family: 'Kreon', serif;
 }
 
 #root {
-    display: grid;
-    grid-template-rows: repeat(1fr, 5);
-    grid-template-columns: repeat(1fr, 5);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    grid-gap: 2px;
+  display: grid;
+  grid-template-rows: repeat(1fr, 5);
+  grid-template-columns: repeat(1fr, 5);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  grid-gap: 2px;
 }
- #navigation {
-    grid-column: 1 / 2;
-    grid-row: 1 / 6;
-    background-color: #07c4dd;
+
+
+#navigation {
+  grid-column: 1 / 2;
+  grid-row: 1 / 6;
+  background-color: #07c4dd;
 }
 
 #navigation > ul {
-    display: grid;
-    grid-template-rows: repeat(6, 1fr) 50%;
-    padding: 0;
-    margin: 0;
-    background-color: #fff;
+  display: grid;
+  grid-template-rows: repeat(6, 1fr) 50%;
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
 }
 
 #navigation > ul > li {
-    padding: 12px 16px;
-    font-weight: 500;
-    text-transform: uppercase;
-    font-family: 'Segoe UI', Verdana, sans-serif;
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    background-color: #07c4dd;
+  cursor: pointer;
+  padding: 12px 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: 'Segoe UI', Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  background-color: #07c4dd;
 }
 
 #navigation li:hover {
-    background-color: #FFFBCC;  
+  background-color: #FFFBCC;
 }
- #header {
-    grid-column: 2 / 6;
-    grid-row: 1 / 2;
-    text-align: center;
+
+#header {
+  grid-column: 2 / 6;
+  grid-row: 1 / 2;
+  text-align: center;
 }
 
 #savvycoders {
-    color: #07c4dd;
+  color: #07c4dd;
 }
- #content {
-    grid-column: 2 / 6;
-    grid-row: 2 / 5;
-    text-align: center;
+
+
+#header {
+  grid-column: 2 / 6;
+  grid-row: 1 / 2;
 }
- #footer {
-    grid-column: 2 / 6;
-    grid-row: 5 / 6;
-    text-align: center;
+
+#content {
+  grid-column: 2 / 6;
+  grid-row: 2 / 5;
+  text-align: center;
+}
+
+#footer {
+  grid-column: 2 / 6;
+  grid-row: 5 / 6;
+  text-align: center;
 }
 
 .book {
-    padding: 5px;
-    font-family: 'Futura', sans-serif;
-    font-size: 18pt;
+  padding: 5px;
+  font-family: 'Futura', sans-serif;
+  font-size: 18pt;
+  border: 1px solid black;
+  max-width: 100px;
+  width: 40vw;
 }
 
 .book .title {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .book .author {
-    font-style: italic;
+  font-style: italic;
 }
 
 .book .price {

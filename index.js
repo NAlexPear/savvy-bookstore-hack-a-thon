@@ -20,7 +20,7 @@ var Books = [
 
     {
         'id': 2,
-        'name': 'THe Savvy Life',
+        'name': 'The Savvy Life',
         'author': 'Elaine Alex',
         'pictureUrl':
     'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Typing_computer_screen_reflection.jpg/800px-Typing_computer_screen_reflection.jpg',
@@ -33,7 +33,7 @@ var Books = [
     },
 
     {
-        'id': 1,
+        'id': 3,
         'name': 'Becoming Snoop Lion',
         'author': 'Snoop Dizzle',
         'pictureUrl': 'https://i.kym-cdn.com/photos/images/facebook/000/367/035/e34.jpg',
@@ -56,6 +56,10 @@ function render(books){
            ${Content(books)}
            ${Footer()}
         `;
+
+    document.getElementById('bookInput').addEventListener('submit', (event) => {
+        event.preventDefault();
+    })
 }
 
 render(Books);
