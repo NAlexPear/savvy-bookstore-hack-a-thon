@@ -1,4 +1,8 @@
-// Create Book Object
+import Navigation from './components/Navigation';
+import Header from './components/Header';
+import Content from './components/Content';
+import Footer from './components/Footer';
+
 
 var book1 = {
     "id": 1,
