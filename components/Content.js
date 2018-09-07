@@ -10,6 +10,7 @@ export default function Content(bookArray){
     return `
     <div id="content">
         ${bookList}
+        ${Input()}
     </div>
     `;
 }
