@@ -1,4 +1,5 @@
 import Book from './Book';
+import Input from './Input';
 
 export default function Content(bookArray){
     var bookList = '';
