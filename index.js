@@ -47,13 +47,12 @@ var book2 = {
 function render() {
     
     document
-    .getElementById('#root')
+    .querySelector(`#root`)
     .innerHTML =
     `
            ${Header()}
            ${Navigation()}
            ${Content()}
-           ${Profile()}
            ${Footer()}
            `;
 
