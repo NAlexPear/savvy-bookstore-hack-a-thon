@@ -1,4 +1,4 @@
-import Book from "./Book";
+import Book from './Book';
 
 export default function Content(bookArray){
     var bookList = '';
@@ -6,7 +6,8 @@ export default function Content(bookArray){
     for(let i = 0; i < bookArray.length; i++){
         bookList += Book(bookArray[i]);
     }
-    return `    
+
+    return `
     <div id="content">
         ${bookList}
     </div>
