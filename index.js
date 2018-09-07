@@ -3,8 +3,7 @@ import Header from './components/Header';
 import Content from './components/Content';
 import Footer from './components/Footer';
 
-var books = [
-
+var Books = [
 {
     'id': 1,
     'name': 'Fried Chicken - A Guide',
@@ -47,16 +46,16 @@ var books = [
   }
 ];
 
-function render(books) {
 
-document
-  .querySelector(`#root`)
-  .innerHTML =
-  `
-    ${Header()}
-    ${Navigation()}
-    ${Content()}
-    ${Footer()}
-  `;
-} 
-render();
+function render(books){
+    document
+        .querySelector('#root')
+        .innerHTML = `
+           ${Header()}
+           ${Navigation()}
+           ${Content(books)}
+           ${Footer()}
+        `;
+}
+
+render(Books);
