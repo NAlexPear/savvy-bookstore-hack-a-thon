@@ -3,7 +3,9 @@ import Header from './components/Header';
 import Content from './components/Content';
 import Footer from './components/Footer';
 
-var book1 = {
+var books = [book1, book2, book3]
+
+books[0] = {
     'id': 1,
     'name': 'Fried Chicken - A Guide',
     'author': 'Col Sanders',
@@ -16,7 +18,7 @@ var book1 = {
     ]
 };
 
-var novel = {
+books[1] = {
     'id': 2,
     'name': 'THe Savvy Life',
     'author': 'Elaine Alex',
@@ -29,7 +31,7 @@ var novel = {
     ]
 };
 
-var book2 = {
+books[2] = {
     'id': 1,
     'name': 'Becoming Snoop Lion',
     'author': 'Snoop Dizzle',
@@ -42,7 +44,7 @@ var book2 = {
     ]
 };
 
-function render() {
+function render(books) {
     
     document
     .querySelector(`#root`)
@@ -55,5 +57,9 @@ function render() {
            `;
 
 }
+
+
+
+
 
 render();
