@@ -69,6 +69,10 @@ h1 {
   grid-column: 2 / 6;
   grid-row: 2 / 5;
   text-align: center;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  
 }
 
 #footer {
