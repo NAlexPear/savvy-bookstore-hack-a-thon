@@ -48,7 +48,7 @@ var Books = [
 
 
 function render(books){
-var input;
+
     document
         .querySelector('#root')
         .innerHTML = `
@@ -59,11 +59,8 @@ var input;
         `;
 
     document.getElementById('bookInput').addEventListener('submit', (event) => {
-
         event.preventDefault();
     })
-
-
 }
 
 render(Books);
