@@ -43,7 +43,7 @@ var Books = [
             'High Times Best Seller',
             'Each Chapter Contains a Different Strain Thoughts - Seth Rogen'
         ]
-    }
+    },
 ];
 
 
