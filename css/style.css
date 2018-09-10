@@ -84,7 +84,7 @@ h1 {
 .book {
   padding: 5px;
   font-family: 'Futura', sans-serif;
-  font-size: 18pt;
+  font-size: 1vw;
   border: 1px solid black;
   width: 12vw;
   min-width: 150px;
