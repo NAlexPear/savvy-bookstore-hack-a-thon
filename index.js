@@ -48,6 +48,7 @@ var Books = [
 
 
 function render(books){
+
     document
         .querySelector('#root')
         .innerHTML = `
