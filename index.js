@@ -21,13 +21,19 @@ function render(books){
             event.preventDefault();
         });
 
-    document.querySelectorAll('span.delete a').forEach((deleteLink) => { // For each delete link in a book div
-        deleteLink.addEventListener('click', (event) => {   // Replace navigation with this eventlistener
-            event.preventDefault();                         // And prevent default behavior
-            Axios.delete(`https://api.savvycoders.com/books/${deleteLink.id}`) // Delete it from the API
-                .then(() => render(books.filter((book) => book.id != deleteLink.id))); // Re-render the page without it
+    document
+        .querySelectorAll('span.delete a')
+        .forEach((deleteLink) => {
+            deleteLink.addEventListener('click', (event) => {   // Replace navigation with this eventlistener
+                event.preventDefault();                         // And prevent default behavior
+
+                Axios
+                    .delete(`https://api.savvycoders.com/books/${deleteLink.id}`) // Delete it from the API
+                    .then(
+                        () => render(books.filter((book) => book.id != deleteLink.id))
+                    );
+            });
         });
-    });
 }
 
 Axios
@@ -41,7 +47,5 @@ Axios
                 var albums = albumsResponse.data;
 
                 render(books.concat(albums));
-            
-            }
-        )
+            });
     });
