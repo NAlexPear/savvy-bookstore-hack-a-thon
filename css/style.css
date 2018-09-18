@@ -131,3 +131,9 @@ input, textarea {
   flex-direction: column;
   align-items: center;
 }
+
+#radio-buttons{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
