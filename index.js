@@ -1,3 +1,4 @@
+import axios from 'axios';
 import Navigation from './components/Navigation';
 import Header from './components/Header';
 import Content from './components/Content';
@@ -46,9 +47,7 @@ var Books = [
     },
 ];
 
-
 function render(books){
-
     document
         .querySelector('#root')
         .innerHTML = `
@@ -58,9 +57,11 @@ function render(books){
            ${Footer()}
         `;
 
-    document.getElementById('bookInput').addEventListener('submit', (event) => {
-        event.preventDefault();
-    })
+    document
+        .getElementById('bookInput')
+        .addEventListener('submit', (event) => {
+            event.preventDefault();
+        });
 }
 
 render(Books);

@@ -19,5 +19,8 @@
   "homepage": "https://github.com/nalexpear/savvy-bookstore-hack-a-thon#readme",
   "devDependencies": {
     "eslint": "^5.1.0"
+  },
+  "dependencies": {
+    "axios": "^0.18.0"
   }
 }
