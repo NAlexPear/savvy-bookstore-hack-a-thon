@@ -32,6 +32,16 @@ function render(books){
 
 Axios
     .get('https://api.savvycoders.com/books')
-    .then((response) => {
-        render(response.data);
+    .then((booksResponse) => {
+        var books = booksResponse.data;
+
+        Axios
+            .get('https://api.savvycoders.com/albums')
+            .then((albumsResponse) => {
+                var albums = albumsResponse.data;
+
+                render(books.concat(albums));
+            
+            }
+        )
     });
