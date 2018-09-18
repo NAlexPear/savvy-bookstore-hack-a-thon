@@ -2,6 +2,7 @@ import Navigation from './components/Navigation';
 import Header from './components/Header';
 import Content from './components/Content';
 import Footer from './components/Footer';
+import Axios from 'axios';
 
 var Books = [
     {
@@ -46,9 +47,7 @@ var Books = [
     },
 ];
 
-
 function render(books){
-
     document
         .querySelector('#root')
         .innerHTML = `
@@ -60,7 +59,11 @@ function render(books){
 
     document.getElementById('bookInput').addEventListener('submit', (event) => {
         event.preventDefault();
-    })
+    });
 }
 
-render(Books);
+Axios
+    .get('https://api.savvycoders.com/books')
+    .then((response) => {
+        render(response.data);
+    });
