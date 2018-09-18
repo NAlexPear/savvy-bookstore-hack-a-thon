@@ -40,7 +40,8 @@ Axios
             .then((albumsResponse) => {
                 var albums = albumsResponse.data;
 
-                render(books,albums);
+                render(books.concat(albums));
+            
             }
         )
     });
