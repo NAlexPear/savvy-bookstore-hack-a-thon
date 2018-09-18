@@ -4,6 +4,7 @@ import Content from './components/Content';
 import Footer from './components/Footer';
 import Axios from 'axios';
 
+var items;
 
 function render(books){
     document
@@ -34,6 +35,16 @@ function render(books){
                     );
             });
         });
+
+    document.querySelector('.nav-books a').addEventListener('click', (event) => { // When we click the books link
+        event.preventDefault();                                          // Prevent default behavior
+        render(items.filter((item) => item.type == 'book'));             // Filter only books
+    });
+
+    document.querySelector('.nav-movies a').addEventListener('click', (event) => { // Likewise for movies
+        event.preventDefault();
+        render(items.filter((item) => item.type == 'movie'));
+    });
 }
 
 Axios
@@ -45,7 +56,10 @@ Axios
             .get('https://api.savvycoders.com/albums')
             .then((albumsResponse) => {
                 var albums = albumsResponse.data;
+                var products = books.concat(albums);
 
-                render(books.concat(albums));
+                items = products;
+
+                render(products);
             });
     });
