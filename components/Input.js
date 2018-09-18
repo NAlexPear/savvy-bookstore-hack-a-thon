@@ -1,4 +1,4 @@
-export default function Input() {
+export default function Input(){
     return `
             <form action="" method="POST" id="bookInput">
                 <input type="text" name="name" placeholder="Title" required>

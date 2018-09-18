@@ -3,6 +3,7 @@ import Navigation from './components/Navigation';
 import Header from './components/Header';
 import Content from './components/Content';
 import Footer from './components/Footer';
+import Axios from 'axios';
 
 var Books = [
     {
@@ -64,4 +65,8 @@ function render(books){
         });
 }
 
-render(Books);
+Axios
+    .get('https://api.savvycoders.com/books')
+    .then((response) => {
+        render(response.data);
+    });
