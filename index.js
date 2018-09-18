@@ -19,7 +19,23 @@ function render(books){
         .getElementById('bookInput')
         .addEventListener('submit', (event) => {
             event.preventDefault();
-        });
+            var newProduct = Array.from(event
+                .target
+                .elements)
+                var object = {
+                    "title": newProduct[0].value,
+                    "creator": newProduct[1].value,
+                    "price": newProduct[2].value,
+                    "image": newProduct[3].value,
+                    "selling_points": [newProduct[4].value],
+                    "type": newProduct[5].value
+                }
+                Axios
+                    .post('https://api.savvycoders.com/books', object)
+                    .then(function(response) {console.log(response)}); 
+                console.log(object);
+            });
+        
 
     document.querySelectorAll('span.delete a').forEach((deleteLink) => { // For each delete link in a book div
         deleteLink.addEventListener('click', (event) => {   // Replace navigation with this eventlistener
