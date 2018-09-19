@@ -43,9 +43,9 @@ Axios
             .then((albumsResponse) => {
                 var albums = albumsResponse.data;
                 
-                var storeItems = books.concat(albums);
+                newState = books.concat(albums);
 
-                render(storeItems);
+                render(newState);
             
             }
         )
