@@ -58,8 +58,6 @@ Axios
                 var albums = albumsResponse.data;
                 var products = books.concat(albums);
 
-                items = products;
-
                 render(products);
             });
     });
