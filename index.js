@@ -41,9 +41,9 @@ function render(books){
         render(items.filter((item) => item.type == 'book'));             // Filter only books
     });
 
-    document.querySelector('.nav-movies a').addEventListener('click', (event) => { // Likewise for movies
+    document.querySelector('.nav-music a').addEventListener('click', (event) => { // Likewise for music
         event.preventDefault();
-        render(items.filter((item) => item.type == 'movie'));
+        render(items.filter((item) => item.type == 'music'));
     });
 }
 
