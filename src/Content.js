@@ -1,5 +1,7 @@
 export default function Content() {
     return `
-        <div id="content"></div>
+        <div id="content">
+        <p> stuff stuff stuff </p>
+        </div>
     `;
 }
