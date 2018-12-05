@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import Navigation from './src/Navigation';
 import Header from './src/Header';
 import Content from './src/Content';
@@ -8,7 +5,6 @@ import Footer from './src/Footer';
 
 var root = document.querySelector('#root');
 
->>>>>>> b9008c9e226c5ad754da2d253d820ec20f2c0fda
 var book1 = {
     'id': 1,
     'name': 'Illusive: Friends & Adversaries (The Illusive Series Book 2) ',
@@ -70,18 +66,7 @@ var book5 = {
         'An extraordinary novel...an ingenious, intriguing, and also moving story about two losers who become friends. It is also a revealing book about burning your bridges behind you. - Sacramento Union',
         'This novel is woven together with such artistic acumen that suspense never ebbs. The plot structure, characterization, dialog and style are virtually flawless. - Chicago Sun - Times'
     ]
-<<<<<<< HEAD
-}
-=======
-import Navigation from './src/Navigation';
-import Header from './src/Header';
-import Content from './src/Content';
-import Footer from './src/Footer';
-
-var root = document.querySelector('#root');
-=======
 };
->>>>>>> b9008c9e226c5ad754da2d253d820ec20f2c0fda
 
 function render(state){
     root.innerHTML = `
@@ -93,7 +78,3 @@ function render(state){
 }
 
 render(); // @fixme
-<<<<<<< HEAD
->>>>>>> a3034c09ad9c47858256e858c552162289a71af0
-=======
->>>>>>> b9008c9e226c5ad754da2d253d820ec20f2c0fda
