@@ -5,6 +5,7 @@
 
 ### Contributors
 + Alex Pearson
++ Sidney Hemphill
 + Fabi clubb
 + Britten Sindelar
 + Damian Clay-Downing
