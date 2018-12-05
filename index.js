@@ -3,9 +3,9 @@ import Header from './src/Header';
 import Content from './src/Content';
 import Footer from './src/Footer';
 
-var root = document.querySelector("#root")
+var root = document.querySelector('#root');
 
-function render(state) {
+function render(state){
     root.innerHTML = `
     ${Navigation(state)}
     ${Header(state)}
@@ -14,4 +14,4 @@ function render(state) {
     `;
 }
 
-render(); //@fixme
+render(); // @fixme
