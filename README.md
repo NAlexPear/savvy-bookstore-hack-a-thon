@@ -5,6 +5,7 @@
 
 ### Contributors
 + Alex Pearson
++ Jason Brown
 + Derek Dunwiddie
 + Chaquita Johnson-Moore
 + Sonni Edwards
