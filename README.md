@@ -5,6 +5,7 @@
 
 ### Contributors
 + Alex Pearson
++ Damian Clay-Downing
 + Jason Brown
 + Derek Dunwiddie
 + Chaquita Johnson-Moore
