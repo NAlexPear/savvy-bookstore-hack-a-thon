@@ -1,7 +1,5 @@
-function render(state) {
-    
-var root = document
-.querySelector("root")
-.innerHTML = "";
+var root = document.querySelector("root");
 
+function render(state) {
+    root.innerHTML = "";
 }
