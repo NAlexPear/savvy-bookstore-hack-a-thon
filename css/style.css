@@ -14,19 +14,21 @@ html {
   min-height: 100vh;
   grid-template-rows: min-content 30vh auto min-content;
   grid-template-areas:
-                      "navigation"
-                      "header"
-                      "content"
-                      "footer";
+    "navigation"
+    "header"
+    "content"
+    "footer";
 }
 
 #header{
   grid-area: header;
 }
+
 #content{
   background-color: lightcoral;
   grid-area: content;
 }
+
 #navigation{
   grid-area: navigation;
 }
@@ -34,6 +36,7 @@ html {
 #footer{
   grid-area: footer;
 }
+
 @media (min-width: 750px) {
   #root {
     grid-template-columns: 15% auto;
