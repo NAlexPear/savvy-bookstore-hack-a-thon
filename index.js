@@ -1,5 +1,10 @@
-var root = document.querySelector("#root");
+var root = document.querySelector("#root")
 
 function render(state) {
-    root.innerHTML = "";
+    root.innerHTML = `
+    ${Navigation(state)}
+    ${Header(state)}
+    ${Content(state)}
+    ${Footer(state)}
+    `;
 }
