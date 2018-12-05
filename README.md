@@ -5,5 +5,6 @@
 
 ### Contributors
 + Alex Pearson
++ Kayla Forsythe
 + Summer Richards
 + Joe Asaro
