@@ -5,6 +5,7 @@
 
 ### Contributors
 + Alex Pearson
++ Britten Sindelar
 + Damian Clay-Downing
 + Jason Brown
 + Derek Dunwiddie
