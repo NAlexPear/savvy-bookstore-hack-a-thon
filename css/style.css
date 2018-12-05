@@ -22,19 +22,26 @@ html {
 
 #header{
   grid-area: header;
+  background-image: url "https://get.pxhere.com/photo/building-reading-aisle-library-books-public-library-inventory-bookselling-popular-library-1217232.jpg";
 }
 
 #content{
   background-color: lightcoral;
   grid-area: content;
+  font-family: 'Aclonica', sans-serif;
 }
 
 #navigation{
   grid-area: navigation;
+  font-family: 'PT Sans', sans-serif;
 }
 
 #footer{
   grid-area: footer;
+}
+
+p {
+  font-family: 'Prata', serif;
 }
 
 @media (min-width: 750px) {
