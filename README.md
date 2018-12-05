@@ -6,3 +6,6 @@
 ### Contributors
 + Alex Pearson
 + Sonni Edwards
++ Kayla Forsythe
++ Summer Richards
++ Joe Asaro
