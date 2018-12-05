@@ -9,11 +9,10 @@ html {
 
 
 #root{
-background-color: orchid;
 display: grid;
 min-height: 100vh;
 grid-template-rows: min-content 30vh auto min-content;
-  grid-template-areas:
+grid-template-areas:
     "navigation"
     "header"
     "content"
@@ -21,16 +20,16 @@ grid-template-rows: min-content 30vh auto min-content;
 }
 
 #header{
-
+grid-area: header;
 }
 #content{
-
+  grid-area: content;
 }
 #navigation{
-
+  grid-area: navigation;
 }
 
 #footer{
-
+  grid-area: footer;
 }
 
