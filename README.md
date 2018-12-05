@@ -5,6 +5,7 @@
 
 ### Contributors
 + Alex Pearson
++ Jason Brown
 + Derek Dunwiddie
 + Chaquita Johnson-Moore
 + Sonni Edwards
@@ -13,3 +14,4 @@
 + Joe Asaro
 + Phillip Temple
 + Ashlyn Hunt
++ Phillip Temple
