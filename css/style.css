@@ -7,15 +7,17 @@ html {
 /*put all other styles below this line, please*/
 
 
-.grid {
-  display: grid;
-  grid-template-columns: 100px auto 100px;
-  grid-template-rows: repeat(3, 100px);
-  grid-gap: 1em;
-}
 
 #root{
-
+background-color: orchid;
+display: grid;
+min-height: 100vh;
+grid-template-rows: min-content 30vh auto min-content;
+  grid-template-areas:
+    "navigation"
+    "header"
+    "content"
+    "footer";
 }
 
 #header{
