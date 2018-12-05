@@ -14,4 +14,3 @@
 + Joe Asaro
 + Phillip Temple
 + Ashlyn Hunt
-+ Phillip Temple
