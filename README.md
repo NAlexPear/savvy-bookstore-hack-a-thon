@@ -5,6 +5,7 @@
 
 ### Contributors
 + Alex Pearson
++ Chaquita Johnson-Moore
 + Sonni Edwards
 + Kayla Forsythe
 + Summer Richards
