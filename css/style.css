@@ -9,27 +9,27 @@ html {
 
 
 #root{
-display: grid;
-min-height: 100vh;
-grid-template-rows: min-content 30vh auto min-content;
-grid-template-areas:
-"navigation"
-"header"
-"content"
-"footer";
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: min-content 30vh auto min-content;
+  grid-template-areas:
+                      "navigation"
+                      "header"
+                      "content"
+                      "footer";
 }
 
 #header{
-grid-area: header;
+  grid-area: header;
 }
 #content{
-grid-area: content;
+  grid-area: content;
 }
 #navigation{
-grid-area: navigation;
+  grid-area: navigation;
 }
 
 #footer{
-grid-area: footer;
+  grid-area: footer;
 }
 
