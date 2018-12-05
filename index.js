@@ -1,3 +1,11 @@
+
+import Navigation from './src/Navigation';
+import Header from './src/Header';
+import Content from './src/Content';
+import Footer from './src/Footer';
+
+var root = document.querySelector('#root');
+
 var book1 = {
     "id": 1,
     "name": "Illusive: Friends & Adversaries (The Illusive Series Book 2) ",
@@ -62,3 +70,14 @@ var book5 = {
         "This novel is woven together with such artistic acumen that suspense never ebbs. The plot structure, characterization, dialog and style are virtually flawless. - Chicago Sun - Times"
     ]
 }
+
+function render(state){
+    root.innerHTML = `
+    ${Navigation(state)}
+    ${Header(state)}
+    ${Content(state)}
+    ${Footer(state)}
+    `;
+}
+
+render(); // @fixme
