@@ -4,4 +4,5 @@
 ---
 
 ### Contributors
-+ Alex Pearson
++ Alex Pearson  
++ Phillip Temple
