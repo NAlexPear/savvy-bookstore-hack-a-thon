@@ -5,4 +5,15 @@
 
 ### Contributors
 + Alex Pearson
-Fabi clubb
++ Fabi clubb
++ Britten Sindelar
++ Damian Clay-Downing
++ Jason Brown
++ Derek Dunwiddie
++ Chaquita Johnson-Moore
++ Sonni Edwards
++ Kayla Forsythe
++ Summer Richards
++ Joe Asaro
++ Phillip Temple
++ Ashlyn Hunt
