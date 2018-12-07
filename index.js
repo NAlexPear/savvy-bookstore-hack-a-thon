@@ -6,7 +6,7 @@ import Footer from './src/Footer';
 var root = document.querySelector('#root');
 
 var state = {
-    books = 'id': 1,
+    books = {        'id': 1,
         'name': 'Illusive: Friends & Adversaries (The Illusive Series Book 2) ',
         'author': 'Celeste-Marie Lyon',
         'pictureUrl': 'https://images-na.ssl-images-amazon.com/images/I/31cSwirXe3L.jpg',
@@ -63,8 +63,10 @@ var state = {
             "With every page the situation gets crazier, zanier, more improbable, also funnier...Kirkwood's bizarre humor comes off, thanks to his ability to throw opposites together, with a stand up comic&#39;s timing. - Publishers Weekly",
             'An extraordinary novel...an ingenious, intriguing, and also moving story about two losers who become friends. It is also a revealing book about burning your bridges behind you. - Sacramento Union',
             'This novel is woven together with such artistic acumen that suspense never ebbs. The plot structure, characterization, dialog and style are virtually flawless. - Chicago Sun - Times'
-        ]
-};
+       
+         ]
+}
+}
 
 function render(state) {
     root.innerHTML = `
