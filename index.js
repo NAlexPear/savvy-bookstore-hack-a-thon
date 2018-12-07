@@ -17,9 +17,9 @@ var state = {
             'Keep your friends close and your enemies closer.'
         ]
 
-    }]
+    },
 
-    [{
+    {
         'id': 2,
         'name': "It Ain't Easy Being Cheesy:The Rise and Fall of Chester of the Cat",
         'author': 'Chester Cheetah',
@@ -30,9 +30,9 @@ var state = {
             'Cheesy Smell From Book.',
             'Orange Fur Everywhere'
         ]
-    }]
+    },
 
-        [{
+        {
             'id': 3,
             'name': '1822',
             'author': 'Jose',
@@ -42,10 +42,10 @@ var state = {
                 'History of Brazil',
                 'Dom Joao, Napoleon Bonaparte'
             ]
-        }]
+        },
 
 
-        [{
+        {
             'id': 4,
             'name': 'Danger! A Catalog of Risks',
             'author': 'Luke Out',
@@ -57,9 +57,9 @@ var state = {
                 "I ain't afraid of no ghost. Cliffs, though... - Ray Parker Jr. "
             ]
 
-        }]
+        },
 
-        [{
+        {
             'id': 5,
             'name': "It's New Year's Eve in New York City. Your best friend died in September, you've been robbed twice, your girlfriend is leaving you, you've lost your job...and the only one left to talk to is the gay burglar you've got tied up in the kitchen... P.S. your cat is dead.",
             'author': 'James Kirkwood',
@@ -71,8 +71,8 @@ var state = {
                 'This novel is woven together with such artistic acumen that suspense never ebbs. The plot structure, characterization, dialog and style are virtually flawless. - Chicago Sun - Times'
 
             ]
-        }]
-}
+        }
+    ]
 
 function render(state) {
     root.innerHTML = `
