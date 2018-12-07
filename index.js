@@ -74,12 +74,80 @@ var State = {
 
             ]
         }
+    ],
+    
+    'albums': [
+        {
+            'id': 1,
+            'name': "Atrophy",
+            'creator': '3Teeth',
+            'pictureUrl': ('https://f4.bcbits.com/img/a2512560373_16.jpg'),
+            'price': 3,
+            'sellingPoints': [
+                "419echo 3TEETH are just on a roll. Atrophy is another hard-hitting track that updates that classic 90's industrial feel for a new generation. Atrophy will get many, many high-volume plays from me.",
+            ]
+        },
+        {
+            'id': 2,
+            'name': "Love Death Immortality",
+            'creator': 'The Glitch Mob',
+            'pictureUrl': 'https://consequenceofsound.files.wordpress.com/2014/01/91vaxjhtjjl-_sl1500_.jpg',
+            'price': 12.99,
+            'sellingPoints': [
+                `[The Glitch Mob's] sophomore album returns with the pulsing, headbang-worthy songs that initially commanded their fans' attention. -- Consequence of Sound.net`,
+                `In the end, what really made this entire work stick out and worthy of such a high ranking is the creativity that went behind the entire process. Considering this is The Glitch Mob's only second album and they've released it through their own self run label, Glass Air Records, they've created quite a stir. -- Earmilk`,
+                `If you liked Drink the Sea, this is an evolution [from the band's initial sound]. There are clear references to their original sound, but The Glitch Mob has successfully branched into a new overall feel. -- Craig Apfelback, Amazon.com`
+            ]
+        },
+        
+        {
+            'id': 3,
+            'name': "The Best of Nickelback",
+            'creator': 'Nickelback',
+            'pictureUrl': 'https://target.scene7.com/is/image/Target/GUEST_14ad61c3-3789-437e-bd41-0fa0875c1ef5?wid=488&hei=488&fmt=webp',
+            'price': 24.99,
+            'sellingPoints': [
+                "I'm so high, I think this band sounds good. ",
+                'Look at the Photograph',
+                'All our songs sound the same!'
+            ]
+        },
+        
+        
+        {
+            'id': 4,
+            'name': " Horizons/Rapture EP",
+            'creator': "The Physics House Band" ,
+            'pictureUrl': "https://f4.bcbits.com/img/a1321039771_10.jpg",
+            'price': 30	,
+            'sellingPoints': [
+                "1.ObeliskMonolith 05:12",
+                "2.Abraxical Solapse 04:19",
+                "3.Hollow Mountain 03:47",
+                "4.Teratology 06:25",
+                "5.The Spectral Beyond 01:32"
+            ]
+        },
+        {
+            'id': 5,
+            'name': "Best Ballads",
+            'creator': 'Whitesnake',
+            'pictureUrl': "https://lastfm-img2.akamaized.net/i/u/ar0/b9354feec4ae0b60287cc3202dc25571",
+            'price': 25,
+            'sellingPoints': [
+                "Say You Love Me",
+                "Love Is Blind",
+                "Looking for Love",
+                "Your Precious Love"
+            ]
+        }
     ]
 };
-
-function render(state){
-    root.innerHTML = `
-      ${Navigation(state)}
+    
+    
+    function render(state){
+        root.innerHTML = `
+        ${Navigation(state)}
       ${Header(state)}
       ${Content(state)}
       ${Footer(state)}
