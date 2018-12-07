@@ -3,7 +3,7 @@ function buildBook(sellingPoints) {
      for (let i = 0; i <sellingPoints.length; i++) {
           list += `
           <li> 
-          ${book.sellingPoints[i]}
+          ${sellingPoints[i]}
           </li>
           `;
      }
