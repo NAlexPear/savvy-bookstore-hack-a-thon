@@ -3,34 +3,36 @@ import Header from './src/Header';
 import Content from './src/Content';
 import Footer from './src/Footer';
 
+
 var root = document.querySelector('#root');
 
-var state = {
-    books: [{
-        'id': 1,
-        'name': 'Illusive: Friends & Adversaries (The Illusive Series Book 2) ',
-        'author': 'Celeste-Marie Lyon',
-        'pictureUrl': 'https://images-na.ssl-images-amazon.com/images/I/31cSwirXe3L.jpg',
-        'price': 25,
-        'sellingPoints': [
-            'Lead singers are hot.',
-            'Keep your friends close and your enemies closer.'
-        ]
+var State = {
+    'books': [
+        {
+            'id': 1,
+            'name': 'Illusive: Friends & Adversaries (The Illusive Series Book 2) ',
+            'author': 'Celeste-Marie Lyon',
+            'pictureUrl': 'https://images-na.ssl-images-amazon.com/images/I/31cSwirXe3L.jpg',
+            'price': 25,
+            'sellingPoints': [
+                'Lead singers are hot.',
+                'Keep your friends close and your enemies closer.'
+            ]
 
-    },
+        },
 
-    {
-        'id': 2,
-        'name': "It Ain't Easy Being Cheesy:The Rise and Fall of Chester of the Cat",
-        'author': 'Chester Cheetah',
-        'pictureUrl': 'https://pbs.twimg.com/profile_images/989986384453644288/uoHCyP8R_400x400.jpg',
-        'price': 40,
-        'sellingPoints': [
-            'Cheetos Fingers.',
-            'Cheesy Smell From Book.',
-            'Orange Fur Everywhere'
-        ]
-    },
+        {
+            'id': 2,
+            'name': "It Ain't Easy Being Cheesy:The Rise and Fall of Chester of the Cat",
+            'author': 'Chester Cheetah',
+            'pictureUrl': 'https://pbs.twimg.com/profile_images/989986384453644288/uoHCyP8R_400x400.jpg',
+            'price': 40,
+            'sellingPoints': [
+                'Cheetos Fingers.',
+                'Cheesy Smell From Book.',
+                'Orange Fur Everywhere'
+            ]
+        },
 
         {
             'id': 3,
@@ -73,8 +75,9 @@ var state = {
             ]
         }
     ]
-}
-function render(state) {
+};
+
+function render(state){
     root.innerHTML = `
     ${Navigation(state)}
     ${Header(state)}
@@ -83,4 +86,4 @@ function render(state) {
     `;
 }
 
-render(); // @fixme
+render(State); // @fixme
