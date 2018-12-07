@@ -74,17 +74,7 @@ var state = {
         }
     ]
 }
-return
-`<form id = "name">
-<input type="button" onclick="alert(document.forms[1].id);"value="name"/>
-</form>
-<form id = "author">
-<input type="button" onclick="alert(document.forms[2].id);"value="author"/>
-</form>
-<form id = "price">
-<input type="button" onclick="alert(document.forms[3].id);"value="price"/>
-</form>
-`
+
 function render(state) {
     root.innerHTML = `
     ${Navigation(state)}
