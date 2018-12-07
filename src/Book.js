@@ -9,12 +9,13 @@ function buildBook(sellingPoints) {
      }
      return list;
 }
+
 export default function Book(book) {
      return `
 <div class= "book" id = ${book.id}>
-<ul>
-     ${buildBook(sellingPoints)}
-</ul>
+     <ul>
+         ${buildBook(sellingPoints)}
+     </ul>
      <h3>${book.name} </h3>
      <h4> ${book.author} </h4>
      <h5>${book.price}</h5>
