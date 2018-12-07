@@ -86,4 +86,4 @@ function render(state){
     `;
 }
 
-render(State); // @fixme
+render(State);
