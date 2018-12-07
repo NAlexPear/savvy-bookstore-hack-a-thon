@@ -73,7 +73,7 @@ var state = {
             ]
         }
     ]
-
+}
 function render(state) {
     root.innerHTML = `
     ${Navigation(state)}
