@@ -79,10 +79,10 @@ var State = {
 
 function render(state){
     root.innerHTML = `
-    ${Navigation(state)}
-    ${Header(state)}
-    ${Content(state)}
-    ${Footer(state)}
+      ${Navigation(state)}
+      ${Header(state)}
+      ${Content(state)}
+      ${Footer(state)}
     `;
 }
 
