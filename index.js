@@ -77,4 +77,4 @@ function render(state){
     `;
 }
 
-render(); // @fixme
+render({ 'books': []}); // @fixme
