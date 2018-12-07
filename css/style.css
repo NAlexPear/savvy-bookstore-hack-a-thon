@@ -19,6 +19,15 @@ h4{
   border-style: solid;
 }
 
+h2 {
+  font-family:  'Aclonica', sans-serif;
+  color: whitesmoke;
+  padding-top: 30px;
+  padding-right: auto;
+  padding-left: auto;
+
+ }
+
 #root{
   background-color: rgba(190, 23, 126, 0.425);
   text-align: center;
@@ -39,24 +48,42 @@ img {
 }
 #header{
   grid-area: header;
-  background-image: url "https://get.pxhere.com/photo/building-reading-aisle-library-books-public-library-inventory-bookselling-popular-library-1217232.jpg";
+  background-image: url("https://fuzzable.com/wp-content/uploads/2018/11/The-Most-Beautiful-Libraries-Around-The-World-04.jpg");
+
 }
 
-#content{
-  background-color: rgb(28, 209, 133);
+
+#content {
+  background: linear-gradient(#E9190F, lightcoral);
   grid-area: content;
   font-family: 'Aclonica', sans-serif;
-  display: block;
-}
+  scroll-behavior: smooth;
+ }
 
 #navigation{
   grid-area: navigation;
   font-family: 'PT Sans', sans-serif;
+  background: linear-gradient(to top, coral, lightcoral);
+  text-transform: uppercase;
+  position: sticky;
+  padding: -30px 30px 0 50px;
+  
+
+}
+
+li {
+  font-family: 'PT Sans', sans-serif;
+  list-style-type: none;
+ 
 }
 
 #footer{
   grid-area: footer;
-}
+  font-size: 40%;
+  font-style: italic;
+  background-color: rgba(100, 66, 3, 0.719);
+ 
+ }
 
 p {
   font-family: 'Prata', serif;
