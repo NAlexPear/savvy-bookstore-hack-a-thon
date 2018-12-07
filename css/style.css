@@ -5,30 +5,49 @@ html {
 }
 
 /*put all other styles below this line, please*/
-
-
-
-#root{
-  background-color: darkred;
-  display: grid;
-  min-height: 100vh;
-  grid-template-rows: min-content 30vh auto min-content;
-  grid-template-areas:
-    "navigation"
-    "header"
-    "content"
-    "footer";
+h3 {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 3em;
 }
 
+h4{
+  text-align: center;
+  font-size: 1.5em;
+}
+.book{
+  border-style: solid;
+}
+
+#root{
+  background-color: rgba(190, 23, 126, 0.425);
+  text-align: center;
+  display: grid;
+  min-height: 100vh;
+  font-family: ;
+  grid-template-rows: min-content 30vh auto min-content;
+  grid-template-areas:
+  "navigation"
+  "header"
+  "content"
+  "footer";
+}
+img {
+  width: 700px;
+  height: 700px;
+  border-style: solid;
+
+}
 #header{
   grid-area: header;
   background-image: url "https://get.pxhere.com/photo/building-reading-aisle-library-books-public-library-inventory-bookselling-popular-library-1217232.jpg";
 }
 
 #content{
-  background-color: lightcoral;
+  background-color: rgb(28, 209, 133);
   grid-area: content;
   font-family: 'Aclonica', sans-serif;
+  display: block;
 }
 
 #navigation{
@@ -42,6 +61,7 @@ html {
 
 p {
   font-family: 'Prata', serif;
+  text-align: center;
 }
 
 @media (min-width: 750px) {
