@@ -5,6 +5,10 @@ import Footer from './src/Footer';
 
 var root = document.querySelector('#root');
 
+var state = {
+    books = [book1,book2,book3,book4,book5]
+}
+
 var book1 = {
     'id': 1,
     'name': 'Illusive: Friends & Adversaries (The Illusive Series Book 2) ',
@@ -15,7 +19,7 @@ var book1 = {
         'Lead singers are hot.',
         'Keep your friends close and your enemies closer.'
     ]
-};
+},
 
 var book2 = {
     'id': 2,
@@ -28,7 +32,7 @@ var book2 = {
         'Cheesy Smell From Book.',
         'Orange Fur Everywhere'
     ]
-};
+},
 
 var book3 = {
     'id': 3,
@@ -40,7 +44,7 @@ var book3 = {
         'History of Brazil',
         'Dom Joao, Napoleon Bonaparte'
     ]
-};
+},
 
 var book4 = {
     'id': 4,
@@ -53,7 +57,7 @@ var book4 = {
         'Why did it have to include snakes? - Indiana Jones',
         "I ain't afraid of no ghost. Cliffs, though... - Ray Parker Jr. "
     ]
-};
+},
 
 var book5 = {
     'id': 5,
