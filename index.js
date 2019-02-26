@@ -1,3 +1,5 @@
+import Navigation from './src/Navigation';
+
 var book1 = {
     "id": 1,
     "name": "Lonely Turbo guy",
