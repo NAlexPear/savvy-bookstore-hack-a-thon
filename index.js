@@ -1,7 +1,7 @@
 var book1 = {
     "id": 1,
     "name": "Lonely Turbo guy",
-    "author": "Stock Boo5t"
+    "author": "Stock Boo5t",
     "pictureUrl": "https://giphy.com/gifs/vdcdxvKDJpqH6/html5",
     "price": 3.50,
     "sellingPoints": [
@@ -14,7 +14,7 @@ var book1 = {
  var book2 = {
     "id": 2,
     "name": "Alex The Swaglord",
-    "author": "I dunno that guy ->"
+    "author": "I dunno that guy ->",
     "pictureUrl": "https://i.kym-cdn.com/photos/images/newsfeed/001/399/667/664.jpg",
     "price": 4 ,
     "sellingPoints": [
@@ -27,7 +27,7 @@ var book1 = {
 var book3 = {
     "id": 3,
     "name": "Hell Hath No Furry",
-    "author": "Seath"
+    "author": "Seath",
     "pictureUrl": "https://cdn.weasyl.com/~sketh/submissions/893599/3476bbeea39cadd6a47938cd04eb86da97b70cd4834bc2536cf398b94d3f6974/sketh-sketh-the-angry-furry.jpg",
     "price": 39.99,
     "sellingPoints": [
@@ -39,7 +39,7 @@ var book3 = {
 var book4 = {
     "id": 4,
     "name": "Brad the server dad",
-    "author": "Brad the amateur server dad"
+    "author": "Brad the amateur server dad",
     "pictureUrl": "https://giphy.com/gifs/139eZBmH1HTyRa/html5",
     "price": 99.99,
     "sellingPoints": [
