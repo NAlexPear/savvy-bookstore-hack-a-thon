@@ -1,3 +1,8 @@
+import Navigation from './src/Navigation';
+import Header from './src/Header';
+import Content from './src/Content';
+import Footer from './src/Footer';
+
 var book1 = {
     "id": 1,
     "name": "Lonely Turbo guy",
@@ -49,4 +54,16 @@ var book4 = {
     ]
  }
 
+var state = {};
 var root = document.querySelector('#root');
+ 
+function render(state){
+    root.innerHTML = `
+    ${Navigation(state)}
+    ${Header(state)}
+    ${Content(state)}
+    ${Footer(state)}
+    `;
+};
+
+render(state);

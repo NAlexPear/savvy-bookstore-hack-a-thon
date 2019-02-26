@@ -3,11 +3,37 @@
 html {
   box-sizing: border-box;
 }
-#root {
-  display: grid;
-  grid-template-areas: "navigation" "header" "content" "footer";
-  grid-template-rows: min-content min-content auto min-content;
-  background: #8278cc;
-}
 
 /*put all other styles below this line, please*/
+
+#navigation{
+  background-color: teal;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#header{
+  background-color: blue;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#content{
+  background-color: lightblue;
+  font-family: Arial, Helvetica, sans-serif;
+  border: dotted;
+}
+
+#footer{
+  background-color: blue;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#root {
+  background: #8278cc;
+  display: grid;
+  grid-template-areas: "navigation"
+                       "header"
+                       "content"
+                       "footer";
+  grid-template-rows: min-content min-content auto min-content;
+  min-height: 100vh;
+}
