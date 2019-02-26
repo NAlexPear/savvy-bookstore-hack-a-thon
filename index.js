@@ -59,13 +59,13 @@ var root = document.querySelector('#root');
 
 var state = {
     books: [book1, book2, book3, book4]
-};
+}
  
 function render(state){
     root.innerHTML = `
     ${Navigation(state)}
     ${Header(state)}
-    ${Content(state)}
+    ${Content(state.books)}
     ${Footer(state)}
     `;
 };
