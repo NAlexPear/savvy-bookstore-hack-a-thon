@@ -9,6 +9,9 @@ html {
 #navigation{
   background-color: teal;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+#navigation ul li{
   display: inline;
 }
 
