@@ -26,3 +26,14 @@ html {
   background-color: blue;
   font-family: 'Courier New', Courier, monospace;
 }
+
+#root {
+  background: #8278cc;
+  display: grid;
+  grid-template-areas: "navigation"
+                       "header"
+                       "content"
+                       "footer";
+  grid-template-rows: min-content min-content auto min-content;
+  min-height: 100vh;
+}
