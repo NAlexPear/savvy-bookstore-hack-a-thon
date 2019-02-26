@@ -11,6 +11,10 @@ html {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+#navigation ul li{
+  display: inline;
+}
+
 #header{
   background-color: blue;
   font-family: 'Courier New', Courier, monospace;
