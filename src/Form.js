@@ -1,4 +1,4 @@
-export default function formSubmit() {
+export default function form() {
     return `
     
 <form>
