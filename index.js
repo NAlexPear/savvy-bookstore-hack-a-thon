@@ -1,4 +1,7 @@
 import Navigation from './src/Navigation';
+import Header from './src/Header';
+import Content from './src/Header';
+import Footer from './src/Footer';
 
 var book1 = {
     "id": 1,
