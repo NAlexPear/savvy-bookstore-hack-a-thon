@@ -3,5 +3,11 @@
 html {
   box-sizing: border-box;
 }
+#root {
+  display: grid;
+  grid-template-areas: "navigation" "header" "content" "footer";
+  grid-template-rows: min-content min-content auto min-content;
+  background: #8278cc;
+}
 
 /*put all other styles below this line, please*/
