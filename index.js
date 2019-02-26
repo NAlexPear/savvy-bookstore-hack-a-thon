@@ -48,3 +48,5 @@ var book4 = {
         "Im on farmers only.com-brad"
     ]
  }
+
+var root = document.querySelector('#root');
