@@ -1,3 +1,8 @@
+import Navigation from './src/Navigation';
+import Header from './src/Header';
+import Content from './src/Content';
+import Footer from './src/Footer';
+
 var book1 = {
     "id": 1,
     "name": "Lonely Turbo guy",
