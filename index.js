@@ -55,7 +55,9 @@ var book4 = {
     ]
  }
 
-var state = [book1, book2, book3, book4];
+var state = (new Array[book1, book2, book3, book4]);
+
+book1, book2, book3, book4
 var root = document.querySelector('#root');
  
 function render(state){
