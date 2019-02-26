@@ -49,4 +49,16 @@ var book4 = {
     ]
  }
 
+var state = {};
 var root = document.querySelector('#root');
+ 
+function render(state){
+    root.innerHTML = `
+    ${Navigation(state)}
+    ${Header(state)}
+    ${Content(state)}
+    ${Footer(state)}
+    `;
+};
+
+render(state);
