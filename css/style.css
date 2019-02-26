@@ -4,12 +4,48 @@ html {
   box-sizing: border-box;
 }
 
-/*put all other styles below this line, please*/
+img {
+  width: 100%;
+}
 
-#content {
+/*put all other styles below this line, please*/
+#content > div:first-child {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+
+#content > div:first-child > div {
+  max-width: 350px;
+  width: 95%;
+}
+
+#content > form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 25px;
+  padding: 25px;
+}
+
+#content > form > div {
+  display: flex;
+  flex-direction: column;
+}
+
+#content > form input[type=submit],
+#content > form input[type=reset] {
+  margin: 15px;
+  width: 33%;
+}
+
+#content .row {
+  grid-column: span 2;
+}
+
+#content .inline {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 #navigation{

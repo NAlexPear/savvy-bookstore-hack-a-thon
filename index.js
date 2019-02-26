@@ -8,7 +8,7 @@ var book1 = {
     "id": 1,
     "name": "Lonely Turbo guy",
     "author": "Stock Boo5t",
-    "pictureUrl": "https://giphy.com/gifs/vdcdxvKDJpqH6/html5",
+    "pictureUrl": "https://cdn.shopify.com/s/files/1/1032/7025/products/turbo_lunch_napkin_1_2048x2048.jpg?v=1472354438",
     "price": 3.50,
     "sellingPoints": [
         "Turbo lag always effects evan.",
@@ -46,7 +46,7 @@ var book4 = {
     "id": 4,
     "name": "Brad the server dad",
     "author": "Brad the amateur server dad",
-    "pictureUrl": "https://giphy.com/gifs/139eZBmH1HTyRa/html5",
+    "pictureUrl": "https://i.ytimg.com/vi/KzjDO3bJjzk/maxresdefault.jpg",
     "price": 99.99,
     "sellingPoints": [
         "9+ hours a day of minecraft.",
@@ -60,12 +60,12 @@ var root = document.querySelector('#root');
 var state = {
     books: [book1, book2, book3, book4]
 }
- 
+
 function render(state){
     root.innerHTML = `
     ${Navigation(state)}
     ${Header(state)}
-    ${Content(state.books)}
+    ${Content(state)}
     ${Footer(state)}
     `;
 };
