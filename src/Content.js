@@ -1,5 +1,9 @@
+import Form from './Form'
+
 export default function Content(){
     return `
-        <div id ="content"></div>
+        <div id ="content">
+          ${Form()}
+        </div>
     `;
 }
