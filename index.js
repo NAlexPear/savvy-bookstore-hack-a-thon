@@ -3,6 +3,7 @@ import Header from './src/Header';
 import Content from './src/Content';
 import Footer from './src/Footer';
 
+
 var book1 = {
     "id": 1,
     "name": "Lonely Turbo guy",
@@ -54,8 +55,11 @@ var book4 = {
     ]
  }
 
-var state = {};
 var root = document.querySelector('#root');
+
+var state = {
+    books: [book1, book2, book3, book4]
+};
  
 function render(state){
     root.innerHTML = `
