@@ -2,28 +2,28 @@ export default function Form(){
     return `
         <form>
             <div>
-                <label for="title">Book Title</label>
-                <input type="text" id="title" name="name" required>
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" required>
             </div>
 
             <div>
-                <label for="author">Author</label>
-                <input type="text" id="author" name="author" required>
+                <label for="creator">Creator</label>
+                <input type="text" id="author" name="creator" required>
             </div>
 
             <div>
-                <label for="picture url">Book Cover</label>
-                <input type="url" id="pic" name="pictureUrl" required>
+                <label for="image">Cover</label>
+                <input type="url" id="pic" name="image" required>
             </div>
 
             <div>
-                <label for="price">Book Price</label>
+                <label for="price">Price</label>
                 <input type="number" id="price" name="price" required>
             </div>
 
             <div class='row'>
-                <label for="sellingPoints">Selling Points</label>
-                <textarea id="sellingPoints" name="sellingPoints" required>
+                <label for="selling_points">Selling Points</label>
+                <textarea id="sellingPoints" name="selling_points" required>
                 </textarea>
             </div>
 
