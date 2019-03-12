@@ -1,4 +1,4 @@
-export default function Form() {
+export default function Form(){
     return `
         <form>
             <div>
@@ -32,4 +32,5 @@ export default function Form() {
                 <input type="reset" value="clear">
             </div>
         </form>
-    `}
+    ` 
+;}

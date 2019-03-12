@@ -1,5 +1,5 @@
-import Book from './Book'
-import Form from './Form'
+import Book from './Book';
+import Form from './Form';
 
 export default function Content(state){
     return `
