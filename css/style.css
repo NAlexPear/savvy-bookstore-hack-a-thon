@@ -51,6 +51,10 @@ img {
 #navigation{
   background-color: teal;
   font-family: Arial, Helvetica, sans-serif;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 #navigation ul li{
@@ -60,6 +64,7 @@ img {
 #header{
   background-color: blue;
   font-family: 'Courier New', Courier, monospace;
+  margin-top: 3%;
 }
 
 #content{
