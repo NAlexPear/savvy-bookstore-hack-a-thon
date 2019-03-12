@@ -57,7 +57,7 @@ var book4 = {
 
 var root = document.querySelector('#root');
 
-var state = {
+var State = {
     'books': [ book1, book2, book3, book4 ]
 };
 
@@ -70,4 +70,4 @@ function render(state){
     `;
 }
 
-render(state);
+render(State);
