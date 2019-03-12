@@ -51,6 +51,10 @@ img {
 #navigation{
   background-color: teal;
   font-family: Arial, Helvetica, sans-serif;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
 }
 
 #navigation ul li{
