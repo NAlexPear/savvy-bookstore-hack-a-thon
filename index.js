@@ -57,13 +57,15 @@ var root = document.querySelector('#root');
 
 function render(state){
     root.innerHTML = `
-    ${Navigation(state)}
-    ${Header(state)}
-    ${Content(state)}
-    ${Footer(state)}
+      ${Navigation(state)}
+      ${Header(state)}
+      ${Content(state)}
+      ${Footer(state)}
     `;
-    document.getElementById('form').addEventListener('submit', (event) => {
+
+    document.querySelector('form').addEventListener('submit', (event) => {
         event.preventDefault();
+
         render(State);
     });
 }
