@@ -73,4 +73,7 @@ function render(state){
 }
 
 render(State);
-console.log('axiox ->', axios);
+
+axios
+    .get('https://api.savvycoders.com/books')
+    .then((response) => console.log(response.data));
