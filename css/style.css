@@ -5,7 +5,11 @@ html {
 }
 
 img {
-  width: 30%;
+  width: 100%;
+}
+
+#header > img {
+  width: 75%;
   border: grey solid 3px;
 }
 
