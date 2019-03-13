@@ -64,11 +64,10 @@ function render(state){
     ${Content(state)}
     ${Footer(state)}
     `;
+    document.getElementById('form').addEventListener('submit', (event) => {
+        event.preventDefault();
+        render(State);
+    });
 }
 
 render(State);
-
-document.getElementById('form').addEventListener('click', (event) => {
-    event.preventDefault();
-});
-

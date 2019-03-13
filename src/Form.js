@@ -1,6 +1,6 @@
 export default function Form(){
     return `
-        <form id='form'>
+        <form>
             <div>
                 <label for="title">Title</label>
                 <input type="text" id="title" name="title" required>
@@ -31,7 +31,7 @@ export default function Form(){
                 <input type="submit" value="Submit">
                 <input type="reset" value="clear">
             </div>
-                
+
         </form>
     `;
 }
