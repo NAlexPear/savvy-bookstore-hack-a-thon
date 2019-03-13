@@ -67,3 +67,8 @@ function render(state){
 }
 
 render(State);
+
+document.getElementById('form').addEventListener('click', (event) => {
+    event.preventDefault();
+});
+
