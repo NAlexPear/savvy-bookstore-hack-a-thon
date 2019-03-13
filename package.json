@@ -1,5 +1,5 @@
 {
-  "name": "bookstore-hack-a-thon",
+  "name": "productstore-hack-a-thon",
   "version": "1.0.0",
   "description": "---",
   "main": "index.js",
@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nalexpear/savvy-bookstore-hack-a-thon.git"
+    "url": "git+https://github.com/nalexpear/savvy-productstore-hack-a-thon.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nalexpear/savvy-bookstore-hack-a-thon/issues"
+    "url": "https://github.com/nalexpear/savvy-productstore-hack-a-thon/issues"
   },
-  "homepage": "https://github.com/nalexpear/savvy-bookstore-hack-a-thon#readme",
+  "homepage": "https://github.com/nalexpear/savvy-productstore-hack-a-thon#readme",
   "devDependencies": {
     "eslint": "^5.1.0",
     "parcel-bundler": "^1.11.0"
