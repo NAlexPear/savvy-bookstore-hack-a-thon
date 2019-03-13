@@ -31,6 +31,7 @@ export default function Form(){
                 <input type="submit" value="Submit">
                 <input type="reset" value="clear">
             </div>
+
         </form>
     `;
 }
