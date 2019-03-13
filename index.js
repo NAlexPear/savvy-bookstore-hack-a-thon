@@ -63,9 +63,9 @@ function render(state){
       ${Footer(state)}
     `;
 
-    document.querySelector('#navigation > ul').addEventListener('click', (event) => {
+    document.querySelectorAll('#navigation a').forEach((link) => link.addEventListener('click', (event) => {
         event.preventDefault();
-    });
+    }));
 
     document.querySelector('form').addEventListener('submit', (event) => {
         event.preventDefault();
