@@ -8,6 +8,11 @@ img {
   width: 100%;
 }
 
+#header > img {
+  width: 75%;
+  border: grey solid 3px;
+}
+
 /*put all other styles below this line, please*/
 #content > div:first-child {
   display: flex;
@@ -25,6 +30,7 @@ img {
   grid-template-columns: 1fr 1fr;
   grid-gap: 25px;
   padding: 25px;
+  background: gray;
 }
 
 #content > form > div {
@@ -51,6 +57,8 @@ img {
 #navigation{
   background-color: teal;
   font-family: Arial, Helvetica, sans-serif;
+  border: 2px solid white;
+  border-radius: 2px;
   position: sticky;
   top: 0;
   display: flex;
@@ -62,8 +70,9 @@ img {
 }
 
 #header{
-  background-color: blue;
+  background-color:teal;
   font-family: 'Courier New', Courier, monospace;
+  text-align: center;
 }
 
 #content{
