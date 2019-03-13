@@ -20,5 +20,8 @@
   "devDependencies": {
     "eslint": "^5.1.0",
     "parcel-bundler": "^1.11.0"
+  },
+  "dependencies": {
+    "axios": "^0.18.0"
   }
 }
