@@ -63,6 +63,12 @@ function render(state){
       ${Footer(state)}
     `;
 
+    document.querySelector('#navigation').addEventListener('click', (event) => {
+        event.preventDefault();
+
+        render(State);
+    });
+
     document.querySelector('form').addEventListener('submit', (event) => {
         event.preventDefault();
 
