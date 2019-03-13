@@ -44,7 +44,12 @@ function render(state){
     ${Content(state)}
     ${Footer(state)}
     `;
-    
+
+    document.querySelectorAll('#navigation a').forEach((link) => link.addEventListener('click', (event) => {
+        event.preventDefault();
+    }));
+
+
     document.querySelector('form').addEventListener('submit', (event) => {
         event.preventDefault();
         
