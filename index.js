@@ -6,6 +6,7 @@ import axios from 'axios';
 
 
 var State = {
+    'filter': null,
     'books': [],
     'albums': []
 };
@@ -24,6 +25,14 @@ function render(state){
 
     document.querySelectorAll('#navigation a').forEach((link) => link.addEventListener('click', (event) => {
         event.preventDefault();
+        State.filter = 'books';
+        render(State);
+    }));
+
+    document.querySelectorAll('#navigation a:nth-of-type(2)').forEach((link) => link.addEventListener('click', (event) => {
+        event.preventDefault();
+        State.filter = 'album';
+        render(State);
     }));
 
 
