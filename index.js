@@ -41,7 +41,7 @@ var State = {
         'title': 'Alex The Swaglord',
         'creator': 'I dunno that guy ->',
         'image': 'https://i.kym-cdn.com/photos/images/newsfeed/001/399/667/664.jpg',
-        'price': 4 ,
+        'price': 4.00 ,
         'selling_points': [
             'It has a picture of our overlord in it. We must listen and be obedient for we are peasants and he is god',
             'Bruh its 4 dollars',
@@ -86,6 +86,22 @@ function render(state){
 
     document.querySelector('form').addEventListener('submit', (event) => {
         event.preventDefault();
+        
+        var title = document.querySelector('#title').value;
+
+        console.log(title);
+        var author = document.querySelector('#author').value;
+
+        console.log(author);
+        var pic = document.querySelector('#pic').value;
+
+        console.log(pic);
+        var price = document.querySelector('#price').value;
+
+        console.log(price);
+        var sp = document.querySelector('#sellingPoints').value;
+
+        console.log(sp);
 
         render(State);
     });
