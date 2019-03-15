@@ -6,7 +6,7 @@ import axios from 'axios';
 
 
 var State = {
-    'null': [],
+    'filter': null,
     'books': [],
     'albums': []
 };
