@@ -5,6 +5,7 @@ import Footer from './src/Footer';
 import axios from 'axios';
 
 
+
 var State = {
     'books': [],
     'albums': []
@@ -29,6 +30,9 @@ function render(state){
 
     document.querySelector('form').addEventListener('submit', (event) => {
         event.preventDefault();
+  
+        console.log(Array.from(event.target.elements).map((element) => ({ 'name': element.name, 'value': element.value })));
+
         
         render(State);
     });
