@@ -1,16 +1,16 @@
-import Book from './Book';
+import Product from './Product';
 import Form from './Form';
 
 
-function booksBuilder(bookList){
-    return bookList.map((book) => Book(book)).join(' ');
+function productsBuilder(productList){
+    return productList.map((product) => Product(product)).join(' ');
 }
 
 export default function Content(state){
     return `
         <div id ="content">
           <div>
-            ${booksBuilder(state.books)}
+            ${productsBuilder(state.books)}
           </div>
           ${Form()}
         </div>
