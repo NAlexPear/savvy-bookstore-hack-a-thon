@@ -7,34 +7,22 @@ function productsBuilder(productList){
 }
 
 export default function Content(state){
-    var products = state.filter;
+    var products;
 
-    if(products === 'books'){
-        return `
-        <div id ="content">
-          <div>
-            ${productsBuilder(state.books)}
-          </div>
-          ${Form()}
-        </div>
-    `;
+    if(state.filter === 'books'){
+        products = state.books;
     }
-    else if(products === 'albums'){
-        return `
-        <div id ="content">
-          <div>
-            ${productsBuilder(state.albums)}
-          </div>
-          ${Form()}
-        </div>
-    `;
+    else if(state.filter === 'albums'){
+        products = state.albums;
     }
-    
+    else{
+        products = state.books.concat(state.albums);
+    }
+
     return `
         <div id ="content">
           <div>
-            ${productsBuilder(state.albums)}
-            ${productsBuilder(state.books)}
+            ${productsBuilder(products)}
           </div>
           ${Form()}
         </div>
