@@ -86,23 +86,9 @@ function render(state){
 
     document.querySelector('form').addEventListener('submit', (event) => {
         event.preventDefault();
+
+        console.log(Array.from(event.target.elements).map((element) => ({ 'name': element.name, 'value': element.value })));
         
-        var title = document.querySelector('#title').value;
-
-        console.log(title);
-        var author = document.querySelector('#author').value;
-
-        console.log(author);
-        var pic = document.querySelector('#pic').value;
-
-        console.log(pic);
-        var price = document.querySelector('#price').value;
-
-        console.log(price);
-        var sp = document.querySelector('#sellingPoints').value;
-
-        console.log(sp);
-
         render(State);
     });
 }
