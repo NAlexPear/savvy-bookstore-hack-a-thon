@@ -1,4 +1,4 @@
-import product from './product';
+import Book from './Product';
 import Form from './Form';
 
 

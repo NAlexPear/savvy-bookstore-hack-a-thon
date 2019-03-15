@@ -53,7 +53,7 @@ function render(state){
 }
 
 axios
-    .get('https://api.savvycoders.com/products')
+    .get('https://api.savvycoders.com/Books')
     .then((response) => {
         State.products = response.data;
         render(State);

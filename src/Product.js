@@ -2,7 +2,7 @@ function sellingPoints(points){
     return points.map((point) => `<li>${point}</li>`).join(' ');
 }
 
-export default function product(Products){
+export default function Product(product){
     return `
       <div>
           <h1>${product.title}</h1>
