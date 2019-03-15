@@ -27,7 +27,7 @@ export default function Form(){
                 </textarea>
             </div>
 
-            <div class=radio>
+            <div class='radio'>
             <input type="radio" name="type" value="book" checked> Book<br>
             <input type="radio" name="category" value="album"> Album<br></br>
             </div>
