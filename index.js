@@ -5,7 +5,6 @@ import Footer from './src/Footer';
 import axios from 'axios';
 
 
-
 var State = {
     'books': [],
     'albums': []
