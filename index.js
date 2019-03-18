@@ -39,7 +39,17 @@ function render(state){
     document.querySelector('form').addEventListener('submit', (event) => {
         event.preventDefault();
   
-        console.log(Array.from(event.target.elements).map((element) => ({ 'name': element.name, 'value': element.value })));
+        console.log('look ->', Array
+        .from(event.target.elements)
+        .map((element) => ({ 'name': element.name, 'value': element.value }))
+        .reduce(
+            (accumulator, original) => {
+                accumulator[original.name] = original.value;
+                return accumulator;
+            }, 
+            {}
+        ))
+        ;
 
         
         render(State);
