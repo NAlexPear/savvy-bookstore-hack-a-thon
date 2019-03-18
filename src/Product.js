@@ -5,7 +5,8 @@ function sellingPoints(points){
 export default function Product(product){
     return `
       <div>
-          <h1>${product.title}</h1>
+          <i class="fas fa-trash-alt"></i>
+          <h1>${product.title}</h1> 
           <h2>${product.creator}</h2>
           <h3>${product.price}</h3>
           <a href=""><img src="${product.image}" alt="${product.title}"></a>

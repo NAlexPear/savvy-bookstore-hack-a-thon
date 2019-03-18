@@ -8,6 +8,11 @@ img {
   width: 100%;
 }
 
+i {
+  float: right;
+  padding-top: 33px;
+}
+
 #header > img {
   width: 75%;
   border: grey solid 3px;
