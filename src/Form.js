@@ -29,7 +29,7 @@ export default function Form(){
 
             <div class='radio'>
             <input type="radio" name="type" value="book" checked> Book<br>
-            <input type="radio" name="category" value="album"> Album<br></br>
+            <input type="radio" name="type" value="album"> Album<br></br>
             </div>
 
             <div class='row inline'>
