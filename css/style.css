@@ -96,3 +96,7 @@ img {
   grid-template-rows: min-content min-content auto min-content;
   min-height: 100vh;
 }
+
+.radio {
+  border: 2px solid white;
+}
