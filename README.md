@@ -5,4 +5,12 @@
 
 ### Contributors
 + Manav Misra
-+
++ Alex Pearson
++ doug
++ abby
++ Rusty Hoppins
++ Mackenzie 
++ LaMarr A
++ Nowell Gata
++ Wendy Newell
++ Hunter Feltes
