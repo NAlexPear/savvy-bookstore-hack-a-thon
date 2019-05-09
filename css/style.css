@@ -10,6 +10,15 @@
   
 }
 
+.root {
+  display: grid;
+  grid-template-areas:
+  'Header'
+  'Nav'
+  'Content'
+  'Footer';
+}
+
 html {
   box-sizing: border-box;
   width: auto;
