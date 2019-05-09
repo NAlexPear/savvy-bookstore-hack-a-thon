@@ -1,3 +1,21 @@
+const states = {
+    'home': {
+
+        'title': 'welcome to your home'
+    },
+    'contact': {
+
+        'title': 'Contact Me'
+    },
+    'portfolio': {
+        'title': 'welcome to my portfolio'
+    },
+
+    'about': {
+        'title': 'About me'
+    }
+};
+
 const root = document.querySelector('#root');
 function render(state){
     root.innerHTML =`
@@ -14,7 +32,6 @@ const links = document.querySelectorAll('nav a');
 links.forEach((link) => {
     link.addEventListener('click', (event) => {
         event.preventDefault();
-        console.log(event.target.textContent);
         render(states.$event.target.textContent);
     });
 });
