@@ -1,10 +1,10 @@
 export default(state) => `
 <form action="" method="post">
-    <label for=""><input type="text" name="name" id=""></label>
-    <label for=""><input type="text" name="autor" id=""></label>
-    <label for=""><input type="image" src="" alt="" name='pictureUrl'></label>
-    <label for=""><input type="number" name="price" id=""></label>
-    <label for=""><input type="text" id="" name="sellingPoints"></label>
+    <label for="name">input type="text" name="name" id="name">Name: </label>
+    <label for="author"><input type="text" name="author" id="author">Author:</label>
+    <label for="pictureUrl"><input type="image" src="" alt="" id = "pictureUrl" name='pictureUrl'>Picture Url:</label>
+    <label for="price"><input type="number" name="price" id="price">Price:</label>
+    <label for="sellingPoints"><input type="text" id="sellingPoints" name="sellingPoints">Selling Points:</label>
     <input type="submit" value="whatever">
 </form>
 `
