@@ -1,7 +1,29 @@
 /*set up universal box-sizing adjustment*/
 
+
 html {
   box-sizing: border-box;
+  width: auto;
 }
 
 /*put all other styles below this line, please*/
+h1 {
+  background: springgreen;
+  font-family: fantasy;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  background: firebrick;
+  color: darkkhaki;
+}
+
+content {
+  text-align: center;
+  
+}
+
+footer {
+
+}
