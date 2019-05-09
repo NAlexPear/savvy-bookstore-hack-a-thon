@@ -4,4 +4,7 @@
 ---
 
 ### Contributors
-+ Alex Pearson
+
++ Nowell Gata
++ Wendy Newell
++ Hunter Feltes
