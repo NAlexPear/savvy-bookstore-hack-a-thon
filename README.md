@@ -4,4 +4,13 @@
 ---
 
 ### Contributors
-+ Alex Pearson
++ 
+
+
+
+
+
++Rusty Hoppins
++Mackenzie 
++LaMarr A
+
