@@ -29,8 +29,16 @@ function render(state){
 
 render(states.home);
 const links = document.querySelectorAll('nav a');
+const button = document.getElementById('button');
 
 links.forEach((link) => {
+    link.addEventListener('click', (event) => {
+        event.preventDefault();
+        render(states.$event.target.textContent);
+    });
+});
+
+button.forEach((link) => {
     link.addEventListener('click', (event) => {
         event.preventDefault();
         render(states.$event.target.textContent);
