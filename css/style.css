@@ -1,32 +1,8 @@
-/*set up universal box-sizing adjustment*/
-
-.container {
-  display: grid;
-  grid-template-areas: 
-  'card1 card2 card3'
-  'card4 card5 card6'
-  'card7 card8 card9'
-  'card10 card11 card12';
-  
-}
-
-.root {
-  display: grid;
-  grid-template-areas:
-  'Header'
-  'Nav'
-  'Content'
-  'Footer';
-}
-
 html {
   box-sizing: border-box;
   width: auto;
 }
 
-
-
-/*put all other styles below this line, please*/
 h1 {
   background: springgreen;
   font-family: fantasy;
@@ -54,6 +30,16 @@ footer {
   text-shadow: 0px 0px 9px aquamarine;
   color: peru;  
   border: dashed 6px hotpink;
+}
+
+/*Developer's Note: This needs to be an ID, not a class selector.*/
+#root {
+  display: grid;
+  grid-template-areas:
+  'Header'
+  'Nav'
+  'Content'
+  'Footer';
 }
 
 .fas {
