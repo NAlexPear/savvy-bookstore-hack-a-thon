@@ -17,6 +17,20 @@ const states = {
     }
 };
 
+// How to get boox into Content???
+
+// Start with 2-3 boox.
+
+// Create fxn. inside content...
+
+// What happens when we add more boox?
+
+// What type of data for more and more boox?
+
+// One team makes boox, one team makes Content, and one team to make boox
+
+// How to upgrade to more than boox?
+
 const root = document.querySelector('#root');
 function render(state){
     root.innerHTML =`
