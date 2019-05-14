@@ -54,10 +54,10 @@ document
                 'name': data[0].value,
                 'author': data[1].value,
                 'pictureURL': data[2].value,
-                'price': data[3].value
+                'price': data[3].value,
 
                 // we'll learn how to handle sellingPoints next
-                'sellingPoints': []
+                'sellingPoints': [],
             };
 
             // this might be a hint for number 11
