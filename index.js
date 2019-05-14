@@ -38,7 +38,7 @@ function render(state){
     `;
 }
 
-render(state);
+render(states);
 
 
 
