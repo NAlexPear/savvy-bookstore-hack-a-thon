@@ -60,6 +60,6 @@ document
 
             states.books[states.books.length] = newProduct;
 
-            render(states.books);
+            render(states);
         }
     );
