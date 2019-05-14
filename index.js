@@ -7,7 +7,7 @@ const root = document.querySelector("#root");
 
 const states = {
   header: {
-    title: ""
+    title: "Amagone Book Store"
   },
   navigation: {
     links: ["Books", "Albums"]
@@ -31,11 +31,11 @@ const states = {
 
 function render(state) {
   root.innerHTML = `
-    ${Navigation(state)},
-    ${Header(state)},
-    ${Content(state)},
-    ${Form()},
-    ${Footer(state)},
+    ${Navigation(state)}
+    ${Header(state)}
+    ${Content(state)}
+    ${Form()}
+    ${Footer(state)}
     `;
 }
 
