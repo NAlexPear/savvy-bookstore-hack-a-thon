@@ -13,7 +13,8 @@ const states = {
     navigation: {
         links=[]
     },
-    books: [{
+    books: [
+        {
         "id": 1,
         "name": "Lasagna: A Retrospective",
         "author": "Garfield",
@@ -23,15 +24,11 @@ const states = {
         "Lasagna is delicious.",
         "The essential guide to Italian casseroles of all types.",
         "Real G's move silent, like Lasagna. -Lil Wayne"
-     ]}]
+     ]
+    }
+]
 };
     
-
-    
-
-
-};
-
 function render(state){
     root.innerHTML =`
     ${Navigation(state)},
@@ -40,8 +37,6 @@ function render(state){
     ${Footer(state)},
     `;
 }
-
-
 
 render(state);
 
