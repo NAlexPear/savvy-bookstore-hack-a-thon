@@ -9,11 +9,11 @@ export default (state) => `
     <input type="text" id="author" name="bookAuthor" placeholder="Author" />
   </span>
   <div>
-    <label for="url">URL</label>
+    <label for="pictureURL">URL</label>
     <input
       type="url"
-      name="url"
-      id="url"
+      name="pictureURL"
+      id="pictureURL"
       placeholder="https://example.com"
       pattern="https://.*"
       size="30"
