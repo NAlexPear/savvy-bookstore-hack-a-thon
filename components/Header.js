@@ -1,5 +1,5 @@
 export default (state) => `
 <h1>
-    ${state.title}
+    ${state.header.title}
 </h1>
 `;
