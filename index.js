@@ -59,8 +59,6 @@ document
                 // we'll learn how to handle sellingPoints next
                 'sellingPoints': [],
             };
-
-            // this might be a hint for number 11
             states.books[states.books.length] = newProduct;
 
             render(states.books);
