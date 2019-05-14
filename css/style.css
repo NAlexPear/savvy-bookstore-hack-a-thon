@@ -33,6 +33,14 @@ footer {
   border: dashed 6px hotpink;
 }
 
+li {
+  display:flex;
+  align-items: flex-start;
+  justify-content: center;
+  text-transform: uppercase;
+
+}
+
 /*Developer's Note: This needs to be an ID, not a class selector.*/
 #root {
   display: grid;
