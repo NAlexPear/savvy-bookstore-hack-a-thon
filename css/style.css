@@ -4,12 +4,13 @@ html {
 }
 
 h1 {
-  background: springgreen;
+  background: slategray;
   font-family: fantasy;
   text-shadow: 0px 0px 9px aquamarine;
-  color: peru;
-  border: dashed 6px hotpink;
+  color: darkblue;
+  border: solid 3px darkblue;
   margin: 0px;
+  text-align: center;
 }
 
 nav {
