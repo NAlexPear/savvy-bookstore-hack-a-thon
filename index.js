@@ -13,3 +13,4 @@ function render(state){
     ${Footer(state)},
     `;
 }
+render(state);
