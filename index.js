@@ -5,6 +5,9 @@ import Form from '/components/Form';
 import Book from '/components/Books';
 import Footer from './components/Footer';
 const root = document.querySelector('#root');
+
+const state = {};
+
 function render(state){
     root.innerHTML =`
     ${Navigation(state)},
@@ -13,4 +16,8 @@ function render(state){
     ${Footer(state)},
     `;
 }
+
+
+
 render(state);
+
