@@ -10,7 +10,7 @@ const states = {
     title: ""
   },
   navigation: {
-    links: ["Books", "Albums"]
+    links: ["BOOKS", "ALBUMS"]
   },
   books: [
     {
