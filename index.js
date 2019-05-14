@@ -34,7 +34,7 @@ function render(state){
     ${Header(state)},
     ${Content(state)},
     ${Footer(state)},
-    ${Form(state)},
+    ${Form},
     `;
 }
 
