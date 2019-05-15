@@ -6,27 +6,27 @@ import Footer from './components/Footer';
 const root = document.querySelector('#root');
 
 const states = {
-  header: {
-    title: "Amagone Book Store"
-  },
-  navigation: {
-    links: ["books", "albums"]
-  },
-  books: [
-    {
-      id: 1,
-      name: "Lasagna: A Retrospective",
-      author: "Garfield",
-      pictureUrl:
-        "http://graphics8.nytimes.com/images/2015/10/15/dining/15RECIPE20DIN/15RECIPE20DIN-articleLarge.jpg",
-      price: 24,
-      sellingPoints: [
-        "Lasagna is delicious.",
-        "The essential guide to Italian casseroles of all types.",
-        "Real G's move silent, like Lasagna. -Lil Wayne"
-      ]
-    }
-  ]
+    'header': {
+        'title': 'Amagone Book Store'
+    },
+    'navigation': {
+        'links': [ 'books', 'albums' ]
+    },
+    'books': [
+        {
+            'id': 1,
+            'name': 'Lasagna: A Retrospective',
+            'author': 'Garfield',
+            'pictureUrl':
+        'http://graphics8.nytimes.com/images/2015/10/15/dining/15RECIPE20DIN/15RECIPE20DIN-articleLarge.jpg',
+            'price': 24,
+            'sellingPoints': [
+                'Lasagna is delicious.',
+                'The essential guide to Italian casseroles of all types.',
+                "Real G's move silent, like Lasagna. -Lil Wayne"
+            ]
+        }
+    ]
 };
 
 function render(state){
@@ -51,7 +51,7 @@ document
             const newProduct = {
                 'name': data[0].value,
                 'author': data[1].value,
-                'pictureURL': data[2].value,
+                'pictureUrl': data[2].value,
                 'price': data[3].value,
 
                 // we'll learn how to handle sellingPoints next
