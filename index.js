@@ -59,6 +59,10 @@ document
                 'sellingPoints': [],
             };
 
+            // TODO: Update newProduct to have a value assigned to 🔑 of 'id' that is 1 more than the value in the previous 📖.
+
+            // states.books[length - 1].id + 1
+
             states.books[states.books.length] = newProduct;
 
             render(states);
