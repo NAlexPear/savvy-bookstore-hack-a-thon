@@ -34,8 +34,8 @@ function render(state){
     ${Navigation(state)}
     ${Header(state)}
     ${Content(state)}
-    ${Footer(state)}
     ${Form()}
+    ${Footer}
     `;
 }
 
