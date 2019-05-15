@@ -46,6 +46,19 @@ li {
 
 }
 
+img {
+  display:flex;
+  justify-content: space-around;
+  max-width: 200px;
+  max-height: auto;
+}
+
+figcaption {
+  text-emphasis: center;
+  max-width: 200px;
+  max-height: auto;
+  }
+
 /*Developer's Note: This needs to be an ID, not a class selector.*/
 #root {
   display: grid;
