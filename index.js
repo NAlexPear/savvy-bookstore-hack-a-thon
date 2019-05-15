@@ -36,7 +36,6 @@ function render(state){
     ${Content(state)}
     ${Form()}
     ${Footer}
-
     `;
 }
 
