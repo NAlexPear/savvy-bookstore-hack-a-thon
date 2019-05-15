@@ -25,6 +25,10 @@ content {
   background: burlywood;
   border: solid 2px springgreen;
 }
+form {
+  text-align: center;
+  margin: 0 auto;
+}
 
 footer {
   background: springgreen;
