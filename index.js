@@ -17,7 +17,7 @@ const states = {
             'id': 1,
             'name': 'Lasagna: A Retrospective',
             'author': 'Garfield',
-            'pictureUrl':
+            'pictureURL':
         'http://graphics8.nytimes.com/images/2015/10/15/dining/15RECIPE20DIN/15RECIPE20DIN-articleLarge.jpg',
             'price': 24,
             'sellingPoints': [
@@ -51,7 +51,7 @@ document
             const newProduct = {
                 'name': data[0].value,
                 'author': data[1].value,
-                'pictureUrl': data[2].value,
+                'pictureURL': data[2].value,
                 'price': data[3].value,
 
                 // we'll learn how to handle sellingPoints next
