@@ -5,22 +5,27 @@ html {
 }
 
 /*put all other styles below this line, please*/
-#body {
-  display:grid;
+
+body {
+  display: grid;
+  grid-template-rows: min-content;
+  grid-template-rows: max-content;
 }
 
 #navigation {
   position: sticky;
+  left: 0;
+  top: 0;
 }
 
 #header {
-  width: min-content;
+
 }
 
 #content {
-  width: max-content
+
 }
 
 #footer {
-  width: min-content;
+  
 }
