@@ -26,3 +26,7 @@ const books = [
 ];
 
 console.log(books);
+
+document.getElementById('navigation').addEventListener('click', function(event){
+    event.preventDefault();
+});
