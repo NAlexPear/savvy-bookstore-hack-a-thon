@@ -23,5 +23,5 @@ const books = [
         ]
     },
 ];
-document.querySelector('books'[1]).textContent
+document.querySelector('#content').textContent = books[2].name
 console.log(books);
