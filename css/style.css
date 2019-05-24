@@ -5,17 +5,21 @@ html {
 }
 
 /*put all other styles below this line, please*/
-img {
-  width: 100%;
-}
-body{
+body {
+  display: grid;
+  grid-template-rows: min-content min-content max-content min-content;
   font-family: fantasy;
   background-color: blueviolet;
   font-weight: bold;
-  
-  
 }
-#navigation{
-  color: red;
 
+#navigation {
+  color: red;
+  position: sticky;
+  left: 0;
+  top: 0;
+}
+
+img {
+  width: 100%;
 }
