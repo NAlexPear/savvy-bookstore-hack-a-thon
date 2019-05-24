@@ -8,3 +8,22 @@ html {
 img {
   width: 100%;
 }
+body{
+  font-family: fantasy;
+  background-color: blueviolet;
+  font-weight: bold;
+  
+  
+}
+#navigation{color: red;
+
+}
+#header{
+
+}
+#content{
+
+}
+#footer{
+
+}
