@@ -26,6 +26,6 @@ const books = [
 
 console.log(books);
 
-document.getElementById('navigation').addEventListener('click', function(event){
-    event.preventDefault();
-});
+document
+    .getElementById('navigation')
+    .addEventListener('click',(event) => event.preventDefault());
