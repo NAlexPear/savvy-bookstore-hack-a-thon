@@ -8,22 +8,11 @@ html {
 
 body {
   display: grid;
-  grid-template-rows: min-content min-content max-content min-content;}
+  grid-template-rows: min-content min-content max-content min-content;
+}
 
 #navigation {
   position: sticky;
   left: 0;
   top: 0;
-}
-
-#header {
-
-}
-
-#content {
-
-}
-
-#footer {
-
 }
