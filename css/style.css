@@ -34,6 +34,10 @@ ul {
   font-family: fantasy;
 }
 
+#content {
+  display: flex;
+}
+
 #navigation,
 #footer {
   padding: 1rem;
