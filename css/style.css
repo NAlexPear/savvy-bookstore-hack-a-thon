@@ -5,3 +5,6 @@ html {
 }
 
 /*put all other styles below this line, please*/
+img {
+  width: 100%;
+}
