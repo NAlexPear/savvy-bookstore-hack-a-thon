@@ -31,7 +31,10 @@ ul {
 
 #header {
   color: white;
+  min-height: 100vh;
   font-family: fantasy;
+  background: url(https://www.enca.com/sites/default/files/WEB_PHOTO_MONEY_TREE_BOOK_06092017.jpg);
+  background-size: 100%;
 }
 
 #navigation,
