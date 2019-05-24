@@ -5,6 +5,17 @@ html {
 }
 
 /*put all other styles below this line, please*/
+body {
+  display: grid;
+  grid-template-rows: min-content min-content max-content min-content;
+}
+
+#navigation {
+  position: sticky;
+  left: 0;
+  top: 0;
+}
+
 img {
   width: 100%;
 }
