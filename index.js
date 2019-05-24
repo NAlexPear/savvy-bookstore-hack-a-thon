@@ -23,5 +23,5 @@ const books = [
         ]
     },
 ];
-
+document.querySelector('books'[1]).textContent
 console.log(books);

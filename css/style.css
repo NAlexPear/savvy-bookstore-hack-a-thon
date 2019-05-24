@@ -10,7 +10,7 @@ body {
   grid-template-rows: min-content min-content max-content min-content;
   font-family: fantasy;
   background-color: blueviolet;
-  font-weight: bold;
+  font-weight: bold; 
 }
 
 #navigation {
