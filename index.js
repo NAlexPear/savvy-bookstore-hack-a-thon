@@ -23,8 +23,8 @@ const books = [
         ]
     },
 ];
-document.querySelector('#content').textContent = books[2].name
-console.log(books);
+
+document.querySelector('#content').textContent = books[2].name;
 
 document
     .getElementById('navigation')
