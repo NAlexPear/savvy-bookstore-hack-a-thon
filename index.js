@@ -24,7 +24,7 @@ const books = [
     },
 ];
 
-document.querySelector('#content').textContent = books[2].name;
+document.querySelector('#content').textContent = books[0].name;
 
 document
     .getElementById('navigation')
