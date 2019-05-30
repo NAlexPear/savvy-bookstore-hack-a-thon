@@ -40,12 +40,15 @@ ul {
 
 #content {
   display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
   padding: 1rem;
 }
 
 #content > div {
   background-color: #fafbf0;
   max-width: 90vw;
+  margin: 1rem;
   width: 450px;
 }
 
