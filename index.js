@@ -24,6 +24,23 @@ const books = [
     },
 ];
 
+function SellingPoints(sellingPoints){
+    let i = 0;
+    let list = '<ul>';
+            
+    while(i < sellingPoints.length){
+        list += `
+                    <li>
+                        ${sellingPoints[i]}
+                    </li>
+                `;
+        
+        i++;
+    }
+            
+    return `${list}</ul>`;
+}
+
 function Book(book){
     return `
         <div> 
@@ -31,11 +48,13 @@ function Book(book){
             <h3>${book.author}</h3>
             <p> Price:$${book.price}</p>
             <img src="${book.pictureUrl}">
+            ${SellingPoints(book.sellingPoints)}
         </div>
     `;
 }
 
 document.querySelector('#content').innerHTML = Book(books[0]);
+
 
 document
     .getElementById('navigation')
