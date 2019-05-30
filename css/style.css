@@ -46,13 +46,17 @@ ul {
 #content > div {
   background-color: #fafbf0;
   max-width: 90vw;
-  width: 350px;
+  width: 450px;
 }
 
 #content > div h1,
 #content > div h3,
 #content > div p {
-  padding: 1rem;
+  padding: 0.3rem 1rem;
+}
+
+#content > div ul {
+  padding: 1rem 1rem 1rem 2rem;
 }
 
 #navigation {
