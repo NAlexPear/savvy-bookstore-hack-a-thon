@@ -23,8 +23,19 @@ const books = [
         ]
     },
 ];
-document.querySelector('#content').textContent = books[2].name
-console.log(books);
+
+function Book(book){
+    return `
+        <div> 
+            <h1>${book.name}</h1>
+            <h3>${book.author}</h3>
+            <p> Price:$${book.price}</p>
+            <img src="${book.pictureUrl}">
+        </div>
+    `;
+}
+
+document.querySelector('#content').innerHTML = Book(books[0]);
 
 document
     .getElementById('navigation')
