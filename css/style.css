@@ -43,6 +43,18 @@ ul {
   padding: 1rem;
 }
 
+#content > div {
+  background-color: #fafbf0;
+  max-width: 90vw;
+  width: 350px;
+}
+
+#content > div h1,
+#content > div h3,
+#content > div p {
+  padding: 1rem;
+}
+
 #navigation {
   box-shadow: 0 0 5px 5px #00000073;
 }
