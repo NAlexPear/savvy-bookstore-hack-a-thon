@@ -24,43 +24,21 @@ const books = [
     },
 ];
 
-function SellingPoints(sellingPoints){
-    let i = 0;
-    let list = '<ul>';
-            
-    while(i < sellingPoints.length){
-        list += `
-                    <li>
-                        ${sellingPoints[i]}
-                    </li>
-                `;
-        
-        i++;
-    }
-            
-    return `${list}</ul>`;
-}
-
 function Book(book){
     return `
-        <div> 
+        <div>
             <h1>${book.name}</h1>
             <h3>${book.author}</h3>
             <p> Price:$${book.price}</p>
             <img src="${book.pictureUrl}">
-            ${SellingPoints(book.sellingPoints)}
+            <ul>
+              ${book.sellingPoints.map((sellingPoint) => `<li>${sellingPoint}</li>`).join('')}
+            </ul>
         </div>
     `;
 }
-let content = '';
-let i = 0;
 
-while(i < books.length){
-    content = `${content}${Book(books[i])}`;
-    i++;
-}
-
-document.querySelector('#content').innerHTML = content;
+document.querySelector('#content').innerHTML = books.map(Book).join('');
 
 document
     .getElementById('navigation')
