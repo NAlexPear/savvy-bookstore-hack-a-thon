@@ -52,9 +52,15 @@ function Book(book){
         </div>
     `;
 }
+let content = '';
+let i = 0;
 
-document.querySelector('#content').innerHTML = Book(books[0]);
+while(i < books.length){
+    content = `${content}${Book(books[i])}`;
+    i++;
+}
 
+document.querySelector('#content').innerHTML = content;
 
 document
     .getElementById('navigation')
