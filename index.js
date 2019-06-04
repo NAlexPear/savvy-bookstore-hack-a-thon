@@ -57,12 +57,12 @@ function render(state){
 
 render(State);
 
-fetch('https://api.savvycoders.com/books')
+fetch('https://api.savvycoders.com/albums')
     .then((response) => response.json())
     .then((data) => {
-        data.forEach((book) => products.books.push(book));
+        data.forEach(albums) => products.albums.push(albums));
 
-        if(State.active === 'books'){
+        if(State.active === 'albums'){
             render(State);
         }
     });
