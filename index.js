@@ -1,3 +1,7 @@
+const State = {
+    'active': 'books'
+};
+
 const products = {
     'books': [
         {
@@ -27,6 +31,8 @@ const products = {
     'albums': []
 };
 
+const content = document.querySelector('#content');
+
 function Product(product){
     return `
         <div>
@@ -41,15 +47,22 @@ function Product(product){
     `;
 }
 
-const content = document.querySelector('#content');
+function render(state){
+    content.innerHTML = products[state.active].map(Product).join('');
 
+    document
+        .getElementById('navigation')
+        .addEventListener('click',(event) => event.preventDefault());
+}
 
-content.innerHTML = products.books.map(Product).join('');
-
-document
-    .getElementById('navigation')
-    .addEventListener('click',(event) => event.preventDefault());
+render(State);
 
 fetch('https://api.savvycoders.com/books')
     .then((response) => response.json())
-    .then((data) => content.innerHTML += data.map(Product).join(''));
+    .then((data) => {
+        data.forEach((book) => products.books.push(book));
+
+        if(State.active === 'books'){
+            render(State);
+        }
+    });
