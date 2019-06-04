@@ -35,16 +35,17 @@ const content = document.querySelector('#content');
 
 function Product(product){
     return `
-        <div>
-            <h1>${product.title}</h1>
-            <h3>${product.creator}</h3>
-            <p>Price:$${product.price}</p>
-            <img src="${product.image}">
-            <ul>
+    <div>
+    <span class="fas fa-trash"></span>
+    <h1>${product.title}</h1>
+    <h3>${product.creator}</h3>
+    <p>Price:$${product.price}</p>
+    <img src="${product.image}">
+    <ul>
                 ${product.selling_points.map((sellingPoint) => `<li>${sellingPoint}</li>`).join('')}
-            </ul>
-        </div>
-        `;
+                </ul>
+                </div>
+                `;
 }
 
 function render(state){
