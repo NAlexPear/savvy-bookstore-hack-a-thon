@@ -29,7 +29,6 @@ const products = {
     ]
 };
 
-
 function Book(book){
     return `
         <div>
