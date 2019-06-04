@@ -47,7 +47,25 @@ function Product(product){
         </div>
     `;
 }
-
+function Form(){
+    return `
+        <form>
+            <label for ="title">Title</label> 
+            <input type="text" name="title">
+            <label for ="price">Price</label>
+            <input type="text" name="price">
+            <label for ="creator">Creator</label> 
+            <input type="text" name="creator">
+            <label for ="image">Image</label> 
+            <input type="text" name="image">
+            <label for ="selling_points">Selling_Points</label> 
+            <input type="text" name="selling_points">
+            <label for ="type">Type</label> 
+            <input type="radio" value = "book" name="type" checked>
+            <input type="radio" value="album" name="type">
+        </form>
+    `;
+}
 function render(state){
     content.innerHTML = products[state.active].map(Product).join('');
 
