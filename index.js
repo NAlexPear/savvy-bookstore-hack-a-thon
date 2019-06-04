@@ -24,7 +24,7 @@ const products = {
             ]
         }
     ],
-    'album': [
+    'albums': [
         
     ]
 };
