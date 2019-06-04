@@ -27,15 +27,15 @@ const products = {
     'albums': []
 };
 
-function Book(book){
+function Product(product){
     return `
         <div>
-            <h1>${book.title}</h1>
-            <h3>${book.creator}</h3>
-            <p> Price:$${book.price}</p>
-            <img src="${book.image}">
+            <h1>${product.title}</h1>
+            <h3>${product.creator}</h3>
+            <p>Price:$${product.price}</p>
+            <img src="${product.image}">
             <ul>
-              ${book.selling_points.map((sellingPoint) => `<li>${sellingPoint}</li>`).join('')}
+              ${product.selling_points.map((sellingPoint) => `<li>${sellingPoint}</li>`).join('')}
             </ul>
         </div>
     `;
@@ -43,7 +43,8 @@ function Book(book){
 
 const content = document.querySelector('#content');
 
-content.innerHTML = products.books.map(Book).join('');
+
+content.innerHTML = products.books.map(Product).join('');
 
 document
     .getElementById('navigation')
@@ -51,4 +52,4 @@ document
 
 fetch('https://api.savvycoders.com/books')
     .then((response) => response.json())
-    .then((data) => content.innerHTML += data.map(Book).join(''));
+    .then((data) => content.innerHTML += data.map(Product).join(''));
