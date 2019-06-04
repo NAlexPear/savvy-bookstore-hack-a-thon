@@ -24,7 +24,7 @@ const products = {
             'price': 200,
             'selling_points': [
                 'Something something bitcoin',
-                'I like this -Elon Musk' ,
+                'I like this -Elon Musk',
             ]
         }
     ],
@@ -41,10 +41,10 @@ function Product(product){
             <p>Price:$${product.price}</p>
             <img src="${product.image}">
             <ul>
-              ${product.selling_points.map((sellingPoint) => `<li>${sellingPoint}</li>`).join('')}
+                ${product.selling_points.map((sellingPoint) => `<li>${sellingPoint}</li>`).join('')}
             </ul>
         </div>
-    `;
+        `;
 }
 
 function render(state){
@@ -52,10 +52,13 @@ function render(state){
 
     document
         .getElementById('navigation')
-        .addEventListener('click',(event) => {
+        .addEventListener('click', (event) => {
             event.preventDefault();
 
             console.log(event.target.id);
+
+            state.active = event.target.id;
+            render(state);
         });
 }
 
