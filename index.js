@@ -2,9 +2,9 @@ const products = {
     'books': [
         {
             'id': 1,
-            'name': 'Lasagna: A Retrospective',
-            'author': 'Garfield',
-            'pictureUrl': 'http://graphics8.nytimes.com/images/2015/10/15/dining/15RECIPE20DIN/15RECIPE20DIN-articleLarge.jpg',
+            'title': 'Lasagna: A Retrospective',
+            'creator': 'Garfield',
+            'image': 'http://graphics8.nytimes.com/images/2015/10/15/dining/15RECIPE20DIN/15RECIPE20DIN-articleLarge.jpg',
             'price': 24,
             'selling_points': [
                 'Lasagna is delicious.',
@@ -14,9 +14,9 @@ const products = {
         },
         {
             'id': 2,
-            'name': 'Cryptonomicon',
-            'author': 'Neal Stephenson',
-            'pictureUrl': 'https://images-na.ssl-images-amazon.com/images/I/41K%2Bt2TSopL._SX304_BO1,204,203,200_.jpg',
+            'title': 'Cryptonomicon',
+            'creator': 'Neal Stephenson',
+            'image': 'https://images-na.ssl-images-amazon.com/images/I/41K%2Bt2TSopL._SX304_BO1,204,203,200_.jpg',
             'price': 200,
             'selling_points': [
                 'Something something bitcoin',
@@ -24,9 +24,7 @@ const products = {
             ]
         }
     ],
-    'albums': [
-        
-    ]
+    'albums': []
 };
 
 function Book(book){
