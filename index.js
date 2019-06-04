@@ -1,5 +1,3 @@
-import { type } from 'os';
-
 const books = [
     {
         'id': 1,
@@ -31,7 +29,7 @@ const books = [
 function Book(book){
     return `
         <div>
-            <h1>${book.name}</h1>
+            <h1>${book.title}</h1>
             <h3>${book.creator}</h3>
             <p> Price:$${book.price}</p>
             <img src="${book.image}">
