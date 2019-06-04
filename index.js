@@ -36,6 +36,7 @@ const content = document.querySelector('#content');
 function Product(product){
     return `
         <div>
+            <span class="fas fa-trash"></span>
             <h1>${product.title}</h1>
             <h3>${product.creator}</h3>
             <p>Price:$${product.price}</p>
@@ -44,7 +45,7 @@ function Product(product){
                 ${product.selling_points.map((sellingPoint) => `<li>${sellingPoint}</li>`).join('')}
             </ul>
         </div>
-        `;
+    `;
 }
 
 function render(state){
