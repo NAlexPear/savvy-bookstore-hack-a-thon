@@ -65,7 +65,10 @@ fetch('https://api.savvycoders.com/albums')
         if(State.active === 'albums'){
             render(State);
         }
-        fetch('https://api.savvycoders.com/books')
+    });
+
+
+fetch('https://api.savvycoders.com/books')
     .then((response) => response.json())
     .then((data) => {
         data.forEach((book) => products.books.push(book));
