@@ -1,40 +1,41 @@
-const books = [
-    {
-        'id': 1,
-        'title': 'Lasagna: A Retrospective',
-        'creator': 'Garfield',
-        'image': 'http://graphics8.nytimes.com/images/2015/10/15/dining/15RECIPE20DIN/15RECIPE20DIN-articleLarge.jpg',
-        'price': 24,
-        'selling_points': [
-            'Lasagna is delicious.',
-            'The essential guide to Italian casseroles of all types.',
-            "Real G's move silent, like Lasagna. -Lil Wayne"
-        
-        ]
-    },
-    {
-        'id': 2,
-        'title': 'Cryptonomicon',
-        'creator': 'Neal Stephenson',
-        'image': 'https://images-na.ssl-images-amazon.com/images/I/41K%2Bt2TSopL._SX304_BO1,204,203,200_.jpg',
-        'price': 200,
-        'selling_points': [
-            'Something something bitcoin',
-            'I like this -Elon Musk' ,
-        
-        ]
-    },
-];
+const products = {
+    'books': [
+        {
+            'id': 1,
+            'title': 'Lasagna: A Retrospective',
+            'creator': 'Garfield',
+            'image': 'http://graphics8.nytimes.com/images/2015/10/15/dining/15RECIPE20DIN/15RECIPE20DIN-articleLarge.jpg',
+            'price': 24,
+            'selling_points': [
+                'Lasagna is delicious.',
+                'The essential guide to Italian casseroles of all types.',
+                "Real G's move silent, like Lasagna. -Lil Wayne"
+            ]
+        },
+        {
+            'id': 2,
+            'title': 'Cryptonomicon',
+            'creator': 'Neal Stephenson',
+            'image': 'https://images-na.ssl-images-amazon.com/images/I/41K%2Bt2TSopL._SX304_BO1,204,203,200_.jpg',
+            'price': 200,
+            'selling_points': [
+                'Something something bitcoin',
+                'I like this -Elon Musk' ,
+            ]
+        }
+    ],
+    'albums': []
+};
 
-function Products(products){
+function Product(product){
     return `
         <div>
-            <h1>${products.title}</h1>
-            <h3>${products.creator}</h3>
-            <p> Price:$${products.price}</p>
-            <img src="${products.image}">
+            <h1>${product.title}</h1>
+            <h3>${product.creator}</h3>
+            <p>Price:$${product.price}</p>
+            <img src="${product.image}">
             <ul>
-              ${products.selling_points.map((sellingPoint) => `<li>${sellingPoint}</li>`).join('')}
+              ${product.selling_points.map((sellingPoint) => `<li>${sellingPoint}</li>`).join('')}
             </ul>
         </div>
     `;
@@ -42,7 +43,8 @@ function Products(products){
 
 const content = document.querySelector('#content');
 
-content.innerHTML = products.map(products).join('');
+
+content.innerHTML = products.books.map(Product).join('');
 
 document
     .getElementById('navigation')
@@ -50,4 +52,4 @@ document
 
 fetch('https://api.savvycoders.com/books')
     .then((response) => response.json())
-    .then((data) => content.innerHTML += data.map(Products).join(''));
+    .then((data) => content.innerHTML += data.map(Product).join(''));
