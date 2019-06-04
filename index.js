@@ -52,7 +52,11 @@ function render(state){
 
     document
         .getElementById('navigation')
-        .addEventListener('click',(event) => event.preventDefault());
+        .addEventListener('click',(event) => {
+            event.preventDefault();
+
+            console.log(event.target.id);
+        });
 }
 
 render(State);
