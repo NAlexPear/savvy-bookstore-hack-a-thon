@@ -27,10 +27,10 @@ const books = [
 function Book(book){
     return `
         <div>
-            <h1>${book.name}</h1>
-            <h3>${book.author}</h3>
+            <h1>${book.title}</h1>
+            <h3>${book.creator}</h3>
             <p> Price:$${book.price}</p>
-            <img src="${book.pictureUrl}">
+            <img src="${book.image}">
             <ul>
               ${book.selling_points.map((sellingPoint) => `<li>${sellingPoint}</li>`).join('')}
             </ul>
