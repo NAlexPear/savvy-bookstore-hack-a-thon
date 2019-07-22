@@ -1,0 +1,24 @@
+// 20190722171112
+// https://raw.githubusercontent.com/manavm1990/savvy-coders-portfolio/master/.vscode/settings.json
+{
+  "files.autoSave": "onFocusChange",
+  "editor.tabSize": 2,
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrapColumn": 100,
+  "editor.accessibilitySupport": "off",
+  "editor.scrollBeyondLastColumn": 2,
+  "editor.smoothScrolling": true,
+  "editor.minimap.enabled": false,
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "workbench.enableExperiments": false,
+  "workbench.colorTheme": "Signed Dark Pro",
+  "workbench.iconTheme": "vs-minimal",
+  "workbench.view.alwaysShowHeaderActions": true,
+  "terminal.integrated.fontFamily": "'Inconsolata', monospace",
+  "editor.fontFamily": "'Inconsolata', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "better-comments.highlightPlainText": true,
+  "eslint.autoFixOnSave": true,
+  "files.eol": "\n"
+}

@@ -1,0 +1,25 @@
+// 20190722165430
+// https://raw.githubusercontent.com/manavm1990/savvy-coders-portfolio/master/.vscode/extensions.json
+{
+  "recommendations": [
+    "formulahendry.auto-rename-tag",
+    "aaron-bond.better-comments",
+    "coenraads.bracket-pair-colorizer-2",
+    "streetsidesoftware.code-spell-checker",
+    "naumovs.color-highlight",
+    "oderwat.indent-rainbow",
+    "xabikos.javascriptsnippets",
+    "alex-munene.signed-dark-pro",
+    "esbenp.prettier-vscode",
+    "2gua.rainbow-brackets",
+    "stkb.rewrap",
+    "ms-vsliveshare.vsliveshare",
+    "smelukov.vscode-csstree",
+    "shinnn.stylelint",
+    "dbaeumer.vscode-eslint",
+    "pkief.material-icon-theme",
+    "codezombiech.gitignore",
+    "kisstkondoros.vscode-gutter-preview",
+    "plievone.vscode-template-literal-editor"
+  ]
+}
