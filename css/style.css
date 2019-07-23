@@ -4,4 +4,11 @@ html {
   box-sizing: border-box;
 }
 
+header {
+  background-color: darkslateblue;
+  margin: 0px auto;
+
+}
+
 /*put all other styles below this line, please*/
+
