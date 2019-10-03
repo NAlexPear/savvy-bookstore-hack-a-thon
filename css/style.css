@@ -1,7 +1,0 @@
-/*set up universal box-sizing adjustment*/
-
-html {
-  box-sizing: border-box;
-}
-
-/*put all other styles below this line, please*/

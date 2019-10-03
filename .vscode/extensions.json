@@ -1,5 +1,5 @@
-// 20190722165430
-// https://raw.githubusercontent.com/manavm1990/savvy-coders-portfolio/master/.vscode/extensions.json
+// 20190826132226
+// https://raw.githubusercontent.com/manavm1990/savvy-coders-portfolio/june-2019/.vscode/extensions.json
 {
   "recommendations": [
     "formulahendry.auto-rename-tag",
@@ -9,7 +9,7 @@
     "naumovs.color-highlight",
     "oderwat.indent-rainbow",
     "xabikos.javascriptsnippets",
-    "alex-munene.signed-dark-pro",
+    "sdras.night-owl",
     "esbenp.prettier-vscode",
     "2gua.rainbow-brackets",
     "stkb.rewrap",

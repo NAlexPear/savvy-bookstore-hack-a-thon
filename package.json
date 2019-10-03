@@ -18,7 +18,14 @@
   },
   "homepage": "https://github.com/nalexpear/savvy-bookstore-hack-a-thon#readme",
   "devDependencies": {
-    "eslint": "^5.1.0",
-    "parcel-bundler": "^1.11.0"
+    "eslint": "^6.2.2",
+    "eslint-config-prettier": "^6.1.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "parcel-bundler": "^1.12.3",
+    "prettier": "^1.18.2",
+    "stylelint": "^10.1.0",
+    "stylelint-config-prettier": "^5.2.0",
+    "stylelint-config-standard": "^18.3.0",
+    "stylelint-prettier": "^1.1.1"
   }
 }
