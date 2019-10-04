@@ -1,8 +1,15 @@
 # Savvy Coders Hack-a-thon #2
 
-## Team JEN
 
-### Contributors
+## Contributors
+
+### MNK
+
+- Marvin
+- Nicole
+- Kelly
+
+### Team JEN
 
 + Nick La Chance
 + Ezra Rabinsky
