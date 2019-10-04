@@ -1,6 +1,5 @@
 # Savvy Coders Hack-a-thon #2
 
-
 ## Contributors
 
 ### MNK
@@ -11,16 +10,18 @@
 
 ### Team JEN
 
-+ Nick La Chance
-+ Ezra Rabinsky
-+ Justin Detjen
+- Nick La Chance
+- Ezra Rabinsky
+- Justin Detjen
 
 ### Purple Cobras
-+ Max Eddy
-+ Molly Bick
-+ Meghan Griffith
+
+- Max Eddy
+- Molly Bick
+- Meghan Griffith
 
 ### Go Getters
+
 - Nyilah
 - Savion
 - Vanessa
