@@ -2,6 +2,7 @@
 
 ## Contributors
 
-+ Manav Misra
++ Max Eddy, Molly Bick, Meghan Griffith
 
-**TODO: Create a nested list with your team name followed by the names of your team members.**
+### Purple Cobras
+
