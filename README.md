@@ -1,19 +1,27 @@
 # Savvy Coders Hack-a-thon #2
 
+
 ## Contributors
 
-+ Manav Misra
+### MNK
 
-**TODO: Create a nested list with your team name followed by the names of your team members.**
+- Marvin
+- Nicole
+- Kelly
 
-## MNK
+### Team JEN
 
-Marvin
-Nicole
-Kelly
++ Nick La Chance
++ Ezra Rabinsky
++ Justin Detjen
 
-<ul>
-<li> Marvin </li>
-<li> Kelly </li>
-<li> Nicole </li>
-</ul>
+### Purple Cobras
++ Max Eddy
++ Molly Bick
++ Meghan Griffith
+
+### Go Getters
+- Nyilah
+- Savion
+- Vanessa
+- Laura
