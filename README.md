@@ -13,3 +13,8 @@
 + Molly Bick
 + Meghan Griffith
 
+### Go Getters
+- Nyilah
+- Savion
+- Vanessa
+- Laura
