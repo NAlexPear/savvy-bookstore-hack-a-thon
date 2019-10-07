@@ -37,3 +37,12 @@ img {
 }
 
 /* Put all other styles below this line please! */
+
+header {
+  grid-area: header;
+  background: skyblue;
+  margin: 10px;
+  padding: 10px;
+  align-content: center;
+
+}
