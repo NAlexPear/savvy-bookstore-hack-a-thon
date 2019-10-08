@@ -121,6 +121,9 @@ form{
   display: inline-block;
   margin: 8px 0;
   min-height: 48px;
+  max-width: 60vw;
+
+
 }
 
  #add-book:hover {
