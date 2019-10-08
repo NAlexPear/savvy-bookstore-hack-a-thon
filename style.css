@@ -114,12 +114,16 @@ form div {
   margin: 14px;
 }
 
-#add-book {
+input[type="submit"]{
   background: greenyellow;
   border-radius: 14px;
   display: inline-block;
   margin: 8px 0;
   min-height: 48px;
+  max-width: 240px;
+  align-self: center;
+
+
 }
 
 #add-book:hover {
