@@ -97,25 +97,22 @@ form{
   max-width:80vw;
  }
 
- form div{
+ form div {
   display:flex;
   flex-direction: column;
-  margin: 8px;
+  margin:var(--base-spacing);
+}
 
-
-  #addbook {
-    background: beige;
-    border-radius: 8px ;
+  #add-book {
+    background: var(--secondary);
+    border-radius: var(--base-spacing);
     display: inline-block;
     margin: 8px 0;
     min-height: 8px * 6;
    }
 
-   #addbook:hover {
-color: blue
-
-
-
+   #add-book:hover {
+      color: blue
    }
 
 
