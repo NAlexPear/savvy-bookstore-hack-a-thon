@@ -24,7 +24,7 @@ import { Header, Nav, Main, Footer } from "./components";
  */
 const state = {
   heading: "Sorry, I'm Booked.",
-  links: ["books", "albums"],
+  links: ["Books", "Albums"],
   books: [
     {
       id: 1,
@@ -66,13 +66,13 @@ function render(st = state) {
 
 render();
 
-document.querySelector("form").addEventListener("submit", event => {
+document.querySelector("form").addEventListener("submit", function(event) {
   event.preventDefault();
 
   const data = event.target.elements;
 
   const newBook = {
-    index: state.books.length + 1,
+    id: state.books.length + 1,
     title: data[0].value,
     author: data[1].value,
     pictureURL: data[2].value,
