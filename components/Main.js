@@ -54,7 +54,7 @@ export default function() {
 function bookCardsBuilder(books) {
   let cardsHTML = "";
 
-  for ( let = 0; i < books.length; i++ ) {
+  for (let i = 0; i < books.length; i++ ) {
     cardsHTML += `<div class="card">
     <figure>
         <img src=${books[i.pictureUrl]} alt="dummies">
