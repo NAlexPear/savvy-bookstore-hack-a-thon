@@ -47,7 +47,7 @@ header {
   align-content: center;
 }
 
-nav ul{
+nav ul {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -69,7 +69,6 @@ nav ul li:hover {
   transform: translateX(15%);
   box-shadow: 1px 2px 3px #111;
   box-shadow: 2px 2.5px 3px #b7410e;
-
 }
 
 nav ul a {
@@ -103,21 +102,17 @@ form{
   margin:var(--base-spacing);
 }
 
-  #add-book {
-    background: var(--secondary);
-    border-radius: var(--base-spacing);
-    display: inline-block;
-    margin: 8px 0;
-    min-height: 8px * 6;
-   }
+#add-book {
+  background: var(--secondary);
+  border-radius: var(--base-spacing);
+  display: inline-block;
+  margin: 8px 0;
+  min-height: 48px;
+}
 
-   #add-book:hover {
-      color: blue
-   }
-
-
-
-
+ #add-book:hover {
+    color: blue
+ }
 
 footer {
   height: 100px;
@@ -127,17 +122,20 @@ footer {
   width: 1440px;
 }
 
-footer ul {
-  list-style-type: none;
+form {
   display: flex;
+  flex-direction: column;
+  margin: var(--base-spacing);
 }
 
-footer ul li {
-  padding: 8px;
+input,
+textarea {
+  border: solid thin black;
+  max-width: 80vw;
 }
 
-footer ul li a{
-  text-decoration: none;
-  color: #111;
-  text-shadow: .7px .7px #ccc;
+form div {
+  display: flex;
+  flex-direction: column;
+  margin: var(--base-spacing);
 }
