@@ -1,5 +1,27 @@
+/**
+ * We are using ES Modules - import/export.
+ * This index.js is reaching into the index.js that's inside of components.
+ *
+ * Furthermore, we are using OBJECT DESTRUCTURING.
+ * This just means that we already know that the 'components index' will be EXPORTING out an
+ *  OBJECT LITERAL, and we already know what the 🔑s are going to be.
+ * The braces will 'pull apart' the VALUES associated with these 🔑s - in this case,
+ * functional components, and store them as the VARIABLES, `Header, `Nav`, Main`, etc.
+ */
 import { Header, Nav, Main, Footer } from "./components";
+// console.log(`Header is: ${Header}`);
 
+// import * as notDestructuredObject from "./components";
+// console.log(notDestructuredObject);
+// console.log(`Header is inside of ${notDestructuredObject}. Here's it's value: ${notDestructuredObject.Header}`);
+
+/**
+ * STATE is nothing more than an OBJECT LITERAL that has a bunch of PROPERTIES (AKA 'props')
+ * that describe...the current 'state' of our app and what each property's value is.
+ *
+ * This is the information that the FUNCTIONAL COMPONENTS need to do do their job.
+ * For example,'Header' needs to use `state.heading` to render properly.
+ */
 const state = {
   heading: "Sorry, I'm Booked.",
   links: ["books", "albums"],
@@ -33,6 +55,7 @@ const state = {
 };
 
 function render(st = state) {
+  // Each FUNCTIONAL COMPONENT needs to be INVOKED and may or may not use any STATE information.
   document.querySelector("#root").innerHTML = `
   ${Header(st)}
   ${Nav(st)}
