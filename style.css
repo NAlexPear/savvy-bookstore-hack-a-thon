@@ -37,3 +37,11 @@ img {
 }
 
 /* Put all other styles below this line please! */
+.card {
+  width: 95%;
+  height: 85%;
+  border-color: blue;
+  border-style: dotted;
+  background-color: #D7D7D7;
+}
+
