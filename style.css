@@ -1,6 +1,6 @@
-/* CSS Grid */
 body {
   display: grid;
+  font-family: "Indie Flower", system-ui;
   grid-template-areas:
     "header"
     "nav"
