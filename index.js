@@ -32,13 +32,13 @@ const state = {
   ]
 };
 
-function render(state) {
+function render(st = state) {
   document.querySelector("#root").innerHTML = `
-  ${Header(state)}
-  ${Nav(state)}
-  ${Main(state)}
-  ${Footer(state)}
+  ${Header(st)}
+  ${Nav(st)}
+  ${Main(st)}
+  ${Footer(st)}
   `;
 }
 
-render(state);
+render();
