@@ -42,3 +42,24 @@ function render(st = state) {
 }
 
 render();
+
+document.querySelector("form").addEventListener("submit", event => {
+  event.preventDefault();
+
+  const data = event.target.elements;
+
+  const newBook = {
+    index: state.books.length + 1,
+    title: data[0].value,
+    author: data[1].value,
+    pictureURL: data[2].value,
+    price: data[3].value,
+
+    // TODO: Add selling points.
+    sellingPoints: []
+  };
+
+  state.books.push(newBook);
+
+  render();
+});
