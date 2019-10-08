@@ -76,7 +76,7 @@ nav ul a {
   text-decoration: none;
   color: #b7410e;
 }
-  
+
 footer {
   height: 100px;
   background: #9d8189;
@@ -87,6 +87,17 @@ footer {
 
 footer ul {
   list-style-type: none;
+  display: flex;
+}
+
+footer ul li {
+  padding: 8px;
+}
+
+footer ul li a{
+  text-decoration: none;
+  color: #111;
+  text-shadow: .7px .7px #ccc;
 }
 
 form{
