@@ -2,10 +2,7 @@ import {Header, Nav, Main, Footer} from "./components";
 
 const state = {
   heading: "Sorry, I'm Booked.",
-  links: [
-    "books",
-    "albums"
-  ],
+  links: ["books", "albums"],
   books: [
     {
       id: 1,
@@ -19,7 +16,8 @@ const state = {
         "The essential guide to Italian casseroles of all types.",
         "Real G's move silent, like Lasagna. -Lil Wayne"
       ]
-    } ]
+    }
+  ]
 };
 
 function render(state = state){
