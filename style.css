@@ -82,11 +82,10 @@ nav ul a {
 }
 
 .card {
-  width: 95%;
-  height: 85%;
   border-color: blue;
   border-style: dotted;
   background-color: #d7d7d7;
+  padding: 8px;
 }
 
 form {
