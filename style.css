@@ -39,20 +39,56 @@ img {
 }
 
 /* Put all other styles below this line please! */
-
 header {
   grid-area: header;
   background: skyblue;
   margin: 10px;
   padding: 10px;
   align-content: center;
+}
 
+nav ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  list-style: none;
+}
+
+nav ul li {
+  line-height: 10px;
+  border: 1.75px groove #444;
+  padding: 8px;
+  margin: 8px;
+  border-radius: 25%;
+}
+
+nav ul li:hover {
+  border: 1.75px solid #444;
+  transition: ease .25s;
+  transform: translateY(-15%);
+  transform: translateX(15%);
+  box-shadow: 1px 2px 3px #111;
+  box-shadow: 2px 2.5px 3px #b7410e;
+
+}
+
+nav ul a {
+  text-decoration: none;
+  color: #b7410e;
+}
+
+.card {
+  width: 95%;
+  height: 85%;
+  border-color: blue;
+  border-style: dotted;
+  background-color: #D7D7D7;
 }
 
 form{
   display:flex;
   flex-direction: column;
-  margin:var(--base-spacing);
+  margin:8px;
   }
 
  input,
@@ -64,15 +100,15 @@ form{
  form div{
   display:flex;
   flex-direction: column;
-  margin:var(--base-spacing);
+  margin: 8px;
 
 
   #addbook {
-    background: var(--secondary);
-    border-radius: var(--base-spacing);
+    background: beige;
+    border-radius: 8px ;
     display: inline-block;
-    margin: var(--base-spacing) 0;
-    min-height: var(--base-spacing) * 6;
+    margin: 8px 0;
+    min-height: 8px * 6;
    }
 
    #addbook:hover {
@@ -86,3 +122,25 @@ color: blue
 
 
 
+footer {
+  height: 100px;
+  background: #9d8189;
+  color: #fff;
+  text-align: center;
+  width: 1440px;
+}
+
+footer ul {
+  list-style-type: none;
+  display: flex;
+}
+
+footer ul li {
+  padding: 8px;
+}
+
+footer ul li a{
+  text-decoration: none;
+  color: #111;
+  text-shadow: .7px .7px #ccc;
+}
