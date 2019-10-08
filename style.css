@@ -99,12 +99,12 @@ form{
  form div {
   display:flex;
   flex-direction: column;
-  margin:var(--base-spacing);
+  margin: 14px;
 }
 
 #add-book {
-  background: var(--secondary);
-  border-radius: var(--base-spacing);
+  background: greenyellow;
+  border-radius: 14px;
   display: inline-block;
   margin: 8px 0;
   min-height: 48px;
@@ -125,7 +125,7 @@ footer {
 form {
   display: flex;
   flex-direction: column;
-  margin: var(--base-spacing);
+  margin: 14px;
 }
 
 input,
@@ -137,5 +137,5 @@ textarea {
 form div {
   display: flex;
   flex-direction: column;
-  margin: var(--base-spacing);
+  margin: 14px;
 }
