@@ -45,7 +45,6 @@ img {
 
 /* Put all other styles below this line please! */
 header {
-  grid-area: header;
   background: skyblue;
   margin: 10px;
   padding: 10px;
@@ -106,6 +105,12 @@ form div {
   margin: 14px;
 }
 
+input,
+textarea {
+  border: solid thin black;
+  max-width: 80vw;
+}
+
 input[type="submit"] {
   background: greenyellow;
   border-radius: 14px;
@@ -116,7 +121,7 @@ input[type="submit"] {
   align-self: center;
 }
 
-#add-book:hover {
+input[type="submit"]:hover {
   color: blue;
 }
 
@@ -141,16 +146,4 @@ footer ul li a {
   text-decoration: none;
   color: #111;
   text-shadow: 0.7px 0.7px #ccc;
-}
-
-input,
-textarea {
-  border: solid thin black;
-  max-width: 80vw;
-}
-
-form div {
-  display: flex;
-  flex-direction: column;
-  margin: 14px;
 }
