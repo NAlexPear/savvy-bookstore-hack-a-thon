@@ -6,7 +6,7 @@ const state = {
   books: [
     {
       id: 1,
-      name: "Lasagna: A Retrospective",
+      title: "Lasagna: A Retrospective",
       author: "Garfield",
       pictureUrl:
         "http://graphics8.nytimes.com/images/2015/10/15/dining/15RECIPE20DIN/15RECIPE20DIN-articleLarge.jpg",
@@ -19,7 +19,7 @@ const state = {
     },
     {
       id: 2,
-      name: "Jumping Rope for Dummies",
+      title: "Jumping Rope for Dummies",
       author: "Probably Not Garfield",
       pictureUrl: "http://i.imgur.com/vk9W3gV.jpg",
       sellingPoints: [

@@ -6,7 +6,7 @@ function bookCardsBuilder(books) {
     cardsHTML += `<div class="card">
     <figure>
         <img src=${books[i].pictureUrl} alt="dummies">
-        <figcaption>"${books[i].name}"</figcaption>
+        <figcaption>"${books[i].title}"</figcaption>
     </figure>
     <p>Author: Probably Not ${books[i].author}</p>
     <ul>
