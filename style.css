@@ -46,6 +46,36 @@ header {
   padding: 10px;
   align-content: center;
 }
+ 
+nav ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  list-style: none;
+}
+
+nav ul li {
+  line-height: 10px;
+  border: 1.75px groove #444;
+  padding: 8px;
+  margin: 8px;
+  border-radius: 25%;
+}
+
+nav ul li:hover {
+  border: 1.75px solid #444;
+  transition: ease .25s;
+  transform: translateY(-15%);
+  transform: translateX(15%);
+  box-shadow: 1px 2px 3px #111;
+  box-shadow: 2px 2.5px 3px #b7410e;
+
+}
+
+nav ul a {
+  text-decoration: none;
+  color: #b7410e;
+}
 
 .card {
   width: 95%;
@@ -54,6 +84,24 @@ header {
   border-style: dotted;
   background-color: #D7D7D7;
 }
+
+form{
+  display:flex;
+  flex-direction: column;
+  margin:var(--base-spacing);
+  }
+
+ input,
+ textarea{
+  border:solid thin black;
+  max-width:80vw;
+ }
+
+ form div{
+  display:flex;
+  flex-direction: column;
+  margin:var(--base-spacing);
+
 
 footer {
   height: 100px;
@@ -65,4 +113,15 @@ footer {
 
 footer ul {
   list-style-type: none;
+  display: flex;
+}
+
+footer ul li {
+  padding: 8px;
+}
+
+footer ul li a{
+  text-decoration: none;
+  color: #111;
+  text-shadow: .7px .7px #ccc;
 }
