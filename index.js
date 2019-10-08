@@ -19,3 +19,14 @@ const state = {
       ]
     } ]
 };
+
+function render(state = state){
+  document.querySelector("#root").innerHTML = `
+  ${Header(state)}
+  ${Nav(state)}
+  ${Main(state)}
+  ${Footer(state)}
+  `;
+}
+
+render(state);
