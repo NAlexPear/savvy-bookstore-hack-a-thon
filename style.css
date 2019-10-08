@@ -47,7 +47,7 @@ header {
   align-content: center;
 }
 
-nav ul{
+nav ul {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -69,14 +69,13 @@ nav ul li:hover {
   transform: translateX(15%);
   box-shadow: 1px 2px 3px #111;
   box-shadow: 2px 2.5px 3px #b7410e;
-
 }
 
 nav ul a {
   text-decoration: none;
   color: #b7410e;
 }
-  
+
 footer {
   height: 100px;
   background: #9d8189;
@@ -89,19 +88,20 @@ footer ul {
   list-style-type: none;
 }
 
-form{
-  display:flex;
+form {
+  display: flex;
   flex-direction: column;
-  margin:var(--base-spacing);
-  }
+  margin: var(--base-spacing);
+}
 
- input,
- textarea{
-  border:solid thin black;
-  max-width:80vw;
- }
+input,
+textarea{
+  border: solid thin black;
+  max-width: 80vw;
+}
 
- form div{
-  display:flex;
+form div {
+  display: flex;
   flex-direction: column;
-  margin:var(--base-spacing);
+  margin: var(--base-spacing);
+}
