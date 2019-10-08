@@ -16,15 +16,13 @@ function bookCardsBuilder(books) {
   </div>`;
   }
 
-
   console.log(cardsHTML);
   return cardsHTML;
 }
 
-export default function(st) {
-  return `<main>
-  ${bookCardsBuilder(st.books)};
-    <form action="#">
+function form() {
+  return `
+  <form action="#">
       <!-- Title -->
       <div>
       <label for="title">Title</label>
@@ -58,5 +56,12 @@ export default function(st) {
 
       <input type="submit" value="Add Book">
     </form>
+    `;
+}
+
+export default function(st) {
+  return `<main>
+  ${bookCardsBuilder(st.books)}
+  ${form()}
 </main>`;
 }
