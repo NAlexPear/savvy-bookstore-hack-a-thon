@@ -88,3 +88,20 @@ footer {
 footer ul {
   list-style-type: none;
 }
+
+form{
+  display:flex;
+  flex-direction: column;
+  margin:var(--base-spacing);
+  }
+
+ input,
+ textarea{
+  border:solid thin black;
+  max-width:80vw;
+ }
+
+ form div{
+  display:flex;
+  flex-direction: column;
+  margin:var(--base-spacing);
