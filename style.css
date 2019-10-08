@@ -46,7 +46,7 @@ header {
   padding: 10px;
   align-content: center;
 }
-
+ 
 nav ul{
   display: flex;
   flex-direction: row;
@@ -77,6 +77,32 @@ nav ul a {
   color: #b7410e;
 }
 
+.card {
+  width: 95%;
+  height: 85%;
+  border-color: blue;
+  border-style: dotted;
+  background-color: #D7D7D7;
+}
+
+form{
+  display:flex;
+  flex-direction: column;
+  margin:var(--base-spacing);
+  }
+
+ input,
+ textarea{
+  border:solid thin black;
+  max-width:80vw;
+ }
+
+ form div{
+  display:flex;
+  flex-direction: column;
+  margin:var(--base-spacing);
+
+
 footer {
   height: 100px;
   background: #9d8189;
@@ -99,20 +125,3 @@ footer ul li a{
   color: #111;
   text-shadow: .7px .7px #ccc;
 }
-
-form{
-  display:flex;
-  flex-direction: column;
-  margin:var(--base-spacing);
-  }
-
- input,
- textarea{
-  border:solid thin black;
-  max-width:80vw;
- }
-
- form div{
-  display:flex;
-  flex-direction: column;
-  margin:var(--base-spacing);
