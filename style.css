@@ -114,7 +114,7 @@ form div {
   margin: 14px;
 }
 
-input[type="submit"]{
+input[type="submit"] {
   background: greenyellow;
   border-radius: 14px;
   display: inline-block;
@@ -122,8 +122,6 @@ input[type="submit"]{
   min-height: 48px;
   max-width: 240px;
   align-self: center;
-
-
 }
 
 #add-book:hover {

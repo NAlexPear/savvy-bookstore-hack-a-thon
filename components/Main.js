@@ -1,19 +1,28 @@
-export default function() {
-  return `<main>
-  <div class="card">
-    <figure>
-        <img src="http://i.imgur.com/vk9W3gV.jpg" alt="dummies">
-        <figcaption>"Jumping Rope for Dummies"</figcaption>
-    </figure>
-    <p>Author: Probably Not Garfield</p>
-    <ul>
-      <li>Cats can't jump rope but DUMMIES can</li>
-      <li>It may be dumb but it's a lot of fun</li>
-      <li>A great entertainment for the kids/cats</li>
-    </ul>
-    <p>This book sells for the <i>low low </i>price of $50,000. It is one of a kind, and will never been seen on the shelf.</p>
-  </div>
+function bookCardsBuilder(books) {
+  let cardsHTML = "";
 
+  for (let i = 0; i < books.length; i++) {
+    cardsHTML += `<div class="card">
+    <figure>
+        <img src=${books[i.pictureUrl]} alt="dummies">
+        <figcaption>"${books[i.name]}"</figcaption>
+    </figure>
+    <p>Author: Probably Not ${books[i.author]}</p>
+    <ul>
+      <li>Lasagna is delicious.</li>
+    </ul>
+    <p>This book sells for the <i>low low </i>price of ${
+      books[i.price]
+    }. It is one of a kind, and will never been seen on the shelf.</p>
+  </div>`;
+  }
+
+  return cardsHTML;
+}
+
+export default function(st) {
+  return `<main>
+  ${bookCardsBuilder(st.books)};
     <form action="#">
       <!-- Title -->
       <div>
@@ -48,26 +57,5 @@ export default function() {
 
       <input type="submit" value="Add Book">
     </form>
-</main>`
-}
-
-function bookCardsBuilder(books) {
-  let cardsHTML = "";
-
-  for (let i = 0; i < books.length; i++ ) {
-    cardsHTML += `<div class="card">
-    <figure>
-        <img src=${books[i.pictureUrl]} alt="dummies">
-        <figcaption>"${books[i.name]}"</figcaption>
-    </figure>
-    <p>Author: Probably Not ${books[i.author]}</p>
-    <ul>
-      <li>Lasagna is delicious.</li>
-    </ul>
-    <p>This book sells for the <i>low low </i>price of ${books[i.price]}. It is one of a kind, and will never been seen on the shelf.</p>
-  </div>`
-
-  }
-
-  return cardsHTML;
+</main>`;
 }
