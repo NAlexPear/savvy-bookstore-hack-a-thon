@@ -47,6 +47,36 @@ header {
   align-content: center;
 }
 
+nav ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  list-style: none;
+}
+
+nav ul li {
+  line-height: 10px;
+  border: 1.75px groove #444;
+  padding: 8px;
+  margin: 8px;
+  border-radius: 25%;
+}
+
+nav ul li:hover {
+  border: 1.75px solid #444;
+  transition: ease .25s;
+  transform: translateY(-15%);
+  transform: translateX(15%);
+  box-shadow: 1px 2px 3px #111;
+  box-shadow: 2px 2.5px 3px #b7410e;
+
+}
+
+nav ul a {
+  text-decoration: none;
+  color: #b7410e;
+}
+  
 footer {
   height: 100px;
   background: #9d8189;
