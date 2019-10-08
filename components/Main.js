@@ -1,5 +1,4 @@
 function bookCardsBuilder(books) {
-  console.log(books);
   let cardsHTML = "";
 
   for (let i = 0; i < books.length; i++) {
@@ -16,7 +15,6 @@ function bookCardsBuilder(books) {
   </div>`;
   }
 
-  console.log(cardsHTML);
   return cardsHTML;
 }
 
