@@ -111,7 +111,7 @@ form{
 }
 
  #add-book:hover {
-    color: blue
+    color: blue;
  }
 
 footer {
@@ -120,6 +120,21 @@ footer {
   color: #fff;
   text-align: center;
   width: 1440px;
+}
+
+footer ul {
+  list-style-type: none;
+  display: flex;
+}
+
+footer ul li {
+  padding: 8px;
+}
+
+footer ul li a{
+  text-decoration: none;
+  color: #111;
+  text-shadow: .7px .7px #ccc;
 }
 
 form {
