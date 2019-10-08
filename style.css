@@ -4,7 +4,8 @@ body {
   grid-template-areas:
     "header"
     "nav"
-    "main"
+    "card"
+    "form"
     "footer";
   grid-template-columns: 1200px;
   height: 100vh;
@@ -24,7 +25,19 @@ main {
   grid-area: main;
   display: grid;
   gap: 8px;
+  grid-template-areas:
+    "card card card card"
+    "form form form form";
   grid-template-columns: repeat(4, 25fr);
+
+}
+
+.card {
+  grid-area: card;
+}
+
+form {
+  grid-area: form;
 }
 
 footer {

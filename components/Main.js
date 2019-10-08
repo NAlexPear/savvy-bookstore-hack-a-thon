@@ -50,3 +50,24 @@ export default function() {
     </form>
 </main>`
 }
+
+function bookCardsBuilder(books) {
+  let cardsHTML = "";
+
+  for (let i = 0; i < books.length; i++ ) {
+    cardsHTML += `<div class="card">
+    <figure>
+        <img src=${books[i.pictureUrl]} alt="dummies">
+        <figcaption>"${books[i.name]}"</figcaption>
+    </figure>
+    <p>Author: Probably Not ${books[i.author]}</p>
+    <ul>
+      <li>Lasagna is delicious.</li>
+    </ul>
+    <p>This book sells for the <i>low low </i>price of ${books[i.price]}. It is one of a kind, and will never been seen on the shelf.</p>
+  </div>`
+
+  }
+
+  return cardsHTML;
+}

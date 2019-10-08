@@ -2,10 +2,7 @@ import {Header, Nav, Main, Footer} from "./components";
 
 const state = {
   heading: "Sorry, I'm Booked.",
-  links: [
-    "books",
-    "albums"
-  ],
+  links: ["books", "albums"],
   books: [
     {
       id: 1,
@@ -25,17 +22,17 @@ const state = {
       name: "Jumping Rope for Dummies",
       author: "Probably Not Garfield",
       pictureUrl:"http://i.imgur.com/vk9W3gV.jpg",
-      sellingPoints:
-      ["Cats can't jump rope but DUMMIES can",
-      "It may be dumb but it's a lot of fun",
-    "A great entertainment for the kids/cats"],
+      sellingPoints: [
+        "Cats can't jump rope but DUMMIES can",
+        "It may be dumb but it's a lot of fun",
+      "A great entertainment for the kids/cats"
+      ],
       price: 500000
     }
     ]
-
 };
 
-function render(state = state){
+function render(state){
   document.querySelector("#root").innerHTML = `
   ${Header(state)}
   ${Nav(state)}
