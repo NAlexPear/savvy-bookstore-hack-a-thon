@@ -20,7 +20,7 @@ const state = {
   ]
 };
 
-function render(state = state){
+function render(state){
   document.querySelector("#root").innerHTML = `
   ${Header(state)}
   ${Nav(state)}

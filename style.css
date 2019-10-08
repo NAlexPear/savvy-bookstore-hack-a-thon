@@ -4,7 +4,8 @@ body {
   grid-template-areas:
     "header"
     "nav"
-    "main"
+    "card"
+    "form"
     "footer";
   grid-template-columns: 1200px;
   height: 100vh;
