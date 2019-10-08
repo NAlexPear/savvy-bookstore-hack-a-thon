@@ -8,6 +8,8 @@ body {
     "footer";
   grid-template-columns: 1200px;
   height: 100vh;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
 header {
@@ -37,8 +39,13 @@ img {
 }
 
 /* Put all other styles below this line please! */
-
-/* Navigation Styles */
+header {
+  grid-area: header;
+  background: skyblue;
+  margin: 10px;
+  padding: 10px;
+  align-content: center;
+}
 
 nav ul{
   display: flex;
@@ -68,4 +75,16 @@ nav ul li:hover {
 nav ul a {
   text-decoration: none;
   color: #b7410e;
+}
+  
+footer {
+  height: 100px;
+  background: #9d8189;
+  color: #fff;
+  text-align: center;
+  width: 1440px;
+}
+
+footer ul {
+  list-style-type: none;
 }
