@@ -37,3 +37,14 @@ img {
 }
 
 /* Put all other styles below this line please! */
+
+footer {
+  height: 100px;
+  background: #9d8189;
+  color: #fff;
+  text-align: center;
+  width: 1440px;
+}
+footer ul {
+  list-style-type: none;
+}
