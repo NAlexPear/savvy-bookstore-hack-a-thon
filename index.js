@@ -29,4 +29,4 @@ function render(state = state){
   `;
 }
 
-render(booksArray);
+render(state);
