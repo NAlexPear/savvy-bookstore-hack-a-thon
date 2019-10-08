@@ -67,7 +67,7 @@ form{
   margin:var(--base-spacing);
 
 
-  #addbook {
+  #add-book {
     background: var(--secondary);
     border-radius: var(--base-spacing);
     display: inline-block;
@@ -75,11 +75,8 @@ form{
     min-height: var(--base-spacing) * 6;
    }
 
-   #addbook:hover {
-color: blue
-
-
-
+   #add-book:hover {
+      color: blue
    }
 
 
