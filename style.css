@@ -29,7 +29,6 @@ main {
     "card card card card"
     "form form form form";
   grid-template-columns: repeat(4, 25fr);
-
 }
 
 .card {
@@ -77,7 +76,7 @@ nav ul li {
 
 nav ul li:hover {
   border: 1.75px solid #444;
-  transition: ease .25s;
+  transition: ease 0.25s;
   transform: translateY(-15%);
   transform: translateX(15%);
   box-shadow: 1px 2px 3px #111;
@@ -94,23 +93,23 @@ nav ul a {
   height: 85%;
   border-color: blue;
   border-style: dotted;
-  background-color: #D7D7D7;
+  background-color: #d7d7d7;
 }
 
-form{
-  display:flex;
+form {
+  display: flex;
   flex-direction: column;
-  margin:8px;
-  }
+  margin: 8px;
+}
 
- input,
- textarea{
-  border:solid thin black;
-  max-width:80vw;
- }
+input,
+textarea {
+  border: solid thin black;
+  max-width: 80vw;
+}
 
- form div {
-  display:flex;
+form div {
+  display: flex;
   flex-direction: column;
   margin: 14px;
 }
@@ -123,9 +122,9 @@ form{
   min-height: 48px;
 }
 
- #add-book:hover {
-    color: blue;
- }
+#add-book:hover {
+  color: blue;
+}
 
 footer {
   height: 100px;
@@ -144,10 +143,10 @@ footer ul li {
   padding: 8px;
 }
 
-footer ul li a{
+footer ul li a {
   text-decoration: none;
   color: #111;
-  text-shadow: .7px .7px #ccc;
+  text-shadow: 0.7px 0.7px #ccc;
 }
 
 form {
