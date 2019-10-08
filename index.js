@@ -1,3 +1,5 @@
+import {Header, Nav, Main, Footer} from "./components";
+
 const state = {
   heading: "Sorry, I'm Booked.",
   links: [
