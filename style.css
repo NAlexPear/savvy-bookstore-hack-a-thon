@@ -76,16 +76,20 @@ nav ul a {
   color: #b7410e;
 }
 
+.card {
+  width: 95%;
+  height: 85%;
+  border-color: blue;
+  border-style: dotted;
+  background-color: #D7D7D7;
+}
+
 footer {
   height: 100px;
   background: #9d8189;
   color: #fff;
   text-align: center;
   width: 1440px;
-}
-
-footer ul {
-  list-style-type: none;
 }
 
 form {
@@ -95,7 +99,7 @@ form {
 }
 
 input,
-textarea{
+textarea {
   border: solid thin black;
   max-width: 80vw;
 }
