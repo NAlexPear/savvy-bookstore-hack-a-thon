@@ -25,18 +25,11 @@ main {
   grid-area: main;
   display: grid;
   gap: 8px;
-  grid-template-areas:
-    "card card card card"
-    "form form form form";
   grid-template-columns: repeat(4, 25fr);
 }
 
-.card {
-  grid-area: card;
-}
-
 form {
-  grid-area: form;
+  grid-column: span 4;
 }
 
 footer {
@@ -149,12 +142,6 @@ footer ul li a {
   text-decoration: none;
   color: #111;
   text-shadow: 0.7px 0.7px #ccc;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  margin: 14px;
 }
 
 input,
